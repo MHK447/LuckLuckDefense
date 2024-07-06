@@ -197,6 +197,8 @@ public class InGameEnemyBase : MonoBehaviour
         {
             GetGachaCoin();
         }
+
+        ProjectUtility.SetActiveCheck(this.gameObject, false);
     }
 
 

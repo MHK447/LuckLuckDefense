@@ -19,6 +19,7 @@ public interface IUserDataMode
 	IReactiveProperty<BigInteger> EnergyMoney { get; set; }
 	IReactiveProperty<int> GachaCoin { get; set; }
 	public List<UnitCardData> UnitCardDatas { get; set; }
+	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; }
 }
 
 public class UserDataMain : IUserDataMode
@@ -35,6 +36,7 @@ public class UserDataMain : IUserDataMode
 	public IReactiveProperty<BigInteger> EnergyMoney { get; set; } = new ReactiveProperty<BigInteger>(0);
 	public IReactiveProperty<int> GachaCoin { get; set; } = new ReactiveProperty<int>(0);
 	public List<UnitCardData> UnitCardDatas { get; set; } = new List<UnitCardData>();
+	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; } = new List<InGameUnitUpgradeData>();
 }
 
 public class UserDataEvent : UserDataMain

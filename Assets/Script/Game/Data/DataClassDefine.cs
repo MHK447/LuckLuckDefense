@@ -51,6 +51,24 @@ public class StageData
     }
 }
 
+public class InGameUnitUpgradeData
+{
+	public int UpgradeTypeIdx;
+	public int Level;
+	public IReactiveProperty<int> LevelProperty = new ReactiveProperty<int>();
+
+	public InGameUnitUpgradeData(int upgradeidx)
+    {
+		UpgradeTypeIdx = upgradeidx;
+		Level = 1;
+
+		LevelProperty.Value = Level;
+
+		LevelProperty.Subscribe(x => { Level = x; });
+    }
+
+}
+
 
 public class UnitCardData : IClientData
 {
