@@ -22,12 +22,9 @@ public class PopupUnitCard : MonoBehaviour
 
     public void Init()
     {
-        foreach(var upgrade in UpgradeComponentList)
+        for(int i = 0; i < UpgradeComponentList.Count; ++i)
         {
-            upgrade.set
+            UpgradeComponentList[i].Set((UpgradeComponentType)i);
         }
     }
-
-
-    
 }
