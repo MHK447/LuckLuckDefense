@@ -37,6 +37,8 @@ public class StageData
 		UnitCountPropety.Value = 0;
 		WaveTimeProperty.Value = 0;
 
+		
+
 	}
 
 
@@ -56,6 +58,7 @@ public class InGameUnitUpgradeData
 	public int UpgradeTypeIdx;
 	public int Level;
 	public IReactiveProperty<int> LevelProperty = new ReactiveProperty<int>();
+
 
 	public InGameUnitUpgradeData(int upgradeidx)
     {

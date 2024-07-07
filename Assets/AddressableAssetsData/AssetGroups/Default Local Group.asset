@@ -181,6 +181,10 @@ MonoBehaviour:
     m_Address: Enemy_1001
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d5bd4475185cb467591266cfc6224945
+    m_Address: UI/Popup/PopupUnitUpgrade
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

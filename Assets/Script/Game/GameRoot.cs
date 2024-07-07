@@ -30,7 +30,7 @@ public class GameRoot : Singleton<GameRoot>
 	public EffectSystem EffectSystem { get; private set; } = new EffectSystem();
 	public TutorialSystem TutorialSystem { get; private set; } = new TutorialSystem();
 	public InGameBattleSystem InGameBattleSystem { get; private set; } = new InGameBattleSystem();
-	public UnitCardSystsem UnitCardSystsem { get; private set; } = new UnitCardSystsem();
+	public InGameUnitUpgradeSystem UnitUpgradeSystem { get; private set; } = new InGameUnitUpgradeSystem();
 
 
 
@@ -226,7 +226,7 @@ public class GameRoot : Singleton<GameRoot>
 		UserData.Load();
 		InGameSystem.ChangeMode(CurInGameType);
 		InGameBattleSystem.Create();
-		UnitCardSystsem.Create();
+		UnitUpgradeSystem.Create();
 
 		LoadComplete = true;
 
@@ -309,7 +309,7 @@ public class GameRoot : Singleton<GameRoot>
 
 		//ProjectUtility.Init();
 		InGameBattleSystem.Create();
-		UnitCardSystsem.Create();
+		UnitUpgradeSystem.Create();
 	}
 
 	private void SetNativeLanguage()

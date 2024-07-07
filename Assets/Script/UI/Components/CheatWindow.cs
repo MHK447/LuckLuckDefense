@@ -101,8 +101,6 @@ public class CheatWindow : MonoBehaviour
         }
 
         inputField.text = "";
-
-        GameRoot.Instance.UnitCardSystsem.AddUnitCard((int)convert, 10);
     }
 
 

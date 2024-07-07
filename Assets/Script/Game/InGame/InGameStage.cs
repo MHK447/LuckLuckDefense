@@ -66,6 +66,11 @@ public class InGameStage : MonoBehaviour
                 var getui = GameRoot.Instance.UISystem.GetUI<PopupIngameUpgrade>();
 
                 GameRoot.Instance.UserData.CurMode.StageData.StageEndClear();
+
+                foreach(var unitupgrade in GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas)
+                {
+                    unitupgrade.LevelProperty.Value = 1;
+                }
                 var battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.Battle;
 
                 battle.InitClear();

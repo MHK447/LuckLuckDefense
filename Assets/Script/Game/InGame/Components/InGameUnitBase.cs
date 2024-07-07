@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BanpoFri;
 using UnityEngine.UI;
+using UniRx;
 
 public class InGameUnitBase : MonoBehaviour
 {
@@ -59,6 +60,10 @@ public class InGameUnitBase : MonoBehaviour
 
     private bool facingRight = false;
 
+    private CompositeDisposable disposables = new CompositeDisposable();
+
+    private int UpgradeIdx = 0;
+
     public void Set(int unitidx , InGameBattle battle)
     {
         Target = null;
@@ -70,18 +75,59 @@ public class InGameUnitBase : MonoBehaviour
 
         if(td != null)
         {
-            info.AttackRange = td.attackrange / 100f;
-            info.Attack = td.attack;
-            info.criticalChance = td.criticalchance;
-            info.AttackSpeed = td.attackspeed / 100f;
+            SetInfo();
 
             ChangeState(State.Idle);
 
             ProjectUtility.SetActiveCheck(attackRangeIndicator.gameObject, false);
 
             attackRangeIndicator.transform.localScale = new Vector2(info.AttackRange * radioussize, info.AttackRange * radioussize);
+
+            if (td.grade == 1 || td.grade == 2)
+            {
+                UpgradeIdx = 1;
+            }
+            else if (td.grade == 3)
+            {
+                UpgradeIdx = 2;
+            }
+            else if (td.grade == 4 || td.grade == 5)
+            {
+                UpgradeIdx = 3;
+            }
+
+
+            var finddata = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == UpgradeIdx);
+
+            finddata.LevelProperty.Subscribe(x => { SetInfo(); }).AddTo(disposables);
         }
     }
+
+    private void OnDestroy()
+    {
+        disposables.Clear();
+    }
+
+    private void OnDisable()
+    {
+        disposables.Clear();
+    }
+
+
+    public void SetInfo()
+    {
+        var td = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(UnitIdx);
+
+        if (td != null)
+        {
+
+            info.AttackRange = td.attackrange / 100f;
+
+            info.Attack = td.attack * GameRoot.Instance.UnitUpgradeSystem.GetUgpradeValue(UpgradeIdx);
+            info.criticalChance = td.criticalchance;
+            info.AttackSpeed = td.attackspeed / 100f;
+        }
+        }
 
     private bool IsCriticalHit()
     {

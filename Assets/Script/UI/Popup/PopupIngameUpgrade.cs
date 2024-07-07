@@ -35,6 +35,9 @@ public class PopupIngameUpgrade : UIBase
     private Button PauseBtn;
 
     [SerializeField]
+    private Button UpgradeBtn;
+
+    [SerializeField]
     private Text UnitCountText;
 
     [SerializeField]
@@ -87,6 +90,7 @@ public class PopupIngameUpgrade : UIBase
         LegendCardBtn.onClick.AddListener(OnClickLegendCardBtn);
         PauseBtn.onClick.AddListener(OnClickPause);
         TicketMonsterBtn.onClick.AddListener(OnClickTicketMonster);
+        UpgradeBtn.onClick.AddListener(OnClickUpgrade);
     }
 
     public void Init(InGameBattle battle)
@@ -217,6 +221,11 @@ public class PopupIngameUpgrade : UIBase
         ingamebattle.SpawnEnemy(GameRoot.Instance.InGameSystem.TicketEnemyIdx);
 
         ProjectUtility.SetActiveCheck(TicketMonsterBtn.gameObject, false);
+    }
+
+    private void OnClickUpgrade()
+    {
+        GameRoot.Instance.UISystem.OpenUI<PopupUnitUpgrade>(popup => popup.Init());
     }
     
     private void OnClickUnitSpawn()

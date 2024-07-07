@@ -17,6 +17,11 @@ public class UnitUpgradeComponent : MonoBehaviour
 
     private UpgradeComponentType CurType;
 
+    private InGameUnitUpgradeData UnitUpgradeData;
+
+    private int BaseCostValue = 0;
+    private int CurPriceValue = 0;
+
     private void Awake()
     {
         UpgradeBtn.onClick.AddListener(OnClickUpgrade);
@@ -26,16 +31,57 @@ public class UnitUpgradeComponent : MonoBehaviour
     {
         CurType = type;
 
-        var finddata = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == (int)type);
+        UnitUpgradeData = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == (int)type);
 
-        if(finddata != null)
+
+        var td = Tables.Instance.GetTable<UnitUpgradeInfo>().GetData((int)CurType);
+
+        if(td != null)
         {
-
+            BaseCostValue = td.cost_value;
+            SetCostText();
         }
+    }
+
+    private void SetCostText()
+    {
+        CurPriceValue = BaseCostValue * UnitUpgradeData.Level;
+
+        UpgradeCostText.text = CurPriceValue.ToString();
+
+        LevelText.text = $"Lv.{UnitUpgradeData.Level}";
     }
 
     public void OnClickUpgrade()
     {
+        var td = Tables.Instance.GetTable<UnitUpgradeInfo>().GetData((int)CurType);
+
+        if (td != null)
+        {
+            switch (td.cost_idx)
+            {
+                case (int)Config.CurrencyID.EnergyMoney:
+                    {
+                        if (GameRoot.Instance.UserData.CurMode.EnergyMoney.Value >= CurPriceValue)
+                        {
+                            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, -CurPriceValue);
+                            UnitUpgradeData.LevelProperty.Value += 1;
+                            SetCostText();
+                        }
+                    }
+                    break;
+                case (int)Config.CurrencyID.GachaCoin:
+                    {
+                        if (GameRoot.Instance.UserData.CurMode.GachaCoin.Value >= CurPriceValue)
+                        {
+                            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.GachaCoin, -CurPriceValue);
+                            UnitUpgradeData.LevelProperty.Value += 1;
+                            SetCostText();
+                        }
+                    }
+                    break;
+            }
+        }
 
     }
 }
