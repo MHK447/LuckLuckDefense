@@ -55,6 +55,14 @@ MonoBehaviour:
     color: {r: 0.3529412, g: 1, b: 0.972549, a: 1}
   - key_string: Default_DarkRed
     color: {r: 0.23921569, g: 0, b: 0.011764706, a: 1}
+  - key_string: TextColor_Unit_Grade_Normal
+    color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+  - key_string: TextColor_Unit_Grade_Rare
+    color: {r: 0, g: 0.10007763, b: 1, a: 1}
+  - key_string: TextColor_Unit_Grade_Epic
+    color: {r: 1, g: 0, b: 0.8291087, a: 1}
+  - key_string: TextColor_Unit_Grade_Legend
+    color: {r: 1, g: 0.9964251, b: 0, a: 1}
   _eventTextColorDefines: []
   _imageColorDefines:
   - key_string: BgColor_White

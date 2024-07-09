@@ -26,6 +26,13 @@ public class PopupUnitUpgrade : UIBase
     [SerializeField]
     private Text GachaCoinText;
 
+    [SerializeField]
+    private Button PercentInfoBtn;
+
+    [SerializeField]
+    private ProbabilityComponent probabilityComponent;
+
+    private bool IsPrecentInfo = false;
 
     protected override void Awake()
     {
@@ -39,6 +46,19 @@ public class PopupUnitUpgrade : UIBase
             GachaCoinText.text = x.ToString();
         }).AddTo(this);
 
+        PercentInfoBtn.onClick.AddListener(OnClickPercentInfo);
+    }
+
+    private void OnClickPercentInfo()
+    {
+        IsPrecentInfo = !IsPrecentInfo;
+
+        var UnitUpgradeData = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == (int)UpgradeComponentType.SpawnPercent);
+
+        probabilityComponent.Init(UnitUpgradeData.Level);
+
+        ProjectUtility.SetActiveCheck(probabilityComponent.gameObject, IsPrecentInfo);
+
     }
 
     public void Init()
@@ -47,5 +67,7 @@ public class PopupUnitUpgrade : UIBase
         {
             UpgradeComponentList[i].Set((UpgradeComponentType)i + 1);
         }
+
+        ProjectUtility.SetActiveCheck(probabilityComponent.gameObject, false);
     }
 }

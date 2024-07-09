@@ -15,6 +15,11 @@ public class UnitUpgradeComponent : MonoBehaviour
     [SerializeField]
     private Button UpgradeBtn;
 
+    [SerializeField]
+    private Button InfoIconBtn;
+
+    private bool IsOpenInfo = false;
+
     private UpgradeComponentType CurType;
 
     private InGameUnitUpgradeData UnitUpgradeData;
@@ -25,6 +30,9 @@ public class UnitUpgradeComponent : MonoBehaviour
     private void Awake()
     {
         UpgradeBtn.onClick.AddListener(OnClickUpgrade);
+
+        if(InfoIconBtn != null)
+        InfoIconBtn.onClick.AddListener(OnClickInfo);
     }
 
     public void Set(UpgradeComponentType type)
@@ -41,6 +49,11 @@ public class UnitUpgradeComponent : MonoBehaviour
             BaseCostValue = td.cost_value;
             SetCostText();
         }
+    }
+
+    private void OnClickInfo()
+    {
+
     }
 
     private void SetCostText()
