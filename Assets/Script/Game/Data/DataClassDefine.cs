@@ -21,8 +21,6 @@ public class StageData
 
 	public IReactiveProperty<int> WaveTimeProperty = new ReactiveProperty<int>();
 
-	public IReactiveProperty<int> GachaLevelProperty = new ReactiveProperty<int>(1);
-
 	public int UnitAddCount = 0;
 
 	public bool IsStartBattle = false;
@@ -31,13 +29,10 @@ public class StageData
 
 	public void StageEndClear()
     {
-		GachaLevelProperty.Value = 1;
 		WaveIdxProperty.Value = 1;
 		UnitAddCount = 0;
 		UnitCountPropety.Value = 0;
 		WaveTimeProperty.Value = 0;
-
-		
 
 	}
 
@@ -52,6 +47,9 @@ public class StageData
 		WaveIdxProperty.Value = waveidx;	
     }
 }
+
+
+
 
 public class InGameUnitUpgradeData
 {

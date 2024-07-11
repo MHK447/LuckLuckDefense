@@ -21,6 +21,11 @@ public class InGameUnitUpgradeSystem
     }
 
 
+    public InGameUnitUpgradeData FindUnitUpgradeData(UpgradeComponentType type)
+    {
+       return GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == (int)type);
+    }
+
     public int GetUgpradeValue(int upgradetypeidx)
     {
         int value = 1;

@@ -128,24 +128,24 @@ public class ProjectUtility
 
         int randgrade = 1;
 
-        var td = Tables.Instance.GetTable<GachaUnitLevelInfo>().GetData(level);
+        var td = Tables.Instance.GetTable<UnitGradeInfo>().GetData(level);
 
         int totalgacharatio = 0;
 
         if(td != null)
         {
-            for(int i = 0; i < td.gacha_info.Count; ++i)
+            for(int i = 0; i < td.gradepercent.Count; ++i)
             {
-                totalgacharatio += td.gacha_info[i];
+                totalgacharatio += td.gradepercent[i];
             }
 
 
             var randgacha = UnityEngine.Random.Range(0, totalgacharatio + 1);
             int cumulativevalue = 0;
 
-            for (int i = 0; i < td.gacha_info.Count; ++i)
+            for (int i = 0; i < td.gradepercent.Count; ++i)
             {
-                cumulativevalue += td.gacha_info[i];
+                cumulativevalue += td.gradepercent[i];
 
                 if(randgacha < cumulativevalue)
                 {

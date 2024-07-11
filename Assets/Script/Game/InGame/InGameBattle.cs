@@ -235,7 +235,7 @@ public class InGameBattle : MonoBehaviour
 
     public void RandGachaUnit()
     {
-        var level = GameRoot.Instance.UserData.CurMode.StageData.GachaLevelProperty.Value;
+        var level = GameRoot.Instance.UnitUpgradeSystem.FindUnitUpgradeData(UpgradeComponentType.SpawnPercent).Level;
 
         var grade = ProjectUtility.GetRandGachaCard(level);
 

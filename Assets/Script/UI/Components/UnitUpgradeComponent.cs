@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using BanpoFri;
+using System.Linq;
 
 public class UnitUpgradeComponent : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class UnitUpgradeComponent : MonoBehaviour
     private int BaseCostValue = 0;
     private int CurPriceValue = 0;
 
+    private int MaxLevel = 0;
+
     private void Awake()
     {
         UpgradeBtn.onClick.AddListener(OnClickUpgrade);
@@ -40,6 +43,15 @@ public class UnitUpgradeComponent : MonoBehaviour
         CurType = type;
 
         UnitUpgradeData = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == (int)type);
+
+
+        MaxLevel = int.MaxValue;
+
+
+        if (type == UpgradeComponentType.SpawnPercent)
+        {
+            MaxLevel = Tables.Instance.GetTable<UnitGradeInfo>().DataList.Last().level;
+        }
 
 
         var td = Tables.Instance.GetTable<UnitUpgradeInfo>().GetData((int)CurType);
@@ -62,11 +74,15 @@ public class UnitUpgradeComponent : MonoBehaviour
 
         UpgradeCostText.text = CurPriceValue.ToString();
 
-        LevelText.text = $"Lv.{UnitUpgradeData.Level}";
+        LevelText.text = MaxLevel <= UnitUpgradeData.Level ? $"Lv.MAX" : $"Lv.{UnitUpgradeData.Level}";
+
+        UpgradeBtn.interactable = MaxLevel > UnitUpgradeData.Level;
     }
 
     public void OnClickUpgrade()
     {
+        if (UpgradeBtn.interactable == false) return;
+
         var td = Tables.Instance.GetTable<UnitUpgradeInfo>().GetData((int)CurType);
 
         if (td != null)
