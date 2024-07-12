@@ -44,7 +44,9 @@ MonoBehaviour:
     _prefab: Unit001
     _icon: Unit001_Img
     _name: unit_name_001
-    _unit_skill: 01000000
+    _unit_skill: 0100000001000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 2
     _attack: 10
     _attackrange: 300
@@ -55,6 +57,8 @@ MonoBehaviour:
     _icon: Unit002_Img
     _name: unit_name_002
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 3
     _attack: 10
     _attackrange: 300
@@ -65,6 +69,8 @@ MonoBehaviour:
     _icon: Unit003_Img
     _name: unit_name_003
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 4
     _attack: 50
     _attackrange: 300
@@ -75,6 +81,8 @@ MonoBehaviour:
     _icon: Unit004_Img
     _name: unit_name_004
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 5
     _attack: 50
     _attackrange: 300
@@ -85,6 +93,8 @@ MonoBehaviour:
     _icon: Unit005_Img
     _name: unit_name_005
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 6
     _attack: 50
     _attackrange: 300
@@ -95,6 +105,8 @@ MonoBehaviour:
     _icon: Unit006_Img
     _name: unit_name_006
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 7
     _attack: 50
     _attackrange: 300
@@ -105,6 +117,8 @@ MonoBehaviour:
     _icon: Unit007_Img
     _name: unit_name_007
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 8
     _attack: 10
     _attackrange: 300
@@ -115,6 +129,8 @@ MonoBehaviour:
     _icon: Unit008_Img
     _name: unit_name_008
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 9
     _attack: 10
     _attackrange: 300
@@ -125,6 +141,8 @@ MonoBehaviour:
     _icon: Unit009_Img
     _name: unit_name_009
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 10
     _attack: 50
     _attackrange: 300
@@ -135,6 +153,8 @@ MonoBehaviour:
     _icon: Unit010_Img
     _name: unit_name_010
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 11
     _attack: 50
     _attackrange: 300
@@ -145,6 +165,8 @@ MonoBehaviour:
     _icon: Unit011_Img
     _name: unit_name_011
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 12
     _attack: 50
     _attackrange: 300
@@ -155,6 +177,8 @@ MonoBehaviour:
     _icon: Unit012_Img
     _name: unit_name_012
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 13
     _attack: 50
     _attackrange: 300
@@ -165,6 +189,8 @@ MonoBehaviour:
     _icon: Unit013_Img
     _name: unit_name_013
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 14
     _attack: 50
     _attackrange: 300
@@ -175,6 +201,8 @@ MonoBehaviour:
     _icon: Unit014_Img
     _name: unit_name_014
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 15
     _attack: 50
     _attackrange: 300
@@ -185,6 +213,8 @@ MonoBehaviour:
     _icon: Unit015_Img
     _name: unit_name_015
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 16
     _attack: 150
     _attackrange: 300
@@ -195,6 +225,8 @@ MonoBehaviour:
     _icon: Unit016_Img
     _name: unit_name_016
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 17
     _attack: 150
     _attackrange: 300
@@ -205,6 +237,8 @@ MonoBehaviour:
     _icon: Unit017_Img
     _name: unit_name_017
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 1001
     _attack: 150
     _attackrange: 300
@@ -215,6 +249,8 @@ MonoBehaviour:
     _icon: Unit015_Img
     _name: unit_name_018
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 1002
     _attack: 150
     _attackrange: 300
@@ -225,6 +261,8 @@ MonoBehaviour:
     _icon: Unit016_Img
     _name: unit_name_019
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200
   - _unit_idx: 1003
     _attack: 150
     _attackrange: 300
@@ -235,3 +273,5 @@ MonoBehaviour:
     _icon: Unit017_Img
     _name: unit_name_020
     _unit_skill: 01000000
+    _unit_skil_percent: 300
+    _unit_skil_value: 200

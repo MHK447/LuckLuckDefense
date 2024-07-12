@@ -16,17 +16,57 @@ MonoBehaviour:
   - 1
   - 2
   - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
   mSecondKey: []
   mDataList:
   - _skill_idx: 1
-    _image: skill_image
-    _desc: 
-    _desc_name: 
+    _image: skill_image_1
+    _desc: skill_1_desc
+    _desc_name: skill_1_name
   - _skill_idx: 2
-    _image: 
-    _desc: 
-    _desc_name: 
+    _image: skill_image_2
+    _desc: skill_2_desc
+    _desc_name: skill_2_name
   - _skill_idx: 3
-    _image: 
-    _desc: 
-    _desc_name: 
+    _image: skill_image_3
+    _desc: skill_3_desc
+    _desc_name: skill_3_name
+  - _skill_idx: 4
+    _image: skill_image_4
+    _desc: skill_4_desc
+    _desc_name: skill_4_name
+  - _skill_idx: 5
+    _image: skill_image_5
+    _desc: skill_5_desc
+    _desc_name: skill_5_name
+  - _skill_idx: 6
+    _image: skill_image_6
+    _desc: skill_6_desc
+    _desc_name: skill_6_name
+  - _skill_idx: 7
+    _image: skill_image_7
+    _desc: skill_7_desc
+    _desc_name: skill_7_name
+  - _skill_idx: 8
+    _image: skill_image_8
+    _desc: skill_8_desc
+    _desc_name: skill_8_name
+  - _skill_idx: 9
+    _image: skill_image_9
+    _desc: skill_9_desc
+    _desc_name: skill_9_name
+  - _skill_idx: 10
+    _image: skill_image_10
+    _desc: skill_10_desc
+    _desc_name: skill_10_name
+  - _skill_idx: 11
+    _image: skill_image_11
+    _desc: skill_11_desc
+    _desc_name: skill_11_name

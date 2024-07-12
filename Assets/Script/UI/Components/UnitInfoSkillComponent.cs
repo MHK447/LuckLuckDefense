@@ -72,11 +72,36 @@ public class UnitInfoSkillComponent : MonoBehaviour
 
         var td = Tables.Instance.GetTable<PlayerSkillInfo>().GetData(CurSelectSkillIdx);
 
+        var unitinfotd = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(Unitidx);
+
         if (td != null)
         {
             SkillNameText.text = Tables.Instance.GetTable<Localize>().GetString(td.desc_name);
-            SkillDescText.text = Tables.Instance.GetTable<Localize>().GetString(td.desc);
 
+            var percennt = (float)unitinfotd.unit_skil_percent / 100f;
+
+            switch (td.skill_idx)
+            {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    {
+                        SkillDescText.text = Tables.Instance.GetTable<Localize>().GetFormat($"skill_{td.skill_idx}_desc",percennt, unitinfotd.unit_skil_value);
+                    }
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                    {
+                        SkillDescText.text = Tables.Instance.GetTable<Localize>().GetFormat($"skill_{td.skill_idx}_desc", unitinfotd.unit_skil_value);
+                    }
+                    break;
+            }
         }
     }
 

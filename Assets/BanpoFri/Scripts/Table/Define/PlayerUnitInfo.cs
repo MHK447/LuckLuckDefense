@@ -76,6 +76,20 @@ namespace BanpoFri
 			get { return _unit_skill;}
 			set { _unit_skill = value;}
 		}
+		[SerializeField]
+		private int _unit_skil_percent;
+		public int unit_skil_percent
+		{
+			get { return _unit_skil_percent;}
+			set { _unit_skil_percent = value;}
+		}
+		[SerializeField]
+		private int _unit_skil_value;
+		public int unit_skil_value
+		{
+			get { return _unit_skil_value;}
+			set { _unit_skil_value = value;}
+		}
 
     }
 
