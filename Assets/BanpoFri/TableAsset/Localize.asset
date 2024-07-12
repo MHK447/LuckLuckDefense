@@ -6829,7 +6829,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_1_desc
-    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1}\uD53C\uD574\uC744 \uAC00\uD569\uB2C8\uB2E4"
+    _ko: "<color=#F1FF00>{0}\uD37C\uC13C\uD2B8 </color> \uD655\uB960\uB85C <color=#F1FF00>{1}\uD53C\uD574
+      </color>\uC744 \uAC00\uD569\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -6863,7 +6864,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_2_desc
-    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1}\uD53C\uD574\uC744 \uAC00\uD569\uB2C8\uB2E4"
+    _ko: "<color=#F1FF00>{0}\uD37C\uC13C\uD2B8 </color> \uD655\uB960\uB85C <color=#F1FF00>{1}\uD53C\uD574
+      </color>\uC744 \uAC00\uD569\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -6897,7 +6899,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_3_desc
-    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1}\uBC88 \uC77C\uACA9\uC744 \uAC00\uD569\uB2C8\uB2E4"
+    _ko: "<color=#F1FF00>{0}\uD37C\uC13C\uD2B8 </color> \uD655\uB960\uB85C <color=#F1FF00>{1}\uC77C\uACA9
+      </color>\uC744 \uAC00\uD569\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -6931,7 +6934,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_4_desc
-    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1}\uCD08\uAC04 \uAE30\uC808 \uC2DC\uD0B5\uB2C8\uB2E4"
+    _ko: "<color=#F1FF00>{0}\uD37C\uC13C\uD2B8 </color> \uD655\uB960\uB85C <color=#F1FF00>{1}\uCD08\uAC04
+      </color>\uC744 \uC2DC\uD0B5\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -6965,7 +6969,7 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_5_desc
-    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1}\uCD08\uAC04 \uC2AC\uB85C\uC6B0
+    _ko: "<color=#F1FF00>{0}\uD37C\uC13C\uD2B8 </color> \uD655\uB960\uB85C <color=#F1FF00>{1}\uCD08\uAC04</color>\uC2AC\uB85C\uC6B0\uB97C
       \uC2DC\uD0B5\uB2C8\uB2E4"
     _en: 
     _ja: 
@@ -7000,8 +7004,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_6_desc
-    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1}\uCD08\uAC04\uD53C\uD574\uB97C
-      \uAC00\uD569\uB2C8\uB2E4"
+    _ko: "<color=#F1FF00>{0}\uD37C\uC13C\uD2B8 </color> \uD655\uB960\uB85C <color=#F1FF00>{1}\uCD08\uAC04
+      </color>\uC744 \uAC00\uD569\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -7035,8 +7039,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_7_desc
-    _ko: "\uBAA8\uB4E0 \uC801\uC758 \uBC29\uC5B4\uB825\uC744{0}\uB97C \uAC10\uC18C
-      \uC2DC\uD0B5\uB2C8\uB2E4"
+    _ko: "\uBAA8\uB4E0 \uC801\uC758 \uBC29\uC5B4\uB825\uC744<color=#F1FF00>{0}</color>\uB97C
+      \uAC10\uC18C \uC2DC\uD0B5\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -7070,8 +7074,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_8_desc
-    _ko: "\uBAA8\uB4E0 \uC544\uAD70\uC758 \uACF5\uACA9\uB825\uC744 {0}% \uC99D\uAC00
-      \uC2DC\uD0B5\uB2C8\uB2E4"
+    _ko: "\uBAA8\uB4E0 \uC544\uAD70\uC758 \uACF5\uACA9\uB825\uC744 <color=#F1FF00>{0}%</color>
+      \uC99D\uAC00 \uC2DC\uD0B5\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -7105,7 +7109,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_9_desc
-    _ko: "\uBAA8\uB4E0 \uC801\uC758 \uC774\uB3D9\uC18D\uB3C4\uB97C {0} \uB454\uD654\uC2DC\uD0B5\uB2C8\uB2E4"
+    _ko: "\uBAA8\uB4E0 \uC801\uC758 \uC774\uB3D9\uC18D\uB3C4\uB97C <color=#F1FF00>{0}</color>
+      \uB454\uD654\uC2DC\uD0B5\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -7139,8 +7144,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_10_desc
-    _ko: "\uACF5\uACA9 \uC2DC {0}% \uD655\uB960\uB85C \uCF54\uC778\uC744 {1} \uD68D\uB4DD
-      \uD569\uB2C8\uB2E4"
+    _ko: "\uACF5\uACA9 \uC2DC  <color=#F1FF00>{0}</color>% \uD655\uB960\uB85C \uCF54\uC778\uC744 
+      <color=#F1FF00>{1}</color>\uD68D\uB4DD \uD569\uB2C8\uB2E4"
     _en: 
     _ja: 
     _es: 
@@ -7174,7 +7179,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: skill_11_desc
-    _ko: "\uC18C\uD658 \uC2DC \uCF54\uC778\uC744 {0} \uD68D\uB4DD \uD569\uB2C8\uB2E4."
+    _ko: "\uC18C\uD658 \uC2DC \uCF54\uC778\uC744  <color=#F1FF00>{0}</color>\uD68D\uB4DD
+      \uD569\uB2C8\uB2E4."
     _en: 
     _ja: 
     _es: 
