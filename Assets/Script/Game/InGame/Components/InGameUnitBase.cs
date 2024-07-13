@@ -79,6 +79,7 @@ public class InGameUnitBase : MonoBehaviour
 
             ChangeState(State.Idle);
 
+
             ProjectUtility.SetActiveCheck(attackRangeIndicator.gameObject, false);
 
             attackRangeIndicator.transform.localScale = new Vector2(info.AttackRange * radioussize, info.AttackRange * radioussize);
@@ -96,10 +97,11 @@ public class InGameUnitBase : MonoBehaviour
                 UpgradeIdx = 3;
             }
 
-
             var finddata = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == UpgradeIdx);
 
             finddata.LevelProperty.Subscribe(x => { SetInfo(); }).AddTo(disposables);
+
+            GameRoot.Instance.UnitSkillSystem.AddPassiveSkill(unitidx);
         }
     }
 
@@ -132,6 +134,13 @@ public class InGameUnitBase : MonoBehaviour
     private bool IsCriticalHit()
     {
         return Random.value < info.criticalChance;
+    }
+
+
+    public void RemoveUnit()
+    {
+        ProjectUtility.SetActiveCheck(this.gameObject, false);
+        GameRoot.Instance.UnitSkillSystem.RemovePassiveSkill(UnitIdx);
     }
 
     public void SetTileComponent(UnitTileComponent tilecomponent)
@@ -219,7 +228,15 @@ public class InGameUnitBase : MonoBehaviour
             }
         }
     }
-    
+
+
+
+    public bool SkillProbability(int probability)
+    {
+
+        int randomValue = Random.Range(0, 100);
+        return randomValue < probability;
+    }
 
 
     void OnDrawGizmos()

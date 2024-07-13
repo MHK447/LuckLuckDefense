@@ -91,6 +91,24 @@ public class UnitCardData : IClientData
  
 }
 
+
+public class PassiveSkillData : IClientData
+{
+	public int UnitIdx = 0;
+
+	public int SkillIdx = 0;
+
+	public int SkillValue = 0;
+
+	public PassiveSkillData(int skillidx , int skillvalue ,  int unitidx)
+    {
+		SkillIdx = skillidx;
+		SkillValue = skillvalue;
+		UnitIdx = unitidx;
+    }
+
+}
+
 public class InGameUpgradeData : IClientData
 {
 	public int Level = 0;

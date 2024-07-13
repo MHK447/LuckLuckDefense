@@ -21,9 +21,6 @@ MonoBehaviour:
   - 6
   - 7
   - 8
-  - 9
-  - 10
-  - 11
   mSecondKey: []
   mDataList:
   - _skill_idx: 1
@@ -58,15 +55,3 @@ MonoBehaviour:
     _image: skill_image_8
     _desc: skill_8_desc
     _desc_name: skill_8_name
-  - _skill_idx: 9
-    _image: skill_image_9
-    _desc: skill_9_desc
-    _desc_name: skill_9_name
-  - _skill_idx: 10
-    _image: skill_image_10
-    _desc: skill_10_desc
-    _desc_name: skill_10_name
-  - _skill_idx: 11
-    _image: skill_image_11
-    _desc: skill_11_desc
-    _desc_name: skill_11_name

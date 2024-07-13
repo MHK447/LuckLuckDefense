@@ -20,6 +20,7 @@ public interface IUserDataMode
 	IReactiveProperty<int> GachaCoin { get; set; }
 	public List<UnitCardData> UnitCardDatas { get; set; }
 	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; }
+	public List<PassiveSkillData> PassiveSkillDatas { get; set; }
 }
 
 public class UserDataMain : IUserDataMode
@@ -37,6 +38,7 @@ public class UserDataMain : IUserDataMode
 	public IReactiveProperty<int> GachaCoin { get; set; } = new ReactiveProperty<int>(0);
 	public List<UnitCardData> UnitCardDatas { get; set; } = new List<UnitCardData>();
 	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; } = new List<InGameUnitUpgradeData>();
+	public List<PassiveSkillData> PassiveSkillDatas { get; set; } = new List<PassiveSkillData>();
 }
 
 public class UserDataEvent : UserDataMain

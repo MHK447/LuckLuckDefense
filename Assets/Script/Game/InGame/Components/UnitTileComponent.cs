@@ -42,11 +42,6 @@ public class UnitTileComponent : MonoBehaviour
         
     public void SpawnTileUnit(InGameUnitBase unit)
     {
-        if(unit == null)
-        {
-            int a = 0; 
-        }
-
         TileUnitIdx = unit.GetUnitIdx;
         UnitList.Add(unit);
         unit.transform.position = SpawnList[UnitList.Count - 1].transform.position;
@@ -97,7 +92,7 @@ public class UnitTileComponent : MonoBehaviour
 
                 foreach(var unit in UnitList)
                 {
-                    ProjectUtility.SetActiveCheck(unit.gameObject, false);
+                    unit.RemoveUnit();
                 }
 
                 UnitList.Clear();
@@ -111,7 +106,7 @@ public class UnitTileComponent : MonoBehaviour
     {
         foreach (var unit in UnitList)
         {
-            ProjectUtility.SetActiveCheck(unit.gameObject, false);
+            unit.RemoveUnit();
         }
 
         UnitList.Clear();

@@ -31,6 +31,7 @@ public class GameRoot : Singleton<GameRoot>
 	public TutorialSystem TutorialSystem { get; private set; } = new TutorialSystem();
 	public InGameBattleSystem InGameBattleSystem { get; private set; } = new InGameBattleSystem();
 	public InGameUnitUpgradeSystem UnitUpgradeSystem { get; private set; } = new InGameUnitUpgradeSystem();
+	public UnitSkillSystem UnitSkillSystem { get; private set; } = new UnitSkillSystem();
 
 
 
