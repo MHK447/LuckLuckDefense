@@ -8,42 +8,25 @@ using System.Linq;
 public class UnitSkillSystem
 {
 
-    public enum PassiveSkillType
-    {
-        DefenseReduction = 4,
-        AttackPowerIncrease = 5,
-        MoveSpeedReduction = 6,
-        CoinGainSummon = 8,
-    }
-
-
-    public enum ActiveSkillType
+    public enum SkillType
     {
         AttackSkill = 1,
         Sturn = 2,
         Slow = 3,
+        DefenseReduction = 4,
+        AttackPowerIncrease = 5,
+        MoveSpeedReduction = 6,
         AttackCoin = 7,
+        CoinGainSummon = 8,
     }
 
-    public int[] PassiveSkillIdxList = {(int)PassiveSkillType.DefenseReduction , (int)PassiveSkillType.AttackPowerIncrease ,
-        (int)PassiveSkillType.MoveSpeedReduction , (int)PassiveSkillType.CoinGainSummon };
 
-    public void AddPassiveSkill(int unitidx)
+    public int[] PassiveSkillIdxList = {(int)SkillType.DefenseReduction , (int)SkillType.AttackPowerIncrease ,
+        (int)SkillType.MoveSpeedReduction , (int)SkillType.CoinGainSummon };
+
+    public void AddPassiveSkill(int unitidx ,int skillidx , int skillvalue)
     {
-        var td = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(unitidx);
-
-        if(td != null)
-        {
-            foreach(var skillidx in td.unit_skill)
-            {
-                var skilltd = Tables.Instance.GetTable<PlayerSkillInfo>().GetData(skillidx);
-
-                if(skilltd != null && PassiveSkillIdxList.Contains(skillidx))
-                {
-                    GameRoot.Instance.UserData.CurMode.PassiveSkillDatas.Add(new PassiveSkillData(skillidx, td.unit_skil_value, unitidx));
-                }
-            }
-        }
+        GameRoot.Instance.UserData.CurMode.PassiveSkillDatas.Add(new PassiveSkillData(skillidx, skillvalue, unitidx));
     }
 
 

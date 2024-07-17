@@ -16,12 +16,30 @@ public class InGameUnitBase : MonoBehaviour
 
 
     [System.Serializable]
+    public class UnitActiveSkillInfo
+    {
+        public int UnitSkillIdx;
+        public int UnitSkillRatio;
+        public int UnitSkillValue;
+
+
+        public UnitActiveSkillInfo(int unitskillidx , int unitskillratio , int unitskillvalue)
+        {
+            UnitSkillIdx = unitskillidx;
+            UnitSkillRatio = unitskillratio;
+            UnitSkillValue = unitskillvalue;
+        }
+    }
+
+
+    [System.Serializable]
     public class Info
     {
         public float AttackRange;
         public int Attack;
         public float criticalChance;
         public float AttackSpeed;
+        public List<UnitActiveSkillInfo> UnitSkillInfoList = new List<UnitActiveSkillInfo>();
     }
 
     [SerializeField]
@@ -100,8 +118,6 @@ public class InGameUnitBase : MonoBehaviour
             var finddata = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == UpgradeIdx);
 
             finddata.LevelProperty.Subscribe(x => { SetInfo(); }).AddTo(disposables);
-
-            GameRoot.Instance.UnitSkillSystem.AddPassiveSkill(unitidx);
         }
     }
 
@@ -128,6 +144,34 @@ public class InGameUnitBase : MonoBehaviour
             info.Attack = td.attack * GameRoot.Instance.UnitUpgradeSystem.GetUgpradeValue(UpgradeIdx);
             info.criticalChance = td.criticalchance;
             info.AttackSpeed = td.attackspeed / 100f;
+
+
+            info.UnitSkillInfoList.Clear();
+
+
+            for(int i = 0; i < td.unit_skill.Count; ++i)
+            {
+                switch(td.unit_skill[i])
+                {
+                    case (int)UnitSkillSystem.SkillType.Slow:
+                    case (int)UnitSkillSystem.SkillType.Sturn:
+                    case (int)UnitSkillSystem.SkillType.AttackSkill:
+                        {
+                            var newskill = new UnitActiveSkillInfo(td.unit_skill[i], td.unit_skil_percent[i], td.unit_skil_value[i]);
+                            info.UnitSkillInfoList.Add(newskill);
+                        }
+                        break;
+                    case (int)UnitSkillSystem.SkillType.DefenseReduction:
+                    case (int)UnitSkillSystem.SkillType.AttackPowerIncrease:
+                    case (int)UnitSkillSystem.SkillType.MoveSpeedReduction:
+                    case (int)UnitSkillSystem.SkillType.AttackCoin:
+                    case (int)UnitSkillSystem.SkillType.CoinGainSummon:
+                        {
+                            GameRoot.Instance.UnitSkillSystem.AddPassiveSkill(td.unit_idx, td.unit_skill[i], td.unit_skil_value[i]);
+                        }
+                        break;
+                }
+            }
         }
         }
 
@@ -156,8 +200,18 @@ public class InGameUnitBase : MonoBehaviour
     public void Attack(InGameEnemyBase enemy , int damage)
     {
         ChangeState(State.Attack);
+
+        for(int i = 0; i < info.UnitSkillInfoList.Count; ++i)
+        {
+            var isskillon = SkillProbability(info.UnitSkillInfoList[i].UnitSkillRatio);
+
+            if(isskillon)
+            {
+                enemy.DebuffDamage((InGameEnemyBase.DebuffType)info.UnitSkillInfoList[i].UnitSkillIdx, info.UnitSkillInfoList[i].UnitSkillValue, info.UnitSkillInfoList[i].UnitSkillValue / 10);
+            }
+        }
+
         enemy.Damage(damage);
-        Battle.SetDamageUI(enemy.GetHpTr, damage);
     }
 
     public void DeathUnit()

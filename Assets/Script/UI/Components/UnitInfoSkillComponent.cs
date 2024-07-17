@@ -78,7 +78,7 @@ public class UnitInfoSkillComponent : MonoBehaviour
         {
             SkillNameText.text = Tables.Instance.GetTable<Localize>().GetString(td.desc_name);
 
-            var percennt = (float)unitinfotd.unit_skil_percent / 100f;
+            var indexs = unitinfotd.unit_skill.IndexOf(CurSelectSkillIdx);
 
             switch (td.skill_idx)
             {
@@ -89,7 +89,7 @@ public class UnitInfoSkillComponent : MonoBehaviour
                 case 5:
                 case 6:
                     {
-                        SkillDescText.text = Tables.Instance.GetTable<Localize>().GetFormat($"skill_{td.skill_idx}_desc",percennt, unitinfotd.unit_skil_value);
+                        SkillDescText.text = Tables.Instance.GetTable<Localize>().GetFormat($"skill_{td.skill_idx}_desc",unitinfotd.unit_skil_percent[indexs], unitinfotd.unit_skil_value[indexs]);
                     }
                     break;
                 case 7:
@@ -98,7 +98,7 @@ public class UnitInfoSkillComponent : MonoBehaviour
                 case 10:
                 case 11:
                     {
-                        SkillDescText.text = Tables.Instance.GetTable<Localize>().GetFormat($"skill_{td.skill_idx}_desc", unitinfotd.unit_skil_value);
+                        SkillDescText.text = Tables.Instance.GetTable<Localize>().GetFormat($"skill_{td.skill_idx}_desc", unitinfotd.unit_skil_value[indexs]);
                     }
                     break;
             }

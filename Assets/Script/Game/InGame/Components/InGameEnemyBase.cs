@@ -12,6 +12,29 @@ public class InGameEnemyBase : MonoBehaviour
         Dead,
     }
 
+    public enum DebuffType
+    {
+        Damage = 1,
+        Sturn,
+        Slow,
+    }
+
+    [System.Serializable]
+    public class DebuffInfo
+    {
+        public DebuffType Type;
+        public int Time;
+        public int Value;
+
+        public DebuffInfo(DebuffType type , int value , int time)
+        {
+            Type = type;
+            Value = value;
+            Time = time;
+        }
+    }
+
+
 
     [SerializeField]
     protected Animator Anim;
@@ -29,6 +52,8 @@ public class InGameEnemyBase : MonoBehaviour
 
     private State CurState;
 
+    private List<DebuffInfo> DebuffList = new List<DebuffInfo>();
+
     public Transform GetHpTr { get { return HpTr; } }
 
     public bool IsDeath { get { return CurState == State.Dead; } }
@@ -45,6 +70,8 @@ public class InGameEnemyBase : MonoBehaviour
 
     private float ticketdeltime = 0f;
 
+    private float debuffdeltatime = 0f;
+
     [HideInInspector]
     public InGameBattle Battle;
 
@@ -52,6 +79,8 @@ public class InGameEnemyBase : MonoBehaviour
 
     public void Set(int unitidx , InGameBattle battle)
     {
+        DebuffList.Clear();
+
         UnitIdx = unitidx;
 
         var td = Tables.Instance.GetTable<EnemyInfo>().GetData(UnitIdx);
@@ -74,6 +103,8 @@ public class InGameEnemyBase : MonoBehaviour
             Battle = battle;
 
             Target = Battle.GetSpawnTr(MoveSpawnCount);
+
+            SetInfo();
         }
 
         SetState(State.Move);
@@ -113,6 +144,25 @@ public class InGameEnemyBase : MonoBehaviour
         }
     }
 
+    public void SetInfo()
+    {
+        var td = Tables.Instance.GetTable<EnemyInfo>().GetData(UnitIdx);
+
+        var movespeed = (float)td.movespeed / 100f;
+
+        var slowdata = DebuffList.Find(x => x.Type == DebuffType.Slow);
+
+        var slowvalue = slowdata == null ? 0 : slowdata.Value;
+
+        var slowdebuffvalue = (movespeed * slowvalue) / 100;
+
+        MoveSpeed = movespeed - (movespeed * slowdebuffvalue);
+
+
+
+
+    }
+
     public void Clear()
     {
         if (HpUI != null)
@@ -142,10 +192,40 @@ public class InGameEnemyBase : MonoBehaviour
         CurState = state;
     }
 
+    public void DebuffDamage(DebuffType debuff , int value , int time)
+    {
+        switch(debuff)
+        {
+            case DebuffType.Damage:
+                {
+                    Damage(value);
+                }
+                break;
+            case DebuffType.Slow:
+            case DebuffType.Sturn:
+                {
+                    var finddata = DebuffList.Find(x => x.Type == debuff);
+
+                    if(finddata != null)
+                    {
+                        finddata.Time = time;
+                    }
+                    else
+                    {
+                        var adddebuff = new DebuffInfo(debuff, value, time);
+                        DebuffList.Add(adddebuff);
+                    }
+                }
+                break;
+
+        }
+    }
+
     public void Damage(int damage)
     {
         if (Hp <= 0) return;
         if (IsDeath) return;
+
 
         Hp -= damage;
 
@@ -159,9 +239,10 @@ public class InGameEnemyBase : MonoBehaviour
         {
             Dead();
         }
+
+        Battle.SetDamageUI(GetHpTr, damage);
     }
 
-    
 
     public void Dead()
     {
@@ -229,6 +310,23 @@ public class InGameEnemyBase : MonoBehaviour
 
     void Update()
     {
+        debuffdeltatime += Time.deltaTime;
+
+        if(debuffdeltatime >= 1f)
+        {
+            debuffdeltatime = 0f;
+
+            foreach(var debuff in DebuffList)
+            {
+                debuff.Time -= 1;
+            }
+
+
+            DebuffList.RemoveAll(debuff => debuff.Time <= 0);
+
+            SetInfo();
+
+        }
         if(UnitIdx == GameRoot.Instance.InGameSystem.TicketEnemyIdx && CurState != State.Dead)
         {
             if(TimeUI != null)
@@ -248,7 +346,7 @@ public class InGameEnemyBase : MonoBehaviour
             }
         }
 
-        if (Target != null)
+        if (Target != null && DebuffList.Find(x=> x.Type == DebuffType.Sturn) == null)
         {
             // 현재 위치에서 목표 위치까지의 방향 벡터 계산
             Vector3 direction = Target.SpawnTr.position - transform.position;
