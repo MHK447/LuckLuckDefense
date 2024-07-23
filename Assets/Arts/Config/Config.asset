@@ -171,3 +171,4 @@ MonoBehaviour:
   PlanetAtlas: {fileID: 0}
   IconImgAtlas: {fileID: 0}
   UnitImgAtlas: {fileID: 4343727234628468602, guid: e4eeb7b3b02ad46fea1bb8d4d1181edf, type: 2}
+  SkillAtlas: {fileID: 4343727234628468602, guid: 1c93609e065d34362968220ce99920c7, type: 2}

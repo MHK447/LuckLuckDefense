@@ -214,6 +214,20 @@ MonoBehaviour:
   - skill_6_desc
   - skill_7_desc
   - skill_8_desc
+  - card_1_name
+  - card_2_name
+  - card_3_name
+  - card_4_name
+  - card_5_name
+  - card_6_name
+  - card_7_name
+  - card_8_name
+  - card_9_name
+  - card_10_name
+  - card_11_name
+  - card_12_name
+  - card_13_name
+  - card_14_name
   mSecondKey: []
   mDataList:
   - _idx: str_stage_select_num
@@ -7073,6 +7087,483 @@ MonoBehaviour:
   - _idx: skill_8_desc
     _ko: "\uC18C\uD658 \uC2DC \uCF54\uC778\uC744  <color=#F1FF00>{0}</color>\uD68D\uB4DD
       \uD569\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_1_name
+    _ko: "\uACF5\uACA9\uC18D\uB3C4"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_2_name
+    _ko: "\uCE58\uBA85\uD0C0 \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_3_name
+    _ko: "\uCE58\uBA85\uD0C0 \uD655\uB960"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_4_name
+    _ko: "\uD53C\uD574 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_5_name
+    _ko: "\uC2A4\uD0AC \uBC1C\uC0DD \uD655\uB960 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_6_name
+    _ko: "\uAE30\uC808 \uC9C0\uC18D\uC2DC\uAC04 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_7_name
+    _ko: "\uBCF4\uC2A4\uC5D0\uAC8C \uAC00\uD558\uB294 \uD53C\uD574 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_8_name
+    _ko: "\uC6E8\uC774\uBE0C\uC758 \uBCF4\uC720\uD55C \uCF54\uC778\uC758 \uAC1C\uC218
+      \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_9_name
+    _ko: "\uC5D0\uD53D \uB3C4\uBC15 \uD655\uB960 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_10_name
+    _ko: "\uBAA8\uB4E0 \uC801\uC5D0\uAC8C \uB454\uD654\uD6A8\uACFC \uC801\uC6A9"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_11_name
+    _ko: "\uC720\uB2DB \uCC98\uCE58 \uC2DC \uCF54\uC778 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_12_name
+    _ko: "\uCD5C\uB300 \uBCF4\uC720 \uAC00\uB2A5\uD55C \uC720\uB2DB \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_13_name
+    _ko: "\uB3C4\uBC15 \uC2E4\uD328 \uC2DC \uBE44\uC6A9 \uBCF5\uAD6C \uD655\uB960"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: card_14_name
+    _ko: "\uC720\uB2DB \uB3C4\uBC15 \uD655\uB960 \uC99D\uAC00"
     _en: 
     _ja: 
     _es: 
