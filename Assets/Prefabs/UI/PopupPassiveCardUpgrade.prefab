@@ -4981,3 +4981,23 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8203764367356185955, guid: dc6a022626dbf8842a3bfa1e1c54361f, type: 3}
   m_PrefabInstance: {fileID: 8637050445114102019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &433849302631193697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8203764367356185954, guid: dc6a022626dbf8842a3bfa1e1c54361f, type: 3}
+  m_PrefabInstance: {fileID: 8637050445114102019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2566963970475398134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433849302631193697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f633526ed0a949fc8fd3aa3f896f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillImg: {fileID: 0}
+  SkillNameText: {fileID: 0}
+  LevelText: {fileID: 0}

@@ -27,7 +27,7 @@ public class PassiveCardComponent : MonoBehaviour
 
         if(td != null)
         {
-            
+            //SkillImg.sprite = Config.Instance.GetSkillAtlas()
 
         }
     }
