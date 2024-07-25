@@ -14,8 +14,7 @@ public class PopupPassiveCardUpgrade : UIBase
     {
         var tdlist = Tables.Instance.GetTable<SkillCardInfo>().DataList;
 
-
-        for(int i = 0; i < PassiveCardComponentList.Count; ++i)
+        for(int i = 0; i < tdlist.Count; ++i)
         {
             PassiveCardComponentList[i].Set(tdlist[i].skill_idx);
         }

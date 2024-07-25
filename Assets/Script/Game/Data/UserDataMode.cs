@@ -21,6 +21,7 @@ public interface IUserDataMode
 	public List<UnitCardData> UnitCardDatas { get; set; }
 	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; }
 	public List<PassiveSkillData> PassiveSkillDatas { get; set; }
+	public List<SkillCardData> SkillCardDatas { get; set; }
 }
 
 public class UserDataMain : IUserDataMode
@@ -39,6 +40,7 @@ public class UserDataMain : IUserDataMode
 	public List<UnitCardData> UnitCardDatas { get; set; } = new List<UnitCardData>();
 	public List<InGameUnitUpgradeData> UnitUpgradeDatas { get; set; } = new List<InGameUnitUpgradeData>();
 	public List<PassiveSkillData> PassiveSkillDatas { get; set; } = new List<PassiveSkillData>();
+	public List<SkillCardData> SkillCardDatas { get; set; } = new List<SkillCardData>();
 }
 
 public class UserDataEvent : UserDataMain

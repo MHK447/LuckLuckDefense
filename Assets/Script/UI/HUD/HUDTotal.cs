@@ -52,6 +52,9 @@ public class HUDTotal : UIBase
             case LobbyTab.Shop:
                 break;
             case LobbyTab.Card:
+                {
+                    GameRoot.Instance.UISystem.OpenUI<PopupPassiveCardUpgrade>(popup => popup.Init());
+                }
                 break;
             case LobbyTab.Fight:
                 GameRoot.Instance.UISystem.OpenUI<PageLobbyBattle>();

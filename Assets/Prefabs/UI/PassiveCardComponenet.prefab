@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8203764367356185955}
   - component: {fileID: 8203764367356185957}
   - component: {fileID: 8203764367356185956}
+  - component: {fileID: 8090663530640928981}
   m_Layer: 5
   m_Name: PassiveCardComponenet
   m_TagString: Untagged
@@ -155,6 +156,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8090663530640928981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8203764367356185954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f633526ed0a949fc8fd3aa3f896f582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillImg: {fileID: 8203764369330767720}
+  SkillNameText: {fileID: 8203764367973081256}
+  LevelText: {fileID: 8203764367737716593}
+  LockObj: {fileID: 8203764368424921191}
 --- !u!1 &8203764367364324520
 GameObject:
   m_ObjectHideFlags: 0

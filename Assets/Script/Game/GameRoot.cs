@@ -32,7 +32,7 @@ public class GameRoot : Singleton<GameRoot>
 	public InGameBattleSystem InGameBattleSystem { get; private set; } = new InGameBattleSystem();
 	public InGameUnitUpgradeSystem UnitUpgradeSystem { get; private set; } = new InGameUnitUpgradeSystem();
 	public UnitSkillSystem UnitSkillSystem { get; private set; } = new UnitSkillSystem();
-
+	public SkillCardSystem SkillCardSystem { get; private set; } = new SkillCardSystem();
 
 
 	public GameObject UILock;

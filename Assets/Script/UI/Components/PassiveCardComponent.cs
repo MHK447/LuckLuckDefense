@@ -16,6 +16,8 @@ public class PassiveCardComponent : MonoBehaviour
     [SerializeField]
     private Text LevelText;
 
+    [SerializeField]
+    private GameObject LockObj;
 
     private int SkillIdx = 0;
 
@@ -27,7 +29,13 @@ public class PassiveCardComponent : MonoBehaviour
 
         if(td != null)
         {
-            //SkillImg.sprite = Config.Instance.GetSkillAtlas()
+            SkillImg.sprite = Config.Instance.GetSkillAtlas(td.image);
+            SkillNameText.text = Tables.Instance.GetTable<Localize>().GetString(td.desc_name);
+            var finddata = GameRoot.Instance.SkillCardSystem.FindSkillCardData(skillidx);
+
+            ProjectUtility.SetActiveCheck(LockObj, finddata == null);
+
+            LevelText.text = finddata == null ? "1" : finddata.Level.ToString();
 
         }
     }

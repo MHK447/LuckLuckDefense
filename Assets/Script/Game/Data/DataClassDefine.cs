@@ -138,6 +138,18 @@ public class LabUpgradeData : IClientData
 	}
 }
 
+public class SkillCardData : IClientData
+{
+	public int SkillIdx = 0;
+	public int Level = 0;
+
+	public SkillCardData(int skillidx , int level)
+    {
+		SkillIdx = skillidx;
+		Level = level;
+    }
+}
+
 
 public class PlanetData
 {

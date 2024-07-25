@@ -185,6 +185,10 @@ MonoBehaviour:
     m_Address: UI/Popup/PopupUnitUpgrade
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5f779285b0c79184994bb5b7cf08f747
+    m_Address: UI/Popup/PopupPassiveCardUpgrade
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
