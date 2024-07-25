@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BanpoFri;
+using UnityEngine.UI;
 
 
 [UIPath("UI/Popup/PopupPassiveCardUpgrade")]
@@ -9,6 +10,40 @@ public class PopupPassiveCardUpgrade : UIBase
 {
     [SerializeField]
     private List<PassiveCardComponent> PassiveCardComponentList = new List<PassiveCardComponent>();
+
+    [SerializeField]
+    private Button CardUpgradeBtn;
+
+    [SerializeField]
+    private Text CardCostText;
+
+    private int card_upgrade_cost = 0;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        CardUpgradeBtn.onClick.AddListener(OnClickUpgrade);
+
+        card_upgrade_cost = Tables.Instance.GetTable<Define>().GetData("card_upgrade_cost").value;
+
+
+    }
+
+
+    public void OnClickUpgrade()
+    {
+        if(card_upgrade_cost >= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value)
+        {
+            var cardidx = GameRoot.Instance.SkillCardSystem.GachaUnitCard();
+
+            GameRoot.Instance.SkillCardSystem.SkillCardLevelUp(cardidx);
+
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, -GameRoot.Instance.UserData.CurMode.EnergyMoney.Value);
+        }
+    }
+    
+
 
     public void Init()
     {
@@ -19,7 +54,9 @@ public class PopupPassiveCardUpgrade : UIBase
             PassiveCardComponentList[i].Set(tdlist[i].skill_idx);
         }
 
+
+        
+
+
     }
-
-
 }
