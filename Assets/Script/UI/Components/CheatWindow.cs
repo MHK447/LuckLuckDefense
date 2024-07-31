@@ -104,6 +104,23 @@ public class CheatWindow : MonoBehaviour
     }
 
 
+    public void SetCardData()
+    {
+        if (string.IsNullOrEmpty(inputField.text))
+        {
+            TpLog.LogError("input field empty!");
+            return;
+        }
+        BigInteger convert;
+        if (!BigInteger.TryParse(inputField.text, out convert))
+        {
+            TpLog.LogError("input field string don't convert number!");
+            return;
+        }
+        inputField.text = "";
+        GameRoot.Instance.SkillCardSystem.SkillCardLevelUp((int)convert);
+    }
+
     public void SetTicket()
     {
         if (string.IsNullOrEmpty(inputField.text))

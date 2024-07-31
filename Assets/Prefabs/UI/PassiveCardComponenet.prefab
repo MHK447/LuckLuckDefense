@@ -171,7 +171,7 @@ MonoBehaviour:
   SkillImg: {fileID: 8203764369330767720}
   SkillNameText: {fileID: 8203764367973081256}
   LevelText: {fileID: 8203764367737716593}
-  LockObj: {fileID: 8203764368424921191}
+  LockObj: {fileID: 8203764368906107282}
 --- !u!1 &8203764367364324520
 GameObject:
   m_ObjectHideFlags: 0
