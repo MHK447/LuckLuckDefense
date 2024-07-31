@@ -25,6 +25,11 @@ MonoBehaviour:
   - enemy_wave_increase_hp
   - boss_gacha_coin_base
   - boss_gacha_coin_increaes
+  - normalrare_base_cost
+  - epic_base_cost
+  - legendmythic_upgrade_cost
+  - summon_percent_base
+  - card_upgrade_cost
   mSecondKey: []
   mDataList:
   - _index: end_unit_count
@@ -51,3 +56,13 @@ MonoBehaviour:
     _value: 2
   - _index: boss_gacha_coin_increaes
     _value: 2
+  - _index: normalrare_base_cost
+    _value: 30
+  - _index: epic_base_cost
+    _value: 50
+  - _index: legendmythic_upgrade_cost
+    _value: 2
+  - _index: summon_percent_base
+    _value: 100
+  - _index: card_upgrade_cost
+    _value: 100
