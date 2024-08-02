@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BanpoFri;
 using UnityEngine.UI;
+using DG.Tweening;
 
 
 public class PassiveCardComponent : MonoBehaviour
@@ -19,7 +20,12 @@ public class PassiveCardComponent : MonoBehaviour
     [SerializeField]
     private GameObject LockObj;
 
+    [SerializeField]
+    private Text SkillValueText;
+
     private int SkillIdx = 0;
+
+    private Vector3 InitScale; 
 
     public void Set(int skillidx)
     {
@@ -37,6 +43,20 @@ public class PassiveCardComponent : MonoBehaviour
 
             LevelText.text = finddata == null ? "1" : finddata.Level.ToString();
 
+            InitScale = this.transform.localScale;
+
+            SkillValueText.text = Tables.Instance.GetTable<Localize>().GetFormat(td.sign_desc, GameRoot.Instance.SkillCardSystem.GetBuffValue(skillidx, false));
         }
+    }
+
+
+    public void WeaponDireciton()
+    {
+        this.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f) // 0.5초 동안 1.5배로 스케일 업
+                    .OnComplete(() =>
+                    {
+                        this.transform.DOScale(InitScale, 0.5f); // 0.5초 동안 원래 스케일로 돌아옴
+                      });
+
     }
 }

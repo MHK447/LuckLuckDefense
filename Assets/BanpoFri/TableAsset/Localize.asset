@@ -228,6 +228,8 @@ MonoBehaviour:
   - card_12_name
   - card_13_name
   - card_14_name
+  - skill_sign_desc_1
+  - skill_sign_desc_2
   mSecondKey: []
   mDataList:
   - _idx: str_stage_select_num
@@ -7564,6 +7566,74 @@ MonoBehaviour:
     _ua: 
   - _idx: card_14_name
     _ko: "\uC720\uB2DB \uB3C4\uBC15 \uD655\uB960 \uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: skill_sign_desc_1
+    _ko: +{0}
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: skill_sign_desc_2
+    _ko: '{0}%'
     _en: 
     _ja: 
     _es: 

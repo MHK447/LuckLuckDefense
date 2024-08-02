@@ -25,4 +25,19 @@ public class PageLobbyBattle : UIBase
     }
 
 
+
+    public override void CustomSortingOrder()
+    {
+        base.CustomSortingOrder();
+
+        transform.GetComponent<Canvas>().sortingOrder = (int)UIBase.HUDTypeTopSorting.POPUPTOP;
+    }
+
+
+    public void SortingRollBack()
+    {
+        transform.GetComponent<Canvas>().sortingOrder = UISystem.START_PAGE_SORTING_NUMBER;
+    }
+
+
 }

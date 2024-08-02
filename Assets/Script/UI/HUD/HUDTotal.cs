@@ -47,17 +47,38 @@ public class HUDTotal : UIBase
 
     public void SelectTab(LobbyTab tab)
     {
+
+        var passivecardupgrade = GameRoot.Instance.UISystem.GetUI<PopupPassiveCardUpgrade>();
+
+        if (passivecardupgrade != null)
+        {
+            passivecardupgrade.SortingRollBack();
+        }
+
+
+        var lobbybattle = GameRoot.Instance.UISystem.GetUI<PageLobbyBattle>();
+
+        if (lobbybattle != null)
+        {
+            lobbybattle.SortingRollBack();
+        }
+        
         switch (tab)
         {
             case LobbyTab.Shop:
                 break;
             case LobbyTab.Card:
                 {
-                    GameRoot.Instance.UISystem.OpenUI<PopupPassiveCardUpgrade>(popup => popup.Init());
+                    GameRoot.Instance.UISystem.OpenUI<PopupPassiveCardUpgrade>(popup => {
+                        popup.Init();
+                        popup.CustomSortingOrder();
+                    });
                 }
                 break;
             case LobbyTab.Fight:
-                GameRoot.Instance.UISystem.OpenUI<PageLobbyBattle>();
+                GameRoot.Instance.UISystem.OpenUI<PageLobbyBattle>(popup => {
+                    popup.CustomSortingOrder();
+                });
                 break;
             case LobbyTab.Upgrade:
                 break;

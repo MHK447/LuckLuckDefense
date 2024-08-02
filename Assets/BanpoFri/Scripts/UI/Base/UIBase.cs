@@ -105,6 +105,14 @@ namespace BanpoFri
             OnlyRight,
         }
 
+        [SerializeField]
+        public enum HUDTypeTopSorting
+        {
+            PAGETOP = 101,
+            POPUPTOP = 11000,
+
+        }
+
         [Serializable]
         public class SortingOrder
         {

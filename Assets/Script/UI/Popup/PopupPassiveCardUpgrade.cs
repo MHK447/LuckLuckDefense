@@ -26,8 +26,6 @@ public class PopupPassiveCardUpgrade : UIBase
         CardUpgradeBtn.onClick.AddListener(OnClickUpgrade);
 
         card_upgrade_cost = Tables.Instance.GetTable<Define>().GetData("card_upgrade_cost").value;
-
-
     }
 
 
@@ -42,7 +40,22 @@ public class PopupPassiveCardUpgrade : UIBase
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, -GameRoot.Instance.UserData.CurMode.EnergyMoney.Value);
         }
     }
-    
+
+
+    public void SortingRollBack()
+    {
+        transform.GetComponent<Canvas>().sortingOrder = UISystem.START_PAGE_SORTING_NUMBER;
+    }
+
+
+
+
+    public override void CustomSortingOrder()
+    {
+        base.CustomSortingOrder();
+
+        transform.GetComponent<Canvas>().sortingOrder = (int)UIBase.HUDTypeTopSorting.POPUPTOP;
+    }
 
 
     public void Init()
@@ -53,10 +66,5 @@ public class PopupPassiveCardUpgrade : UIBase
         {
             PassiveCardComponentList[i].Set(tdlist[i].skill_idx);
         }
-
-
-        
-
-
     }
 }
