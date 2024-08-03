@@ -82,6 +82,8 @@ public class PopupIngameUpgrade : UIBase
 
     private int BossUnitTime = 0;
 
+    private int UnitCount = 0; 
+
     protected override void Awake()
     {
         base.Awake();
@@ -118,8 +120,12 @@ public class PopupIngameUpgrade : UIBase
 
         Battle = battle;
 
+        var unitcountbuff = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.UNITADDINCREASEMAX, false);
+
+        UnitCount = GameRoot.Instance.InGameBattleSystem.unit_max_count + (int)unitcountbuff;
+
         GameRoot.Instance.InGameBattleSystem.CurUnitCountProperty.Subscribe(x => {
-            UnitCountText.text = $"{x}/{GameRoot.Instance.InGameBattleSystem.unit_max_count}";
+            UnitCountText.text = $"{x}/{UnitCount}";
         }).AddTo(disposables);
 
         GameRoot.Instance.UserData.CurMode.GachaCoin.Subscribe(x => {

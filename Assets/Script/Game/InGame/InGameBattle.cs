@@ -75,6 +75,11 @@ public class InGameBattle : MonoBehaviour
             WaveCoolTime = td.spawn_cooltime;
 
             UnitIdx = td.unit_idx;
+
+
+            var coinbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.WAVEADDCOIN, false);
+
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, (int)coinbuffvalue);
         }
 
     }

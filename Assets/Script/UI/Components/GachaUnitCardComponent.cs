@@ -135,7 +135,32 @@ public class GachaUnitCardComponent : MonoBehaviour
             ProjectUtility.SetActiveCheck(NoneSelectObj, false);
             ProjectUtility.SetActiveCheck(GradeCrownObj, true);
 
-            Ratio = td.probability_value / 10f;
+
+            float buffvalue = 0f;
+
+
+            switch(grade)
+            {
+                case 1:
+                    {
+                        buffvalue = (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.RAREGAMBLEINCREASE);
+                    }
+                    break;
+                case 2:
+                    {
+                        buffvalue = (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.EPICGAMBLEINCREASE);
+                    }
+                    break;
+                case 3:
+                    {
+                        buffvalue = (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.LEGENDGAMBLEINCREASE);
+                    }
+                    break;
+            }
+
+            var probabilityvalue = td.probability_value / 10f;
+
+            Ratio = probabilityvalue * buffvalue;
             CostValueText.text = td.cost_value.ToString();
             ProbabilityText.text = $"{Ratio}%";
 

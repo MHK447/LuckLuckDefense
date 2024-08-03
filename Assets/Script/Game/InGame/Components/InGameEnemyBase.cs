@@ -77,6 +77,8 @@ public class InGameEnemyBase : MonoBehaviour
 
     private InGameBattle.SpawnTrPos Target;
 
+    private bool IsBoss = false;
+
     public void Set(int unitidx , InGameBattle battle)
     {
         DebuffList.Clear();
@@ -97,8 +99,17 @@ public class InGameEnemyBase : MonoBehaviour
 
             var increase = curwaveidx < 10 ? 1 : (curwaveidx / 10) * 2;
 
+            IsBoss = td.unit_idx > 1000;
+
             Hp = (int)value * increase;
-            MoveSpeed = (float)td.movespeed / 100f;
+
+            var movespeedbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.SLOWENEMY,false);
+
+            var movespeedvalue = (float)td.movespeed / 100f;
+
+            var decreasebuffvalue = (movespeedvalue * movespeedbuffvalue) / 100f;
+
+            MoveSpeed = movespeedvalue - (int)decreasebuffvalue;
             MoveSpawnCount = 1;
             Battle = battle;
 
@@ -227,6 +238,15 @@ public class InGameEnemyBase : MonoBehaviour
         if (IsDeath) return;
 
 
+        if(IsBoss)
+        {
+            var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.BOSSDAMAGE);
+
+            double damagebuffvalue = damage * buffvalue;
+
+            damage = (int)damagebuffvalue;
+        }
+
         Hp -= damage;
 
 
@@ -258,8 +278,13 @@ public class InGameEnemyBase : MonoBehaviour
         if (UnitIdx == GameRoot.Instance.InGameSystem.TicketEnemyIdx)
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.GachaCoin, 2);
         else
-            GameRoot.Instance.UserData.CurMode.EnergyMoney.Value += 1;
+        {
+            var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.ENEMYDEADCOINUP);
 
+            var rewardvalue = 1 + (int)buffvalue;
+
+            GameRoot.Instance.UserData.CurMode.EnergyMoney.Value += rewardvalue;
+        }
 
         //GameRoot.Instance.EffectSystem.MultiPlay<IconTextEffect>(HpTr.position, effect =>
         //{

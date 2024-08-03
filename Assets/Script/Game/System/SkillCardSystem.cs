@@ -4,12 +4,31 @@ using UnityEngine;
 using BanpoFri;
 using System.Linq;
 
+public enum SKillCardIdx
+{
+    ATTACKSPEED = 1,
+    CRITICALDAMAGE,
+    CRITICALPERECENT,
+    DAMAGEINCREASE,
+    SKILLPERCENT,
+    WAVEADDCOIN,
+    BOSSDAMAGE,
+    EPICGAMBLEINCREASE,
+    SLOWENEMY,
+    ENEMYDEADCOINUP,
+    UNITADDINCREASEMAX,
+    RAREGAMBLEINCREASE,
+    LEGENDGAMBLEINCREASE,
+}
+
 public class SkillCardSystem 
 {
 
+    public static int CrtiticalDamage = 2;
+
     public SkillCardData FindSkillCardData(int skillidx)
     {
-        return GameRoot.Instance.UserData.CurMode.SkillCardDatas.Find(x => x.SkillIdx == skillidx);
+        return GameRoot.Instance.UserData.CurMode.SkillCardDatas.ToList().Find(x => x.SkillIdx == skillidx);
     }
 
 

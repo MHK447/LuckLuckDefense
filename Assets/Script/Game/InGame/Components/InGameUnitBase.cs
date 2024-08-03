@@ -36,7 +36,7 @@ public class InGameUnitBase : MonoBehaviour
     public class Info
     {
         public float AttackRange;
-        public int Attack;
+        public double Attack;
         public float criticalChance;
         public float AttackSpeed;
         public List<UnitActiveSkillInfo> UnitSkillInfoList = new List<UnitActiveSkillInfo>();
@@ -141,9 +141,19 @@ public class InGameUnitBase : MonoBehaviour
 
             info.AttackRange = td.attackrange / 100f;
 
-            info.Attack = td.attack * GameRoot.Instance.UnitUpgradeSystem.GetUgpradeValue(UpgradeIdx);
-            info.criticalChance = td.criticalchance;
-            info.AttackSpeed = td.attackspeed / 100f;
+            info.Attack = td.attack * GameRoot.Instance.UnitUpgradeSystem.GetUgpradeValue(UpgradeIdx) * (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.DAMAGEINCREASE);
+
+            var criticalbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALPERECENT);
+
+            info.criticalChance = (float)td.criticalchance * (float)criticalbuffvalue * (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.SKILLPERCENT);
+            
+            var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.ATTACKSPEED);
+
+            var attackspeedvalue = td.attackspeed / 100f;
+
+
+            info.AttackSpeed = attackspeedvalue * (float)buffvalue;
+           
 
 
             info.UnitSkillInfoList.Clear();
@@ -197,7 +207,7 @@ public class InGameUnitBase : MonoBehaviour
         ProjectUtility.SetActiveCheck(attackRangeIndicator.gameObject, isactive);
     }
 
-    public void Attack(InGameEnemyBase enemy , int damage)
+    public void Attack(InGameEnemyBase enemy , double damage)
     {
         ChangeState(State.Attack);
 
@@ -211,7 +221,18 @@ public class InGameUnitBase : MonoBehaviour
             }
         }
 
-        enemy.Damage(damage);
+
+        if(IsCriticalHit())
+        {
+            var criticaldamagebuff = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALDAMAGE);
+
+            var crticialdamage = criticaldamagebuff * SkillCardSystem.CrtiticalDamage;
+
+            damage = damage * crticialdamage;
+        }
+
+
+        enemy.Damage((int)damage);
     }
 
     public void DeathUnit()

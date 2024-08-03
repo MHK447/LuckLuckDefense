@@ -4,6 +4,7 @@ using UnityEngine;
 using BanpoFri;
 using UnityEngine.UI;
 using DG.Tweening;
+using UniRx;
 
 
 public class PassiveCardComponent : MonoBehaviour
@@ -25,7 +26,10 @@ public class PassiveCardComponent : MonoBehaviour
 
     private int SkillIdx = 0;
 
-    private Vector3 InitScale; 
+    private Vector3 InitScale;
+
+
+    private CompositeDisposable disposables = new CompositeDisposable();
 
     public void Set(int skillidx)
     {
@@ -46,6 +50,16 @@ public class PassiveCardComponent : MonoBehaviour
             InitScale = this.transform.localScale;
 
             SkillValueText.text = Tables.Instance.GetTable<Localize>().GetFormat(td.sign_desc, GameRoot.Instance.SkillCardSystem.GetBuffValue(skillidx, false));
+
+            disposables.Clear();
+
+            GameRoot.Instance.UserData.CurMode.SkillCardDatas.ObserveAdd().Subscribe(x => {
+                if(x.Value.SkillIdx == SkillIdx)
+                {
+                    Set(SkillIdx);
+                }
+
+            }).AddTo(disposables);
         }
     }
 
@@ -58,5 +72,17 @@ public class PassiveCardComponent : MonoBehaviour
                         this.transform.DOScale(InitScale, 0.5f); // 0.5초 동안 원래 스케일로 돌아옴
                       });
 
+    }
+
+
+    private void OnDestroy()
+    {
+        disposables.Clear();
+    }
+
+
+    private void OnDisable()
+    {
+        disposables.Clear();
     }
 }
