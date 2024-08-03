@@ -24,7 +24,11 @@ public class PassiveCardComponent : MonoBehaviour
     [SerializeField]
     private Text SkillValueText;
 
+    public GameObject SelectObj;
+
     private int SkillIdx = 0;
+
+    public int GetSkillIdx { get { return SkillIdx; } }
 
     private Vector3 InitScale;
 
@@ -39,6 +43,37 @@ public class PassiveCardComponent : MonoBehaviour
 
         if(td != null)
         {
+            var finddata = GameRoot.Instance.SkillCardSystem.FindSkillCardData(skillidx);
+
+            SkillSet(skillidx);
+            disposables.Clear();
+
+            GameRoot.Instance.UserData.CurMode.SkillCardDatas.ObserveAdd().Subscribe(x => {
+                if(x.Value.SkillIdx == SkillIdx)
+                {
+                    SkillSet(SkillIdx);
+
+                    x.Value.LevelProperty.Subscribe(y => { SkillSet(skillidx); }).AddTo(disposables);
+                }
+
+            }).AddTo(disposables);
+
+
+            if(finddata != null)
+            {
+                finddata.LevelProperty.Subscribe(x => { SkillSet(skillidx); }).AddTo(disposables);
+            }
+
+        }
+    }
+
+
+    public void SkillSet(int skillidx)
+    {
+        var td = Tables.Instance.GetTable<SkillCardInfo>().GetData(SkillIdx);
+
+        if (td != null)
+        {
             SkillImg.sprite = Config.Instance.GetSkillAtlas(td.image);
             SkillNameText.text = Tables.Instance.GetTable<Localize>().GetString(td.desc_name);
             var finddata = GameRoot.Instance.SkillCardSystem.FindSkillCardData(skillidx);
@@ -50,16 +85,6 @@ public class PassiveCardComponent : MonoBehaviour
             InitScale = this.transform.localScale;
 
             SkillValueText.text = Tables.Instance.GetTable<Localize>().GetFormat(td.sign_desc, GameRoot.Instance.SkillCardSystem.GetBuffValue(skillidx, false));
-
-            disposables.Clear();
-
-            GameRoot.Instance.UserData.CurMode.SkillCardDatas.ObserveAdd().Subscribe(x => {
-                if(x.Value.SkillIdx == SkillIdx)
-                {
-                    Set(SkillIdx);
-                }
-
-            }).AddTo(disposables);
         }
     }
 

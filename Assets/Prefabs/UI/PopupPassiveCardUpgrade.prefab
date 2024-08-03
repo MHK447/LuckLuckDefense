@@ -387,6 +387,9 @@ MonoBehaviour:
   - {fileID: 8169967762863473991}
   CardUpgradeBtn: {fileID: 5060199660163995102}
   CardCostText: {fileID: 2200463081188213076}
+  ScrollRect: {fileID: 5079186660060684692}
+  minScale: 0.5
+  maxScale: 1.5
 --- !u!223 &4482726269772681164
 Canvas:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BanpoFri;
 using UnityEngine.UI;
+using DG.Tweening;
 
 
 [UIPath("UI/Popup/PopupPassiveCardUpgrade")]
@@ -17,7 +18,12 @@ public class PopupPassiveCardUpgrade : UIBase
     [SerializeField]
     private Text CardCostText;
 
+    [SerializeField]
+    private ScrollRect ScrollRect = null;
+
     private int card_upgrade_cost = 0;
+
+    private int CardIdx = 0; 
 
     protected override void Awake()
     {
@@ -33,9 +39,9 @@ public class PopupPassiveCardUpgrade : UIBase
     {
         if(card_upgrade_cost >= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value)
         {
-            var cardidx = GameRoot.Instance.SkillCardSystem.GachaUnitCard();
+            CardUpgradeBtn.interactable = false;
 
-            GameRoot.Instance.SkillCardSystem.SkillCardLevelUp(cardidx);
+            StartCoroutine(RandomlyScaleCards());
 
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, -GameRoot.Instance.UserData.CurMode.EnergyMoney.Value);
         }
@@ -47,8 +53,48 @@ public class PopupPassiveCardUpgrade : UIBase
         transform.GetComponent<Canvas>().sortingOrder = UISystem.START_PAGE_SORTING_NUMBER;
     }
 
+    public float minScale = 0.5f;
+    public float maxScale = 1.5f;
+
+    IEnumerator RandomlyScaleCards()
+    {
+
+        float totalTime = 2.0f; // 총 지속 시간
+        float interval = 0.3f; // 활성화/비활성화 간격
+        float elapsedTime = 0f; // 경과 시간
 
 
+        while (elapsedTime < totalTime)
+        {
+            // 랜덤 유닛 선택
+            var randvalue = Random.Range(0, PassiveCardComponentList.Count);
+
+            // 선택된 유닛 활성화
+            ProjectUtility.SetActiveCheck(PassiveCardComponentList[randvalue].SelectObj, true);
+
+
+            yield return new WaitForSeconds(interval); // 0.3초 대기
+
+            // 선택된 유닛 비활성화
+            ProjectUtility.SetActiveCheck(PassiveCardComponentList[randvalue].SelectObj, false);
+            elapsedTime += interval; // 경과 시간 업데이트
+        }
+
+
+        // Select a random card
+        CardIdx = GameRoot.Instance.SkillCardSystem.GachaUnitCard();
+
+        var finddata = PassiveCardComponentList.Find(x => x.GetSkillIdx == CardIdx);
+
+        if (finddata != null)
+        {
+            GameRoot.Instance.StartCoroutine(ScrollRect.FocusOnItemCoroutine(finddata.transform as RectTransform, 1f, ()=> {
+                GameRoot.Instance.SkillCardSystem.SkillCardLevelUp(CardIdx);
+                CardUpgradeBtn.interactable = true;
+            }));
+          
+        }
+    }
 
     public override void CustomSortingOrder()
     {

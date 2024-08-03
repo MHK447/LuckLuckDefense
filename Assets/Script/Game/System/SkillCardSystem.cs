@@ -70,7 +70,7 @@ public class SkillCardSystem
 
         if(finddata != null)
         {
-            finddata.Level += 1;
+            finddata.LevelProperty.Value += 1;
         }
         else
         {

@@ -57,6 +57,17 @@ public partial class UserDataSystem
             mainData.UnitCardDatas.Add(newdata);
         }
 
+
+        mainData.SkillCardDatas.Clear();
+        for (int i = 0; i < flatBufferUserData.SkillcarddatasLength; ++i)
+        {
+            var data = flatBufferUserData.Skillcarddatas(i);
+
+            var newdata = new SkillCardData(data.Value.Skillidx, data.Value.Level);
+
+            mainData.SkillCardDatas.Add(newdata);
+        }
+
     }
 
 

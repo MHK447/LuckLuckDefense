@@ -143,10 +143,14 @@ public class SkillCardData : IClientData
 	public int SkillIdx = 0;
 	public int Level = 0;
 
+	public IReactiveProperty<int> LevelProperty = new ReactiveProperty<int>();
+
 	public SkillCardData(int skillidx , int level)
     {
 		SkillIdx = skillidx;
 		Level = level;
+		LevelProperty.Value = Level;
+		LevelProperty.Subscribe(x => { Level = x; });
     }
 }
 

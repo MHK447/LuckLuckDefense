@@ -134,6 +134,22 @@ public partial class UserDataSystem
 			unitvec = BanpoFri.Data.UserData.CreateUnitcarddatasVector(builder, unitcarddatas);
 
 
+		//skillcarddata
+
+		Offset<BanpoFri.Data.SkillCardData>[] skillcarddatas = null;
+		if (mainData.SkillCardDatas.Count > 0)
+		{
+			skillcarddatas = new Offset<BanpoFri.Data.SkillCardData>[mainData.SkillCardDatas.Count];
+			dataIdx = 0;
+			foreach (var skillcard in mainData.SkillCardDatas)
+			{
+				skillcarddatas[dataIdx++] = BanpoFri.Data.SkillCardData.CreateSkillCardData(builder, skillcard.SkillIdx, skillcard.Level);
+			}
+		}
+		VectorOffset skillcarddatasvec = default(VectorOffset);
+		if (skillcarddatas != null)
+			skillcarddatasvec = BanpoFri.Data.UserData.CreateSkillcarddatasVector(builder, skillcarddatas);
+
 
 		//insert start
 		BanpoFri.Data.UserData.StartUserData(builder);
@@ -145,6 +161,7 @@ public partial class UserDataSystem
 		BanpoFri.Data.UserData.AddEnergymoney(builder, energymoney);
 		BanpoFri.Data.UserData.AddGachacoin(builder, mainData.GachaCoin.Value);
 		BanpoFri.Data.UserData.AddUnitcarddatas(builder, unitvec);
+		BanpoFri.Data.UserData.AddSkillcarddatas(builder, skillcarddatasvec);
 
 
 		//end 
