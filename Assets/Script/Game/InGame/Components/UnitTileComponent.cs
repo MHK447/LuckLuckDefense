@@ -56,7 +56,7 @@ public class UnitTileComponent : MonoBehaviour
             {
                 case 1:
                     {
-                        GameRoot.Instance.EffectSystem.MultiPlay<UnitNormalEffect>(this.transform.position, effect =>
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitNormalEffect>(unit.transform.position, effect =>
                         {
                             if (this != null)
                             {
@@ -69,7 +69,7 @@ public class UnitTileComponent : MonoBehaviour
                     break;
                 case 2:
                     {
-                        GameRoot.Instance.EffectSystem.MultiPlay<UnitRareEffect>(this.transform.position, effect =>
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitRareEffect>(unit.transform.position, effect =>
                         {
                             if (this != null)
                             {
@@ -82,7 +82,7 @@ public class UnitTileComponent : MonoBehaviour
                     break;
                 case 3:
                     {
-                        GameRoot.Instance.EffectSystem.MultiPlay<UnitEpicEffect>(this.transform.position, effect =>
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitEpicEffect>(unit.transform.position, effect =>
                         {
                             if (this != null)
                             {
@@ -95,7 +95,7 @@ public class UnitTileComponent : MonoBehaviour
                     break;
                 case 4:
                     {
-                        GameRoot.Instance.EffectSystem.MultiPlay<UnitLegendEffect>(this.transform.position, effect =>
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitLegendEffect>(unit.transform.position, effect =>
                         {
                             if (this != null)
                             {

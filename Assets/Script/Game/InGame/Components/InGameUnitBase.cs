@@ -227,7 +227,9 @@ public class InGameUnitBase : MonoBehaviour
         {
             var criticaldamagebuff = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALDAMAGE);
 
-            var crticialdamage = criticaldamagebuff * SkillCardSystem.CrtiticalDamage;
+            var crticialdamage = (criticaldamagebuff * SkillCardSystem.CrtiticalDamage) / 100f;
+
+            crticialdamage = SkillCardSystem.CrtiticalDamage + crticialdamage;
 
             damage = damage * crticialdamage;
         }
