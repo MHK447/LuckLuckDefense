@@ -189,6 +189,22 @@ MonoBehaviour:
     m_Address: UI/Popup/PopupPassiveCardUpgrade
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 84e8af4e85b1f724bb7079c8db0f3d96
+    m_Address: Effect/UnitEpicEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0c31a97e4ce9b954dbfe5cd4f1d87143
+    m_Address: Effect/UnitLegendEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3c19ee5390618cb428c9050d581fde65
+    m_Address: Effect/UnitNormalEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e07c2390af84d5a449a3cf962bbb1ddc
+    m_Address: Effect/UnitRareEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

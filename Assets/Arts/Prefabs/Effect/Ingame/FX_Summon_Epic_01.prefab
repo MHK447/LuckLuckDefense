@@ -19545,6 +19545,7 @@ GameObject:
   - component: {fileID: 7269657271891831496}
   - component: {fileID: 7269657271891831543}
   - component: {fileID: 7269657271891831542}
+  - component: {fileID: 9059125259065615863}
   m_Layer: 0
   m_Name: FX_Summon_Epic_01
   m_TagString: Untagged
@@ -24351,6 +24352,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &9059125259065615863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269657271891831541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2780e36ec8a394589b8fc17ee4cec5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: []
 --- !u!1 &7269657272411215890
 GameObject:
   m_ObjectHideFlags: 0

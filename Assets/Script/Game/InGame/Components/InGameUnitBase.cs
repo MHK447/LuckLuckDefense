@@ -151,8 +151,9 @@ public class InGameUnitBase : MonoBehaviour
 
             var attackspeedvalue = td.attackspeed / 100f;
 
+            var speedbuffvalue = (attackspeedvalue * buffvalue) / 100f;
 
-            info.AttackSpeed = attackspeedvalue * (float)buffvalue;
+            info.AttackSpeed = attackspeedvalue + (float)speedbuffvalue;
            
 
 

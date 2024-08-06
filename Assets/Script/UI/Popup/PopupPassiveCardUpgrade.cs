@@ -91,6 +91,9 @@ public class PopupPassiveCardUpgrade : UIBase
             GameRoot.Instance.StartCoroutine(ScrollRect.FocusOnItemCoroutine(finddata.transform as RectTransform, 1f, ()=> {
                 GameRoot.Instance.SkillCardSystem.SkillCardLevelUp(CardIdx);
                 CardUpgradeBtn.interactable = true;
+
+                ProjectUtility.SetActiveCheck(finddata.SelectObj, true);
+                GameRoot.Instance.WaitTimeAndCallback(1f, () => { ProjectUtility.SetActiveCheck(finddata.SelectObj, false); });
             }));
           
         }

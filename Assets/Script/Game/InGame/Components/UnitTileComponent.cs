@@ -47,6 +47,68 @@ public class UnitTileComponent : MonoBehaviour
         unit.transform.position = SpawnList[UnitList.Count - 1].transform.position;
         unit.SetTileComponent(this);
         unit.AttackRangeTr = GetUnitAttackRange();
+
+        var td = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(unit.GetUnitIdx);
+
+        if(td != null)
+        {
+            switch(td.grade)
+            {
+                case 1:
+                    {
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitNormalEffect>(this.transform.position, effect =>
+                        {
+                            if (this != null)
+                            {
+                                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                effect.SetAutoRemove(true, 1f);
+                                effect.transform.SetParent(this.transform);
+                            }
+                        });
+                    }
+                    break;
+                case 2:
+                    {
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitRareEffect>(this.transform.position, effect =>
+                        {
+                            if (this != null)
+                            {
+                                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                effect.SetAutoRemove(true, 1f);
+                                effect.transform.SetParent(this.transform);
+                            }
+                        });
+                    }
+                    break;
+                case 3:
+                    {
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitEpicEffect>(this.transform.position, effect =>
+                        {
+                            if (this != null)
+                            {
+                                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                effect.SetAutoRemove(true, 1f);
+                                effect.transform.SetParent(this.transform);
+                            }
+                        });
+                    }
+                    break;
+                case 4:
+                    {
+                        GameRoot.Instance.EffectSystem.MultiPlay<UnitLegendEffect>(this.transform.position, effect =>
+                        {
+                            if (this != null)
+                            {
+                                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                effect.SetAutoRemove(true, 1f);
+                                effect.transform.SetParent(this.transform);
+                            }
+                        });
+                    }
+                    break;
+
+            }
+        }
     }
 
     public void SetTileUnitIdx(int unitidx)

@@ -44,6 +44,11 @@ public class InGameStage : MonoBehaviour
                     if (pagelobbyui != null)
                         pagelobbyui.Hide();
 
+                    var pagecardui = GameRoot.Instance.UISystem.GetUI<PopupPassiveCardUpgrade>();
+
+                    if (pagecardui != null)
+                        pagecardui.Hide();
+
                     GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;
 
                     GameRoot.Instance.WaitTimeAndCallback(4f, () =>

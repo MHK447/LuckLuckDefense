@@ -29,7 +29,7 @@ public class SkillCardSystem
     public SkillCardData FindSkillCardData(int skillidx)
     {
         return GameRoot.Instance.UserData.CurMode.SkillCardDatas.ToList().Find(x => x.SkillIdx == skillidx);
-    }
+    }   
 
 
     public int GachaUnitCard()
