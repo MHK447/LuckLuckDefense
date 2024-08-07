@@ -240,9 +240,11 @@ public class InGameEnemyBase : MonoBehaviour
 
         if(IsBoss)
         {
-            var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.BOSSDAMAGE);
+            var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.BOSSDAMAGE,false);
 
-            double damagebuffvalue = damage * buffvalue;
+            buffvalue = ProjectUtility.GetPercentValue(damage, (float)buffvalue);
+
+            double damagebuffvalue = damage + buffvalue;
 
             damage = (int)damagebuffvalue;
         }

@@ -141,11 +141,18 @@ public class InGameUnitBase : MonoBehaviour
 
             info.AttackRange = td.attackrange / 100f;
 
-            info.Attack = td.attack * GameRoot.Instance.UnitUpgradeSystem.GetUgpradeValue(UpgradeIdx) * (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.DAMAGEINCREASE);
+            var attackvalue = td.attack * GameRoot.Instance.UnitUpgradeSystem.GetUgpradeValue(UpgradeIdx);
+            
+            var damagebuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.DAMAGEINCREASE,false);
 
-            var criticalbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALPERECENT);
 
-            info.criticalChance = (float)td.criticalchance * (float)criticalbuffvalue * (float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.SKILLPERCENT);
+            var damageprecentvalue = ProjectUtility.GetPercentValue(attackvalue, (float)damagebuffvalue);
+
+            info.Attack = td.attack + (int)damageprecentvalue;
+
+            var criticalbuffvalue = ProjectUtility.GetPercentValue(td.criticalchance,(float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALPERECENT));
+
+            info.criticalChance = (float)td.criticalchance + (float)criticalbuffvalue;
             
             var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.ATTACKSPEED);
 

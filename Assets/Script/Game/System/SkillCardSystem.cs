@@ -57,9 +57,7 @@ public class SkillCardSystem
 
                 Value = basevalue + skillplusvalue;
             }
-
         }
-
         return Value;
     }
 
@@ -79,5 +77,4 @@ public class SkillCardSystem
             GameRoot.Instance.UserData.CurMode.SkillCardDatas.Add(skillcardata);
         }
     }
-
 }

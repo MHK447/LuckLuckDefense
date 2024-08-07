@@ -161,8 +161,15 @@ public class ProjectUtility
     }
 
 
+    public static float GetPercentValue(float value , float percent)
+    {
+        float returnvalue = 0f;
+
+        returnvalue = (value * percent) / 100f;
 
 
+        return returnvalue;
+    }
     public static string GetTimeStringFormattingShort(int seconds)
     {
         str_seconds = Tables.Instance.GetTable<Localize>().GetString("str_time_second");
