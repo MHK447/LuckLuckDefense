@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 9033090892496637218}
   - component: {fileID: 9033090892496637213}
   m_Layer: 5
-  m_Name: Popup_Unit_Upgrade
+  m_Name: PopupUnitUpgradeInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

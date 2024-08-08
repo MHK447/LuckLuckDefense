@@ -228,7 +228,6 @@ public class InGameEnemyBase : MonoBehaviour
                     }
                 }
                 break;
-
         }
     }
 

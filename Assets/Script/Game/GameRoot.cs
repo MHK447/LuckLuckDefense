@@ -33,6 +33,7 @@ public class GameRoot : Singleton<GameRoot>
 	public InGameUnitUpgradeSystem UnitUpgradeSystem { get; private set; } = new InGameUnitUpgradeSystem();
 	public UnitSkillSystem UnitSkillSystem { get; private set; } = new UnitSkillSystem();
 	public SkillCardSystem SkillCardSystem { get; private set; } = new SkillCardSystem();
+	public OutGameUnitUpgradeSystem OutGameUnitUpgradeSystem { get; private set; } = new OutGameUnitUpgradeSystem();
 
 
 	public GameObject UILock;

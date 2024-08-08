@@ -89,8 +89,8 @@ MonoBehaviour:
     _image: Pictoicon_Moneybag
     _desc_name: card_10_name
   - _skill_idx: 11
-    _skill_base_value: 100
-    _skill_value: 50
+    _skill_base_value: 10
+    _skill_value: 10
     _sign_desc: skill_sign_desc_2
     _image: Pictoicon_Friend_Add
     _desc_name: card_11_name

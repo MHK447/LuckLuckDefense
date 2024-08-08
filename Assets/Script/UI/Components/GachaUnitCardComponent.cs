@@ -160,7 +160,7 @@ public class GachaUnitCardComponent : MonoBehaviour
 
             var probabilityvalue = td.probability_value / 10f;
 
-            Ratio = probabilityvalue * buffvalue;
+            Ratio = probabilityvalue + buffvalue;
             CostValueText.text = td.cost_value.ToString();
             ProbabilityText.text = $"{Ratio}%";
 

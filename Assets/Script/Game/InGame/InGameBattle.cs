@@ -81,7 +81,6 @@ public class InGameBattle : MonoBehaviour
 
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, (int)coinbuffvalue);
         }
-
     }
 
     public SpawnTrPos GetSpawnTr(int spawncount)
@@ -394,12 +393,14 @@ public class InGameBattle : MonoBehaviour
         }
 
         return closestEnemy;
-    }
+    }   
 
 
     public void GachaGradeUnit(int grade = 0)
     {
         var tdlist = Tables.Instance.GetTable<PlayerUnitInfo>().DataList.Where(x => x.grade == grade).ToList();
+
+        if (tdlist.Count == 0) return;
 
         var randunit = Random.Range(0, tdlist.Count);
 
