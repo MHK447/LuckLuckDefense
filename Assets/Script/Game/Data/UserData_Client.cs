@@ -68,6 +68,18 @@ public partial class UserDataSystem
             mainData.SkillCardDatas.Add(newdata);
         }
 
+
+        mainData.OutGameUnitUpgradeDatas.Clear();
+
+        for(int i = 0; i  < flatBufferUserData.OutgameunitupgradedatasLength; ++i)
+        {
+            var data = flatBufferUserData.Outgameunitupgradedatas(i);
+
+            var newdata = new OutGameUnitUpgradeData(data.Value.Unitidx, data.Value.Unitlevel, data.Value.Cardcount);
+
+            mainData.OutGameUnitUpgradeDatas.Add(newdata);
+        }
+
     }
 
 

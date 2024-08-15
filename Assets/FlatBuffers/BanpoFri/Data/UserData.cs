@@ -58,6 +58,8 @@ public struct UserData : IFlatbufferObject
   public int UnitcarddatasLength { get { int o = __p.__offset(24); return o != 0 ? __p.__vector_len(o) : 0; } }
   public BanpoFri.Data.SkillCardData? Skillcarddatas(int j) { int o = __p.__offset(26); return o != 0 ? (BanpoFri.Data.SkillCardData?)(new BanpoFri.Data.SkillCardData()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
   public int SkillcarddatasLength { get { int o = __p.__offset(26); return o != 0 ? __p.__vector_len(o) : 0; } }
+  public BanpoFri.Data.OutGameUnitUpgradeData? Outgameunitupgradedatas(int j) { int o = __p.__offset(28); return o != 0 ? (BanpoFri.Data.OutGameUnitUpgradeData?)(new BanpoFri.Data.OutGameUnitUpgradeData()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
+  public int OutgameunitupgradedatasLength { get { int o = __p.__offset(28); return o != 0 ? __p.__vector_len(o) : 0; } }
 
   public static Offset<BanpoFri.Data.UserData> CreateUserData(FlatBufferBuilder builder,
       StringOffset moneyOffset = default(StringOffset),
@@ -71,10 +73,12 @@ public struct UserData : IFlatbufferObject
       StringOffset energymoneyOffset = default(StringOffset),
       int gachacoin = 0,
       VectorOffset unitcarddatasOffset = default(VectorOffset),
-      VectorOffset skillcarddatasOffset = default(VectorOffset)) {
-    builder.StartTable(12);
+      VectorOffset skillcarddatasOffset = default(VectorOffset),
+      VectorOffset outgameunitupgradedatasOffset = default(VectorOffset)) {
+    builder.StartTable(13);
     UserData.AddCurplaydatetime(builder, curplaydatetime);
     UserData.AddLastlogintime(builder, lastlogintime);
+    UserData.AddOutgameunitupgradedatas(builder, outgameunitupgradedatasOffset);
     UserData.AddSkillcarddatas(builder, skillcarddatasOffset);
     UserData.AddUnitcarddatas(builder, unitcarddatasOffset);
     UserData.AddGachacoin(builder, gachacoin);
@@ -88,7 +92,7 @@ public struct UserData : IFlatbufferObject
     return UserData.EndUserData(builder);
   }
 
-  public static void StartUserData(FlatBufferBuilder builder) { builder.StartTable(12); }
+  public static void StartUserData(FlatBufferBuilder builder) { builder.StartTable(13); }
   public static void AddMoney(FlatBufferBuilder builder, StringOffset moneyOffset) { builder.AddOffset(0, moneyOffset.Value, 0); }
   public static void AddStoremoney(FlatBufferBuilder builder, StringOffset storemoneyOffset) { builder.AddOffset(1, storemoneyOffset.Value, 0); }
   public static void AddCash(FlatBufferBuilder builder, int cash) { builder.AddInt(2, cash, 0); }
@@ -110,6 +114,10 @@ public struct UserData : IFlatbufferObject
   public static VectorOffset CreateSkillcarddatasVector(FlatBufferBuilder builder, Offset<BanpoFri.Data.SkillCardData>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
   public static VectorOffset CreateSkillcarddatasVectorBlock(FlatBufferBuilder builder, Offset<BanpoFri.Data.SkillCardData>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
   public static void StartSkillcarddatasVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static void AddOutgameunitupgradedatas(FlatBufferBuilder builder, VectorOffset outgameunitupgradedatasOffset) { builder.AddOffset(12, outgameunitupgradedatasOffset.Value, 0); }
+  public static VectorOffset CreateOutgameunitupgradedatasVector(FlatBufferBuilder builder, Offset<BanpoFri.Data.OutGameUnitUpgradeData>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
+  public static VectorOffset CreateOutgameunitupgradedatasVectorBlock(FlatBufferBuilder builder, Offset<BanpoFri.Data.OutGameUnitUpgradeData>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
+  public static void StartOutgameunitupgradedatasVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
   public static Offset<BanpoFri.Data.UserData> EndUserData(FlatBufferBuilder builder) {
     int o = builder.EndTable();
     return new Offset<BanpoFri.Data.UserData>(o);

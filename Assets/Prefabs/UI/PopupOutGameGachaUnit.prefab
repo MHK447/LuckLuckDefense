@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 1541104157618017705}
   - component: {fileID: 1541104157618017704}
   m_Layer: 5
-  m_Name: PopupUnitUpgradeResult
+  m_Name: PopupOutGameGachaUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,7 +14,7 @@ public class PopupIngameUpgrade : UIBase
     private Text WaveText;
 
     [SerializeField]
-    private Text TimeText;
+    private Text TimeText;  
 
     [SerializeField]
     private Text WaveEnemyCountText;

@@ -18,7 +18,19 @@ public class OutGameUpgradeComponent : MonoBehaviour
     [SerializeField]
     private Image UnitImg;
 
+    [SerializeField]
+    private GameObject LockObj;
+
+    [SerializeField]
+    private Button UnitInfoBtn;
+
     private int UnitIdx = 0;
+
+
+    private void Awake()
+    {
+        UnitInfoBtn.onClick.AddListener(OnClickUnitInfo);
+    }
 
     public void Set(int unitidx)
     {
@@ -30,6 +42,34 @@ public class OutGameUpgradeComponent : MonoBehaviour
         {
             UnitNameText.text = Tables.Instance.GetTable<Localize>().GetString(td.name);
 
+
+            var finddata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(unitidx);
+
+
+            Utility.SetActiveCheck(LockObj, finddata == null);
+
+            float slidevalue = 0f;
+
+
+            if (finddata != null)
+            {
+                var unitleveltd = Tables.Instance.GetTable<OutGameUnitLevelInfo>().GetData(finddata.UnitLevel);
+
+                if(unitleveltd != null)
+                {
+                    slidevalue = (float)finddata.UnitLevel / (float)unitleveltd.cardcount;
+                }   
+            }
+
+
+
+            UnitCountSlider.value = slidevalue;
         }
+    }
+
+
+    private void OnClickUnitInfo()
+    {
+
     }
 }

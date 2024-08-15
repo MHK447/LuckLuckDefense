@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using BanpoFri;
+using System.Linq;
 
 
 public class ProjectUtility 
@@ -123,6 +124,36 @@ public class ProjectUtility
 
     }
 
+    public static int GetOutGameGachaGrade()
+    {
+        float total = 0;
+
+        int totalratio = 0;
+
+        List<int> gacharatiolist = new List<int>();
+
+        var tdlist = Tables.Instance.GetTable<OutGameGachaGradeInfo>().DataList.ToList();
+            
+        foreach (var td in tdlist)
+        {
+            totalratio += td.ratio;
+
+            gacharatiolist.Add(td.ratio);
+        }
+
+        float randomPoint = UnityEngine.Random.Range(0, totalratio);
+
+        for (int i = 0; i < gacharatiolist.Count; i++)
+        {
+            total += gacharatiolist[i];
+            if (randomPoint <= total)
+            {
+                return tdlist[i].grade;
+            }
+        }
+
+        return 1;
+    }
     public static int GetRandGachaCard(int level)
     {
 

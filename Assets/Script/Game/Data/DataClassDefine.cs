@@ -48,7 +48,23 @@ public class StageData
     }
 }
 
+public class OutGameUnitUpgradeData
+{
+	public int UnitIdx = 0;
+	public int UnitLevel = 0;
+	public int UnitCount = 0;
+		
 
+	public OutGameUnitUpgradeData(int unitidx , int unitlevel , int unitcount)
+    {
+		UnitIdx = unitidx;
+		UnitLevel = unitlevel;
+		UnitCount = unitcount;
+    }
+
+
+
+}
 
 
 public class InGameUnitUpgradeData

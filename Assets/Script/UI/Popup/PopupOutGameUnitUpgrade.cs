@@ -18,10 +18,33 @@ public class PopupOutGameUnitUpgrade : UIBase
     private Transform UpgradeComponentRoot;
 
 
+    [SerializeField]
+    private Button CardSpawnBtnTen;
+
+    [SerializeField]
+    private Button CardSpawnBtnTweenty;
+
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        CardSpawnBtnTen.onClick.AddListener(OnclickTenBtn);
+        CardSpawnBtnTweenty.onClick.AddListener(OnClickTweenty);
+    }
+
 
     public void Init()
     {
         var tdlist = Tables.Instance.GetTable<PlayerUnitInfo>().DataList.ToList();
+
+
+        foreach(var cachedobj in CachedComponents)
+        {
+            ProjectUtility.SetActiveCheck(cachedobj, false);
+        }
+
+
 
         foreach(var td in tdlist)
         {
@@ -29,10 +52,24 @@ public class PopupOutGameUnitUpgrade : UIBase
 
             if(getobj != null)
             {
+                ProjectUtility.SetActiveCheck(getobj.gameObject, true);
 
+                getobj.Set(td.unit_idx);
             }
         }
         
+    }
+
+
+    private void OnclickTenBtn()
+    {
+            
+    }
+
+
+    private void OnClickTweenty()
+    {
+
     }
 
 

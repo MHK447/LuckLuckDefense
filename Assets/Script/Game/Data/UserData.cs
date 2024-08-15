@@ -151,6 +151,26 @@ public partial class UserDataSystem
 			skillcarddatasvec = BanpoFri.Data.UserData.CreateSkillcarddatasVector(builder, skillcarddatas);
 
 
+		//outgameunitupgradedatas
+
+		Offset<BanpoFri.Data.OutGameUnitUpgradeData>[] OutGameUnitUpgradeDatas = null;
+		VectorOffset outgameunitupgradevec = default(VectorOffset);
+		if (mainData.OutGameUnitUpgradeDatas.Count > 0)
+        {
+			OutGameUnitUpgradeDatas = new Offset<BanpoFri.Data.OutGameUnitUpgradeData>[mainData.OutGameUnitUpgradeDatas.Count];
+			dataIdx = 0;
+			foreach(var outgameupgrade in mainData.OutGameUnitUpgradeDatas)
+            {
+				OutGameUnitUpgradeDatas[dataIdx++] = BanpoFri.Data.OutGameUnitUpgradeData.CreateOutGameUnitUpgradeData(builder, outgameupgrade.UnitIdx, outgameupgrade.UnitLevel, outgameupgrade.UnitCount);
+            }
+
+
+			if(OutGameUnitUpgradeDatas != null)
+            {
+				outgameunitupgradevec = BanpoFri.Data.UserData.CreateOutgameunitupgradedatasVector(builder, OutGameUnitUpgradeDatas);
+            }
+        }
+
 		//insert start
 		BanpoFri.Data.UserData.StartUserData(builder);
 
@@ -162,6 +182,7 @@ public partial class UserDataSystem
 		BanpoFri.Data.UserData.AddGachacoin(builder, mainData.GachaCoin.Value);
 		BanpoFri.Data.UserData.AddUnitcarddatas(builder, unitvec);
 		BanpoFri.Data.UserData.AddSkillcarddatas(builder, skillcarddatasvec);
+		BanpoFri.Data.UserData.AddOutgameunitupgradedatas(builder, outgameunitupgradevec);
 
 
 		//end 
