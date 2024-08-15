@@ -14,7 +14,7 @@ public class OutGameGachaComponent : MonoBehaviour
     private Text CountText;
 
     private int UnitIdx = 0;
-
+        
     private int UnitCount = 0;
 
     public void Set(int unitidx , int unitcount)
@@ -26,8 +26,9 @@ public class OutGameGachaComponent : MonoBehaviour
 
         if(td != null)
         {
-            //UnitImg.sprite = Config.Instance.g
+            UnitImg.sprite = Config.Instance.GetUnitImg(td.icon);
             CountText.text = unitcount.ToString();
+
 
         }
             
