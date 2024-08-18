@@ -62,6 +62,13 @@ public class HUDTotal : UIBase
         {
             lobbybattle.SortingRollBack();
         }
+
+        var upgrade = GameRoot.Instance.UISystem.GetUI<PopupOutGameUnitUpgrade>();
+
+        if(upgrade != null)
+        {
+            upgrade.SortingRollBack();
+        }
         
         switch (tab)
         {
@@ -81,6 +88,12 @@ public class HUDTotal : UIBase
                 });
                 break;
             case LobbyTab.Upgrade:
+                {
+                    GameRoot.Instance.UISystem.OpenUI<PopupOutGameUnitUpgrade>(popup => {
+                        popup.CustomSortingOrder();
+                        popup.Init();
+                    });
+                }
                 break;
         }
 

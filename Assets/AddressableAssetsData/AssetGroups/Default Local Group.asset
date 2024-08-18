@@ -205,6 +205,10 @@ MonoBehaviour:
     m_Address: Effect/UnitRareEffect
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2f8fe2d929433b44aa9f6a4d7eec25b2
+    m_Address: UI/Popup/PopupOutGameUnitUpgrade
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

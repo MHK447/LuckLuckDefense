@@ -24,6 +24,7 @@ public class OutGameUpgradeComponent : MonoBehaviour
     [SerializeField]
     private Button UnitInfoBtn;
 
+    [SerializeField]
     private int UnitIdx = 0;
 
 
@@ -32,10 +33,8 @@ public class OutGameUpgradeComponent : MonoBehaviour
         UnitInfoBtn.onClick.AddListener(OnClickUnitInfo);
     }
 
-    public void Set(int unitidx)
+    public void Init()
     {
-        UnitIdx = unitidx;
-
         var td = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(UnitIdx);
 
         if(td != null)
@@ -43,7 +42,7 @@ public class OutGameUpgradeComponent : MonoBehaviour
             UnitNameText.text = Tables.Instance.GetTable<Localize>().GetString(td.name);
 
 
-            var finddata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(unitidx);
+            var finddata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(UnitIdx);
 
 
             Utility.SetActiveCheck(LockObj, finddata == null);

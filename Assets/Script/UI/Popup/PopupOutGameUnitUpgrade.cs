@@ -9,14 +9,7 @@ using System.Linq;
 public class PopupOutGameUnitUpgrade : UIBase
 {
     [SerializeField]
-    private List<GameObject> CachedComponents = new List<GameObject>();
-
-    [SerializeField]
-    private GameObject UpgradeComponentPrefb;
-
-    [SerializeField]
-    private Transform UpgradeComponentRoot;
-
+    private List<OutGameUpgradeComponent> CachedComponents = new List<OutGameUpgradeComponent>();
 
     [SerializeField]
     private Button CardSpawnBtnTen;
@@ -36,28 +29,10 @@ public class PopupOutGameUnitUpgrade : UIBase
 
     public void Init()
     {
-        var tdlist = Tables.Instance.GetTable<PlayerUnitInfo>().DataList.ToList();
-
-
         foreach(var cachedobj in CachedComponents)
         {
-            ProjectUtility.SetActiveCheck(cachedobj, false);
+            cachedobj.Init();
         }
-
-
-
-        foreach(var td in tdlist)
-        {
-            var getobj = GetCachedObject().GetComponent<OutGameUpgradeComponent>();
-
-            if(getobj != null)
-            {
-                ProjectUtility.SetActiveCheck(getobj.gameObject, true);
-
-                getobj.Set(td.unit_idx);
-            }
-        }
-        
     }
 
 
@@ -73,17 +48,18 @@ public class PopupOutGameUnitUpgrade : UIBase
     }
 
 
-    public GameObject GetCachedObject()
-    {
-        var inst = CachedComponents.Find(x => !x.activeSelf);
-        if (inst == null)
-        {
-            inst = GameObject.Instantiate(UpgradeComponentPrefb);
-            inst.transform.SetParent(UpgradeComponentRoot);
-            inst.transform.localScale = Vector3.one;
-            CachedComponents.Add(inst);
-        }
 
-        return inst;
+    public override void CustomSortingOrder()
+    {
+        base.CustomSortingOrder();
+
+        transform.GetComponent<Canvas>().sortingOrder = (int)UIBase.HUDTypeTopSorting.POPUPTOP;
     }
+
+
+    public void SortingRollBack()
+    {
+        transform.GetComponent<Canvas>().sortingOrder = UISystem.START_PAGE_SORTING_NUMBER;
+    }
+
 }
