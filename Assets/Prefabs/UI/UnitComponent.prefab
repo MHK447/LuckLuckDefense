@@ -612,10 +612,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitNameText: {fileID: 3673183526927502492}
   UnitCountSlider: {fileID: 7278616949442467763}
+  UnitCountText: {fileID: 4858943397059427898}
   LevelText: {fileID: 6723162500926349528}
   UnitImg: {fileID: 6374943101724835066}
   LockObj: {fileID: 141623671250951931}
   UnitInfoBtn: {fileID: 5230038094571203374}
+  UnitIdx: 0
 --- !u!114 &5230038094571203374
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ public class OutGameUpgradeComponent : MonoBehaviour
     private Slider UnitCountSlider;
 
     [SerializeField]
+    private Text UnitCountText;
+
+    [SerializeField]
     private Text LevelText;
 
     [SerializeField]
@@ -49,6 +52,7 @@ public class OutGameUpgradeComponent : MonoBehaviour
 
             float slidevalue = 0f;
 
+            UnitImg.sprite = Config.Instance.GetUnitImg(td.icon);
 
             if (finddata != null)
             {
@@ -60,8 +64,16 @@ public class OutGameUpgradeComponent : MonoBehaviour
                 }   
             }
 
+            int curunitcount = finddata == null ? 0 : finddata.UnitCount;
 
+            int curlevel = finddata == null ? 1 : finddata.UnitLevel;
 
+            var unitupgradetd = Tables.Instance.GetTable<UnitUpgradeLevelInfo>().GetData(curlevel);
+
+            if(unitupgradetd != null)
+            {
+                UnitCountText.text = $"{curunitcount}/{unitupgradetd.need_card}";   
+            }
             UnitCountSlider.value = slidevalue;
         }
     }
@@ -69,6 +81,6 @@ public class OutGameUpgradeComponent : MonoBehaviour
 
     private void OnClickUnitInfo()
     {
-
+        GameRoot.Instance.UISystem.OpenUI<PopupOutGameUnitUpgradeInfo>(popup => popup.Set(UnitIdx));
     }
 }

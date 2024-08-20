@@ -1,0 +1,52 @@
+using UnityEngine;
+using System.Collections.Generic;
+
+namespace BanpoFri
+{
+    [System.Serializable]
+    public class OutGameUnitUpgradeData
+    {
+        [SerializeField]
+		private int _unit_idx;
+		public int unit_idx
+		{
+			get { return _unit_idx;}
+			set { _unit_idx = value;}
+		}
+		[SerializeField]
+		private int _level;
+		public int level
+		{
+			get { return _level;}
+			set { _level = value;}
+		}
+		[SerializeField]
+		private int _upgrade_type;
+		public int upgrade_type
+		{
+			get { return _upgrade_type;}
+			set { _upgrade_type = value;}
+		}
+		[SerializeField]
+		private int _upgrade_value;
+		public int upgrade_value
+		{
+			get { return _upgrade_value;}
+			set { _upgrade_value = value;}
+		}
+		[SerializeField]
+		private int _skill_idx;
+		public int skill_idx
+		{
+			get { return _skill_idx;}
+			set { _skill_idx = value;}
+		}
+
+    }
+
+    [System.Serializable]
+    public class OutGameUnitUpgrade : Table<OutGameUnitUpgradeData, KeyValuePair<int,int>>
+    {
+    }
+}
+
