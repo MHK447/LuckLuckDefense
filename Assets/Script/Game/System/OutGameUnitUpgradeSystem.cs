@@ -13,7 +13,7 @@ public class OutGameUnitUpgradeSystem
 
         if (finddata != null)
         {
-            finddata.UnitCount += unitcount;
+            finddata.UnitCountProperty.Value += unitcount;
         }
         else
         {

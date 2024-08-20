@@ -64,6 +64,7 @@ public class PopupOutGameGachaUnit : UIBase
                 if(finddata != null)
                 {
                     finddata.UnitCount += 1;
+                    
                 }
                 else
                 {
@@ -85,6 +86,7 @@ public class PopupOutGameGachaUnit : UIBase
 
                 ProjectUtility.SetActiveCheck(getobj.gameObject, true);
 
+                GameRoot.Instance.OutGameUnitUpgradeSystem.AddUnitData(unitinfo.UnitIdx, unitinfo.UnitCount);
             }
         }
     }

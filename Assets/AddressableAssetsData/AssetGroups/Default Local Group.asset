@@ -57,10 +57,6 @@ MonoBehaviour:
     m_Address: Effect/IconText
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 5bfac7ff753f742629ffd13c543fc514
-    m_Address: UI/Popup/PopupSelectGacha
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: cea350cf6dfd04335add1be0c8f543ef
     m_Address: InGame1_1
     m_ReadOnly: 0
@@ -207,6 +203,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2f8fe2d929433b44aa9f6a4d7eec25b2
     m_Address: UI/Popup/PopupOutGameUnitUpgrade
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 968688e3c3133734f9387d38bb5e5fb6
+    m_Address: UI/Page/PopupOutGameUnitUpgradeInfo
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fbf0dd42490952749afefe3bc3688b84
+    m_Address: UI/Popup/PopupOutGameGachaUnit
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

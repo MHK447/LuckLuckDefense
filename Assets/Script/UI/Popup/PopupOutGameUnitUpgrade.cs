@@ -18,6 +18,11 @@ public class PopupOutGameUnitUpgrade : UIBase
     private Button CardSpawnBtnTweenty;
 
 
+    private int TenRerollPrice = 50;
+
+    private int TweentyFivePrice = 200;
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -38,12 +43,21 @@ public class PopupOutGameUnitUpgrade : UIBase
 
     private void OnclickTenBtn()
     {
-            
+        if (GameRoot.Instance.UserData.CurMode.Money.Value >= TenRerollPrice)
+        {
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, -TenRerollPrice);
+            GameRoot.Instance.UISystem.OpenUI<PopupOutGameGachaUnit>(popup => popup.Set(10));
+        }
     }
 
 
     private void OnClickTweenty()
     {
+        if(GameRoot.Instance.UserData.CurMode.Money.Value >= TweentyFivePrice)
+        {
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, -TweentyFivePrice);
+            GameRoot.Instance.UISystem.OpenUI<PopupOutGameGachaUnit>(popup => popup.Set(25));
+        }
 
     }
 

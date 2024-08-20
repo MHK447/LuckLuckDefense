@@ -53,14 +53,26 @@ public class OutGameUnitUpgradeData
 	public int UnitIdx = 0;
 	public int UnitLevel = 0;
 	public int UnitCount = 0;
-		
+
+
+	public IReactiveProperty<int> UnitCountProperty = new ReactiveProperty<int>();
+	public IReactiveProperty<int> UnitLevelProperty = new ReactiveProperty<int>();
+
+
+
 
 	public OutGameUnitUpgradeData(int unitidx , int unitlevel , int unitcount)
     {
 		UnitIdx = unitidx;
 		UnitLevel = unitlevel;
 		UnitCount = unitcount;
-    }
+
+		UnitCountProperty.Value = UnitCount;
+		UnitLevelProperty.Value = UnitLevel;
+
+		UnitLevelProperty.Subscribe(x => { UnitLevel = x; });
+		UnitCountProperty.Subscribe(x => { UnitCount = x; });
+	}
 
 
 
