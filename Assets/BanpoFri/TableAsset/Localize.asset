@@ -194,6 +194,9 @@ MonoBehaviour:
   - unit_name_013
   - unit_name_014
   - unit_name_015
+  - unit_name_1001
+  - unit_name_1002
+  - unit_name_1003
   - stage_boss_10001
   - skill_1_name
   - skill_2_name
@@ -230,6 +233,15 @@ MonoBehaviour:
   - card_14_name
   - skill_sign_desc_1
   - skill_sign_desc_2
+  - str_outgame_skill_attack_1
+  - str_outgame_skill_attack_2
+  - str_outgame_skill_attack_3
+  - str_outgame_skill_attack_4
+  - str_outgame_skill_attack_5
+  - str_outgame_skill_attack_6
+  - str_outgame_skill_attack_7
+  - str_outgame_skill_attack_8
+  - str_outgame_skill_attack_9
   mSecondKey: []
   mDataList:
   - _idx: str_stage_select_num
@@ -6433,6 +6445,108 @@ MonoBehaviour:
     _sv: 
     _tr: 
     _ua: 
+  - _idx: unit_name_1001
+    _ko: "\b\uAC00\uC624\uB9B0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_name_1002
+    _ko: "\uAE30\uB8EC"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_name_1003
+    _ko: "\uACE8\uB77C"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
   - _idx: stage_boss_10001
     _ko: "\uBE14\uB8E8 \uC2AC\uB77C\uC784"
     _en: 
@@ -7634,6 +7748,312 @@ MonoBehaviour:
     _ua: 
   - _idx: skill_sign_desc_2
     _ko: '{0}%'
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_1
+    _ko: "\uAC80\uC758\uBD84\uB178 \uC2A4\uD0AC\uC774 \uD574\uAE08 \uB429\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_2
+    _ko: "\uBC29\uD328\uAC15\uD0C0 \uC2A4\uD0AC\uC774 \uD574\uAE08 \uB429\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_3
+    _ko: "\uC218\uD638\uC790\uC758 \uC790\uC138\uAC00 \uD574\uAE08 \uB429\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_4
+    _ko: "\uC6A9\uB9F9\uD55C \uC77C\uACA9\uC774 \uD574\uAE08 \uB429\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_5
+    _ko: "\uACF5\uACA9\uB825\uC774 {0}% \uC99D\uAC00 \uD569\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_6
+    _ko: "\uACF5\uACA9\uC18D\uB3C4 {0}% \uC99D\uAC00 \uD569\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_7
+    _ko: "\uC2A4\uD0AC\uD53C\uD574 {0}% \uC99D\uAC00 \uD569\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_8
+    _ko: "\uC2A4\uD0AC\uD53C\uD574 {0}% \uAC10\uC18C \uD569\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_outgame_skill_attack_9
+    _ko: "\uBCF4\uC2A4\uD53C\uD574 {0}% \uC99D\uAC00 \uD569\uB2C8\uB2E4."
     _en: 
     _ja: 
     _es: 

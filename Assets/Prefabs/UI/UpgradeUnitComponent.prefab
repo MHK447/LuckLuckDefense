@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelText: {fileID: 2064765057969401591}
   DescText: {fileID: 8781818514971414763}
+  LockObj: {fileID: 3455975308025715878}
 --- !u!1 &3455975308025715878
 GameObject:
   m_ObjectHideFlags: 0

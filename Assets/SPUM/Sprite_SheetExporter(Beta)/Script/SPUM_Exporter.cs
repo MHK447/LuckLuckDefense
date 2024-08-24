@@ -329,11 +329,9 @@ public class SPUM_Exporter : MonoBehaviour
 	 }
 
 	 public static Texture2D FillColorAlpha(Texture2D tex2D, Color32? fillColor = null)
-     {   
-         if (fillColor ==null)
-         {
-             fillColor = Color.clear;
-         }
+	{
+		fillColor = Color.clear;
+	
          Color32[] fillPixels = new Color32[tex2D.width * tex2D.height];
          for (int i = 0; i < fillPixels.Length; i++)
          {

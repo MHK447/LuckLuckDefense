@@ -55,7 +55,7 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
             for(int i = 0; i < tdlist.Count; ++i)
             {
                 ProjectUtility.SetActiveCheck(InfoComponentList[i].gameObject, true);
-                InfoComponentList[i].Set(tdlist[i].skill_idx, tdlist[i].level);
+                InfoComponentList[i].Set(UnitIdx , tdlist[i].skill_idx, tdlist[i].level);
             }
 
         }

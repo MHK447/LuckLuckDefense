@@ -9,37 +9,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9bad515454304a1db8351ecd0a92c0f, type: 3}
-  m_Name: UnitActiveSkill
+  m_Script: {fileID: 11500000, guid: 798a93dbe161a460da4b71dc9b3aa061, type: 3}
+  m_Name: UnitOutGameSkillInfo
   m_EditorClassIdentifier: 
   mFirstKey:
   - 1
   - 2
   - 3
   - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
   mSecondKey: []
   mDataList:
   - _skill_idx: 1
     _skill_value: 150
-    _skill_cooltime: 100
-    _increase_cost: 3
-    _increase_value: 100
     _name: str_ingame_attack
   - _skill_idx: 2
     _skill_value: 300
-    _skill_cooltime: 100
-    _increase_cost: 3
-    _increase_value: 10
     _name: str_ingame_attack_speed
   - _skill_idx: 3
     _skill_value: 450
-    _skill_cooltime: 400
-    _increase_cost: 3
-    _increase_value: 10
     _name: str_ingame_attack_range
   - _skill_idx: 4
     _skill_value: 550
-    _skill_cooltime: 0
-    _increase_cost: 3
-    _increase_value: 3
     _name: str_ingame_attack_regen
+  - _skill_idx: 5
+    _skill_value: 200
+    _name: str_ingame_attack
+  - _skill_idx: 6
+    _skill_value: 200
+    _name: str_ingame_attack_speed
+  - _skill_idx: 7
+    _skill_value: 200
+    _name: str_ingame_attack_range
+  - _skill_idx: 8
+    _skill_value: 200
+    _name: str_ingame_attack_regen
+  - _skill_idx: 9
+    _skill_value: 200
+    _name: str_ingame_attack

@@ -213,6 +213,18 @@ MonoBehaviour:
     m_Address: UI/Popup/PopupOutGameGachaUnit
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 175ff59a652c14a7383b0c2bf09dc462
+    m_Address: Unit1001
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0de545789863440cb9702e6e563fbad9
+    m_Address: Unit1002
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 92c6fe7c7e32f4777a5128c3636597c4
+    m_Address: Unit1003
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
