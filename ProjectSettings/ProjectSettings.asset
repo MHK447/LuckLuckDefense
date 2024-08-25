@@ -765,7 +765,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: DOTWEEN;RH_AutoComplete
+    Android: DOTWEEN;RH_AutoComplete;AMPLIFY_SHADER_EDITOR
     EmbeddedLinux: DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN
