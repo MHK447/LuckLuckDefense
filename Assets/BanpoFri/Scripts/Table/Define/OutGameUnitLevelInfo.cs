@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace BanpoFri
 {
     [System.Serializable]
-    public class OutGameUnitLevelInfoData
+    public class OutGameUnitLevelinfoData
     {
         [SerializeField]
 		private int _level;
@@ -20,11 +20,18 @@ namespace BanpoFri
 			get { return _cardcount;}
 			set { _cardcount = value;}
 		}
+		[SerializeField]
+		private int _costvalue;
+		public int costvalue
+		{
+			get { return _costvalue;}
+			set { _costvalue = value;}
+		}
 
     }
 
     [System.Serializable]
-    public class OutGameUnitLevelInfo : Table<OutGameUnitLevelInfoData, int>
+    public class OutGameUnitLevelinfo : Table<OutGameUnitLevelinfoData, int>
     {
     }
 }

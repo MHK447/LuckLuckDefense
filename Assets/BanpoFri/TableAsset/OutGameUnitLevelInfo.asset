@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: feac2e09b8cd340c7abbcb540b55206b, type: 3}
-  m_Name: OutGameUnitLevelInfo
+  m_Name: OutGameUnitLevelinfo
   m_EditorClassIdentifier: 
   mFirstKey:
   - 1
@@ -37,41 +37,61 @@ MonoBehaviour:
   mDataList:
   - _level: 1
     _cardcount: 5
+    _costvalue: 100
   - _level: 2
     _cardcount: 10
+    _costvalue: 200
   - _level: 3
     _cardcount: 10
+    _costvalue: 300
   - _level: 4
     _cardcount: 15
+    _costvalue: 300
   - _level: 5
     _cardcount: 15
+    _costvalue: 300
   - _level: 6
     _cardcount: 20
+    _costvalue: 300
   - _level: 7
     _cardcount: 20
+    _costvalue: 300
   - _level: 8
     _cardcount: 25
+    _costvalue: 300
   - _level: 9
     _cardcount: 25
+    _costvalue: 400
   - _level: 10
     _cardcount: 30
+    _costvalue: 400
   - _level: 11
     _cardcount: 30
+    _costvalue: 400
   - _level: 12
     _cardcount: 35
+    _costvalue: 400
   - _level: 13
     _cardcount: 35
+    _costvalue: 500
   - _level: 14
     _cardcount: 40
+    _costvalue: 500
   - _level: 15
     _cardcount: 40
+    _costvalue: 500
   - _level: 16
     _cardcount: 45
+    _costvalue: 600
   - _level: 17
     _cardcount: 45
+    _costvalue: 600
   - _level: 18
     _cardcount: 50
+    _costvalue: 600
   - _level: 19
     _cardcount: 50
+    _costvalue: 600
   - _level: 20
     _cardcount: 50
+    _costvalue: 700

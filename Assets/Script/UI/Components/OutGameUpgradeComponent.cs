@@ -83,7 +83,7 @@ public class OutGameUpgradeComponent : MonoBehaviour
 
             if (finddata != null)
             {
-                var unitleveltd = Tables.Instance.GetTable<OutGameUnitLevelInfo>().GetData(finddata.UnitLevel);
+                var unitleveltd = Tables.Instance.GetTable<OutGameUnitLevelinfo>().GetData(finddata.UnitLevel);
 
                 if (unitleveltd != null)
                 {

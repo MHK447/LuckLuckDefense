@@ -21,7 +21,7 @@ public class OutGameUnitUpgradeSystem
             GameRoot.Instance.UserData.CurMode.OutGameUnitUpgradeDatas.Add(newdata);
         }
     }
-    
+
 
 
     public OutGameUnitUpgradeData FindOutGameUnit(int unitidx)

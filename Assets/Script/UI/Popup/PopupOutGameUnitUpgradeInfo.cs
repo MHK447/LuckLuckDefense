@@ -23,9 +23,39 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
     private Text SkillCoolTimeText;
 
     [SerializeField]
+    private Text CostValueText;
+
+    [SerializeField]
     private List<OutGameUnitUpgradeInfoComponent> InfoComponentList = new List<OutGameUnitUpgradeInfoComponent>();
 
+    [SerializeField]
+    private Button UpgradeBtn;
+
     private int UnitIdx = 0;
+
+    private int CostValue = 0;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        UpgradeBtn.onClick.AddListener(OnClickUpgrade);
+    }
+
+    public void OnClickUpgrade()
+    {
+        if(GameRoot.Instance.UserData.CurMode.Money.Value >= CostValue)
+        {
+            var finddata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(UnitIdx);
+
+            if(finddata != null)
+            {
+                finddata.UnitLevel += 1;
+            }
+
+            Set(UnitIdx);
+        }
+    }
+
 
     public void Set(int unitidx)
     {
@@ -55,8 +85,24 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
             for(int i = 0; i < tdlist.Count; ++i)
             {
                 ProjectUtility.SetActiveCheck(InfoComponentList[i].gameObject, true);
-                InfoComponentList[i].Set(UnitIdx , tdlist[i].skill_idx, tdlist[i].level);
+                InfoComponentList[i].Set(UnitIdx , tdlist[i].upgrade_type, tdlist[i].level);
             }
+
+            var unitdata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(unitidx);
+
+            int level = unitdata == null ? 1 : unitdata.UnitLevel;
+
+            var outgameunittd = Tables.Instance.GetTable<OutGameUnitLevelinfo>().GetData(level);
+
+            if(outgameunittd != null)
+            {
+                CostValue = outgameunittd.costvalue;
+            }
+
+
+            UpgradeBtn.interactable = unitdata != null;
+
+            CostValueText.text = CostValue.ToString();
 
         }
 
