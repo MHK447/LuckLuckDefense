@@ -41,6 +41,13 @@ namespace BanpoFri
 			get { return _skill_idx;}
 			set { _skill_idx = value;}
 		}
+		[SerializeField]
+		private int _skill_value;
+		public int skill_value
+		{
+			get { return _skill_value;}
+			set { _skill_value = value;}
+		}
 
     }
 

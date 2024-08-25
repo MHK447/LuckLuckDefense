@@ -26,28 +26,28 @@ MonoBehaviour:
   mDataList:
   - _skill_idx: 1
     _skill_value: 150
-    _name: str_ingame_attack
+    _name: str_outgame_skill_attack_1
   - _skill_idx: 2
     _skill_value: 300
-    _name: str_ingame_attack_speed
+    _name: str_outgame_skill_attack_2
   - _skill_idx: 3
     _skill_value: 450
-    _name: str_ingame_attack_range
+    _name: str_outgame_skill_attack_3
   - _skill_idx: 4
     _skill_value: 550
-    _name: str_ingame_attack_regen
+    _name: str_outgame_skill_attack_4
   - _skill_idx: 5
     _skill_value: 200
-    _name: str_ingame_attack
+    _name: str_outgame_skill_attack_5
   - _skill_idx: 6
     _skill_value: 200
-    _name: str_ingame_attack_speed
+    _name: str_outgame_skill_attack_6
   - _skill_idx: 7
     _skill_value: 200
-    _name: str_ingame_attack_range
+    _name: str_outgame_skill_attack_7
   - _skill_idx: 8
     _skill_value: 200
-    _name: str_ingame_attack_regen
+    _name: str_outgame_skill_attack_8
   - _skill_idx: 9
     _skill_value: 200
-    _name: str_ingame_attack
+    _name: str_outgame_skill_attack_9

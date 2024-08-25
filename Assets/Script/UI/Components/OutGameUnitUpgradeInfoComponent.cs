@@ -23,16 +23,18 @@ public class OutGameUnitUpgradeInfoComponent : MonoBehaviour
 
         var td = Tables.Instance.GetTable<UnitOutGameSkillInfo>().GetData(skillidx);
 
-        if(td != null)
+        var outgameupgradetd = Tables.Instance.GetTable<OutGameUnitUpgrade>().GetData(new KeyValuePair<int, int>(unitidx, level));
+
+
+        if(td != null && outgameupgradetd != null)
         {
             LevelText.text = level.ToString();
-            DescText.text = Tables.Instance.GetTable<Localize>().GetFormat(td.name);
+            float skillvalue = outgameupgradetd.skill_value / 100f;
+            DescText.text = Tables.Instance.GetTable<Localize>().GetFormat(td.name, skillvalue);
 
             var unitskilllevel = unitdata == null ? 1 : unitdata.UnitLevel;
 
-
             ProjectUtility.SetActiveCheck(LockObj, unitskilllevel <= level);
-
         }
     }
 }

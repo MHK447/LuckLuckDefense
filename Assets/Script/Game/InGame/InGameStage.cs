@@ -49,6 +49,13 @@ public class InGameStage : MonoBehaviour
                     if (pagecardui != null)
                         pagecardui.Hide();
 
+
+                    var outgameunitupgarde = GameRoot.Instance.UISystem.GetUI<PopupOutGameUnitUpgrade>();
+
+                    if (outgameunitupgarde != null)
+                        outgameunitupgarde.Hide();
+
+
                     GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = true;
 
                     GameRoot.Instance.WaitTimeAndCallback(4f, () =>
