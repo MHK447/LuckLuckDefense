@@ -182,7 +182,7 @@ MonoBehaviour:
     _attackrange: 300
     _criticalchance: 25
     _attackspeed: 200
-    _grade: 2
+    _grade: 3
     _prefab: Unit013
     _icon: Unit013_Img
     _name: unit_name_013
@@ -194,7 +194,7 @@ MonoBehaviour:
     _attackrange: 300
     _criticalchance: 25
     _attackspeed: 200
-    _grade: 2
+    _grade: 3
     _prefab: Unit014
     _icon: Unit014_Img
     _name: unit_name_014
@@ -206,7 +206,7 @@ MonoBehaviour:
     _attackrange: 300
     _criticalchance: 25
     _attackspeed: 200
-    _grade: 2
+    _grade: 3
     _prefab: Unit015
     _icon: Unit015_Img
     _name: unit_name_015

@@ -242,6 +242,7 @@ MonoBehaviour:
   - str_outgame_skill_attack_7
   - str_outgame_skill_attack_8
   - str_outgame_skill_attack_9
+  - unit_level_info
   mSecondKey: []
   mDataList:
   - _idx: str_stage_select_num
@@ -8054,6 +8055,40 @@ MonoBehaviour:
     _ua: 
   - _idx: str_outgame_skill_attack_9
     _ko: "\uBCF4\uC2A4\uD53C\uD574 {0}% \uC99D\uAC00 \uD569\uB2C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_level_info
+    _ko: "\uB808\uBCA8 {0}"
     _en: 
     _ja: 
     _es: 

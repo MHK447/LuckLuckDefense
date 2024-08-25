@@ -26,7 +26,7 @@ public class OutGameUnitUpgradeInfoComponent : MonoBehaviour
         if(td != null)
         {
             LevelText.text = level.ToString();
-            DescText.text = Tables.Instance.GetTable<Localize>().GetString(td.name);
+            DescText.text = Tables.Instance.GetTable<Localize>().GetFormat(td.name);
 
             var unitskilllevel = unitdata == null ? 1 : unitdata.UnitLevel;
 

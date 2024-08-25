@@ -35,6 +35,8 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
 
     private int CostValue = 0;
 
+    private int CostCardCount = 0;
+
     protected override void Awake()
     {
         base.Awake();
@@ -43,13 +45,17 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
 
     public void OnClickUpgrade()
     {
-        if(GameRoot.Instance.UserData.CurMode.Money.Value >= CostValue)
-        {
-            var finddata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(UnitIdx);
+        var finddata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(UnitIdx);
 
+
+        if (GameRoot.Instance.UserData.CurMode.Money.Value >= CostValue && finddata.UnitCountProperty.Value >= CostCardCount)
+        {
             if(finddata != null)
             {
-                finddata.UnitLevel += 1;
+
+                finddata.UnitLevelProperty.Value += 1;
+
+                finddata.UnitCountProperty.Value = finddata.UnitCountProperty.Value - CostCardCount;
             }
 
             Set(UnitIdx);
@@ -97,6 +103,8 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
             if(outgameunittd != null)
             {
                 CostValue = outgameunittd.costvalue;
+
+                CostCardCount = outgameunittd.cardcount;
             }
 
 
