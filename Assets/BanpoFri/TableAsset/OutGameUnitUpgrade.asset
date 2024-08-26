@@ -197,525 +197,701 @@ MonoBehaviour:
     _upgrade_value: 50
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 1
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 1
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 30
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 2
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 2
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 2
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 3
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 3
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 3
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 4
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 4
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 4
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 5
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 50
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 5
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 5
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 30
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 5
     _level: 4
     _upgrade_type: 8
     _upgrade_value: 20
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 5
     _level: 5
     _upgrade_type: 9
     _upgrade_value: 1
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 6
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 6
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 6
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 6
     _level: 4
     _upgrade_type: 8
     _upgrade_value: 20
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 6
     _level: 5
     _upgrade_type: 9
     _upgrade_value: 1
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 7
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 7
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 7
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 7
     _level: 4
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 7
     _level: 5
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 8
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 8
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 8
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 8
     _level: 4
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 8
     _level: 5
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 9
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 50
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 9
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 9
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 30
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 9
     _level: 4
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 9
     _level: 5
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 10
     _level: 1
     _upgrade_type: 5
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 10
     _level: 2
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 10
     _level: 3
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 10
     _level: 4
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 10
     _level: 5
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 11
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 11
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 11
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 11
     _level: 4
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 11
     _level: 5
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 12
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 12
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 12
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 12
     _level: 4
     _upgrade_type: 6
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 12
     _level: 5
     _upgrade_type: 7
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 13
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 50
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 13
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 13
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 30
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 14
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 14
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 14
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 15
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 15
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 15
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 16
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 16
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 16
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 17
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 50
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 17
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 17
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 30
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 18
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 18
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 18
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 19
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 19
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 19
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 20
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 20
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 20
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 21
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 50
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 21
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 21
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 30
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 22
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 22
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 22
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 23
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 23
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 23
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 24
     _level: 1
     _upgrade_type: 1
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 1
   - _unit_idx: 24
     _level: 2
     _upgrade_type: 2
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0
   - _unit_idx: 24
     _level: 3
     _upgrade_type: 3
     _upgrade_value: 25
     _skill_idx: -1
     _skill_value: 2000
+    _skill_damage: 2000
+    _debuff_type: 0

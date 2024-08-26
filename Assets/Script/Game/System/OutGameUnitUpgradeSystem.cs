@@ -9,7 +9,7 @@ public class OutGameUnitUpgradeSystem
 
     public enum SKiillInfoType
     {
-        SwordsFury, ShieldBash, GuardiansStance, ValiantStrike, AttackPowerIncrease, AttackSpeedIncrease, SkillDamageIncrease, SkillCooldownReduction, IncreasedBossDamage
+        SwordsFury, ShieldBash, GuardiansStance, ValiantStrike, AttackPowerIncrease, AttackSpeedIncrease, SkillDamageIncrease, SkillCooldownReduction, IncreasedBossDamage , CriticalDamagePecentIncrease , CriticalDamageIncrase
     }
     public void AddUnitData(int unitidx , int unitcount)
     {

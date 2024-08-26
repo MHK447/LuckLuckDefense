@@ -21,13 +21,15 @@ public class InGameUnitBase : MonoBehaviour
         public int UnitSkillIdx;
         public int UnitSkillRatio;
         public int UnitSkillValue;
+        public int DebuffType;
 
 
-        public UnitActiveSkillInfo(int unitskillidx , int unitskillratio , int unitskillvalue)
+        public UnitActiveSkillInfo(int unitskillidx , int unitskillratio , int unitskillvalue , int debufftype)
         {
             UnitSkillIdx = unitskillidx;
             UnitSkillRatio = unitskillratio;
             UnitSkillValue = unitskillvalue;
+            DebuffType = debufftype;
         }
     }
 
@@ -148,11 +150,18 @@ public class InGameUnitBase : MonoBehaviour
 
             var damageprecentvalue = ProjectUtility.GetPercentValue(attackvalue, (float)damagebuffvalue);
 
-            info.Attack = td.attack + (int)damageprecentvalue;
+            var outgamebuffvalue = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.AttackPowerIncrease);
+
+            var getbuffvalue = ProjectUtility.GetPercentValue(UnitIdx, outgamebuffvalue); 
+
+
+            info.Attack = td.attack + (int)damageprecentvalue + getbuffvalue;
 
             var criticalbuffvalue = ProjectUtility.GetPercentValue(td.criticalchance,(float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALPERECENT));
 
-            info.criticalChance = (float)td.criticalchance + (float)criticalbuffvalue;
+            var outgamecriticalbuffvalue = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.CriticalDamagePecentIncrease);
+
+            info.criticalChance = (float)td.criticalchance + (float)criticalbuffvalue + outgamecriticalbuffvalue;
             
             var buffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.ATTACKSPEED);
 
@@ -160,7 +169,11 @@ public class InGameUnitBase : MonoBehaviour
 
             var speedbuffvalue = (attackspeedvalue * buffvalue) / 100f;
 
-            info.AttackSpeed = attackspeedvalue + (float)speedbuffvalue;
+            var outgameattackspeedvalue = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.AttackSpeedIncrease);
+
+            var getoutgameattackspeed = ProjectUtility.GetPercentValue(UnitIdx, outgameattackspeedvalue);
+
+            info.AttackSpeed = attackspeedvalue + (float)speedbuffvalue + getoutgameattackspeed; 
            
 
 
@@ -171,14 +184,6 @@ public class InGameUnitBase : MonoBehaviour
             {
                 switch(td.unit_skill[i])
                 {
-                    case (int)UnitSkillSystem.SkillType.Slow:
-                    case (int)UnitSkillSystem.SkillType.Sturn:
-                    case (int)UnitSkillSystem.SkillType.AttackSkill:
-                        {
-                            var newskill = new UnitActiveSkillInfo(td.unit_skill[i], td.unit_skil_percent[i], td.unit_skil_value[i]);
-                            info.UnitSkillInfoList.Add(newskill);
-                        }
-                        break;
                     case (int)UnitSkillSystem.SkillType.DefenseReduction:
                     case (int)UnitSkillSystem.SkillType.AttackPowerIncrease:
                     case (int)UnitSkillSystem.SkillType.MoveSpeedReduction:
@@ -190,6 +195,32 @@ public class InGameUnitBase : MonoBehaviour
                         break;
                 }
             }
+
+
+            var findoutgamedata = GameRoot.Instance.OutGameUnitUpgradeSystem.FindOutGameUnit(UnitIdx);
+
+            if(findoutgamedata != null)
+            {
+                for(int i = 0; i < findoutgamedata.UnitLevel; ++i)
+                {
+                    var outgameunitupgradetd = Tables.Instance.GetTable<OutGameUnitUpgrade>().GetData(new KeyValuePair<int, int>(UnitIdx, i + 1));
+
+                    if(outgameunitupgradetd != null)
+                    {
+
+                        if (outgameunitupgradetd.debuff_type > 0)
+                        {
+                            int outgameskilvalue = outgameunitupgradetd.skill_value / 100;
+                            int outgameskilldamage = outgameunitupgradetd.skill_damage / 100;
+                            var newskill = new UnitActiveSkillInfo(td.unit_skill[i], outgameskilvalue, outgameskilldamage, outgameunitupgradetd.debuff_type);
+                            info.UnitSkillInfoList.Add(newskill);
+                        }
+                    }
+                }
+            }
+
+
+
         }
         }
 
@@ -225,7 +256,63 @@ public class InGameUnitBase : MonoBehaviour
 
             if(isskillon)
             {
-                enemy.DebuffDamage((InGameEnemyBase.DebuffType)info.UnitSkillInfoList[i].UnitSkillIdx, info.UnitSkillInfoList[i].UnitSkillValue, info.UnitSkillInfoList[i].UnitSkillValue / 10);
+
+                switch (info.UnitSkillInfoList[i].UnitSkillIdx)
+                {
+                    case (int)OutGameUnitUpgradeSystem.SKiillInfoType.SwordsFury:
+                        {
+                            GameRoot.Instance.EffectSystem.MultiPlay<SwordCastEffect>(this.transform.position, effect =>
+                            {
+                                if (this != null)
+                                {
+                                    ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                    effect.SetAutoRemove(true, 2f);
+                                    effect.transform.SetParent(this.transform);
+                                }
+                            });
+                        }
+                        break;
+                    case (int)OutGameUnitUpgradeSystem.SKiillInfoType.ValiantStrike:
+                        {
+                            GameRoot.Instance.EffectSystem.MultiPlay<BraveEffect>(this.transform.position, effect =>
+                            {
+                                if (this != null)
+                                {
+                                    ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                    effect.SetAutoRemove(true, 2f);
+                                    effect.transform.SetParent(this.transform);
+                                }
+                            });
+                        }
+                        break;
+                    case (int)OutGameUnitUpgradeSystem.SKiillInfoType.ShieldBash:
+                        {
+                            GameRoot.Instance.EffectSystem.MultiPlay<ShieldAttackEffect>(this.transform.position, effect =>
+                            {
+                                if (this != null)
+                                {
+                                    ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                    effect.SetAutoRemove(true, 2f);
+                                    effect.transform.SetParent(this.transform);
+                                }
+                            });
+                        }
+                        break;
+                    case (int)OutGameUnitUpgradeSystem.SKiillInfoType.GuardiansStance:
+                        {
+                            GameRoot.Instance.EffectSystem.MultiPlay<GurdianEffect>(this.transform.position, effect =>
+                            {
+                                if (this != null)
+                                {
+                                    ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                                    effect.SetAutoRemove(true, 2f);
+                                    effect.transform.SetParent(this.transform);
+                                }
+                            });
+                        }
+                        break;
+                }
+                enemy.DebuffDamage((InGameEnemyBase.DebuffType)info.UnitSkillInfoList[i].DebuffType, info.UnitSkillInfoList[i].UnitSkillValue, info.UnitSkillInfoList[i].UnitSkillValue / 10 );
             }
         }
 
@@ -236,7 +323,13 @@ public class InGameUnitBase : MonoBehaviour
 
             var crticialdamage = (criticaldamagebuff * SkillCardSystem.CrtiticalDamage) / 100f;
 
+            var outgamecriticalpercent = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.CriticalDamagePecentIncrease);
+
             crticialdamage = SkillCardSystem.CrtiticalDamage + crticialdamage;
+
+            var outgamebuffvalue = ProjectUtility.GetPercentValue((float)crticialdamage, outgamecriticalpercent);
+
+            crticialdamage = crticialdamage + outgamebuffvalue;
 
             damage = damage * crticialdamage;
         }
@@ -302,6 +395,7 @@ public class InGameUnitBase : MonoBehaviour
             float distanceToEnemy = Vector3.Distance(AttackRangeTr.position, Target.transform.position);
             if (distanceToEnemy < info.AttackRange)
             {
+
                 Attack(Target, info.Attack);
 
                 if (Target.IsDeath)

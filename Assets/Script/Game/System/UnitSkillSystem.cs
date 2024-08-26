@@ -10,9 +10,6 @@ public class UnitSkillSystem
 
     public enum SkillType
     {
-        AttackSkill = 1,
-        Sturn = 2,
-        Slow = 3,
         DefenseReduction = 4,
         AttackPowerIncrease = 5,
         MoveSpeedReduction = 6,

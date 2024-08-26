@@ -48,6 +48,20 @@ namespace BanpoFri
 			get { return _skill_value;}
 			set { _skill_value = value;}
 		}
+		[SerializeField]
+		private int _skill_damage;
+		public int skill_damage
+		{
+			get { return _skill_damage;}
+			set { _skill_damage = value;}
+		}
+		[SerializeField]
+		private int _debuff_type;
+		public int debuff_type
+		{
+			get { return _debuff_type;}
+			set { _debuff_type = value;}
+		}
 
     }
 

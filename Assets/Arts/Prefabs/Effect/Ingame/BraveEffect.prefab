@@ -39089,7 +39089,7 @@ GameObject:
   - component: {fileID: 6906710870072246194}
   - component: {fileID: 6906710870072246193}
   m_Layer: 0
-  m_Name: FX_Skill_BraveAttack_01
+  m_Name: BraveEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

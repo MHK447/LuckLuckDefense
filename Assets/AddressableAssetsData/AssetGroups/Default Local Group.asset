@@ -225,6 +225,22 @@ MonoBehaviour:
     m_Address: Unit1003
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e11fbc03d5dcc1f4cbca4f7a1350df16
+    m_Address: Effect/SwordCastEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 325148dc6faa59d4e8454d5ffcbea97f
+    m_Address: Effect/BraveEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5a30f513748239f469ee0395ee3b0dd3
+    m_Address: Effect/ShieldAttackEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 483ff28c875354145b28f5d9e93271d6
+    m_Address: Effect/GurdianEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
