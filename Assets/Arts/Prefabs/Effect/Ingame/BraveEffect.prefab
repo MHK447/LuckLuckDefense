@@ -39088,6 +39088,7 @@ GameObject:
   - component: {fileID: 6906710870072246195}
   - component: {fileID: 6906710870072246194}
   - component: {fileID: 6906710870072246193}
+  - component: {fileID: 7945046266906460146}
   m_Layer: 0
   m_Name: BraveEffect
   m_TagString: Untagged
@@ -43897,3 +43898,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &7945046266906460146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6906710870072246192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13da7c833ca049299f77a7aef062d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: []

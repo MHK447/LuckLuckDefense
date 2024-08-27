@@ -50,6 +50,8 @@ public class InGameUnitBase : MonoBehaviour
     [SerializeField]
     private AnimFunction AttackAnimAction;
 
+    private Vector3 SkillOffset = new Vector3(0,1,0);
+
     public SpriteRenderer attackRangeIndicator;
 
     [SerializeField]
@@ -212,7 +214,7 @@ public class InGameUnitBase : MonoBehaviour
                         {
                             int outgameskilvalue = outgameunitupgradetd.skill_value / 100;
                             int outgameskilldamage = outgameunitupgradetd.skill_damage / 100;
-                            var newskill = new UnitActiveSkillInfo(td.unit_skill[i], outgameskilvalue, outgameskilldamage, outgameunitupgradetd.debuff_type);
+                            var newskill = new UnitActiveSkillInfo(outgameunitupgradetd.upgrade_type, outgameskilvalue, outgameskilldamage, outgameunitupgradetd.debuff_type);
                             info.UnitSkillInfoList.Add(newskill);
                         }
                     }
@@ -256,12 +258,15 @@ public class InGameUnitBase : MonoBehaviour
 
             if(isskillon)
             {
+                var skilleffect = this.transform.position + SkillOffset;
 
                 switch (info.UnitSkillInfoList[i].UnitSkillIdx)
                 {
                     case (int)OutGameUnitUpgradeSystem.SKiillInfoType.SwordsFury:
                         {
-                            GameRoot.Instance.EffectSystem.MultiPlay<SwordCastEffect>(this.transform.position, effect =>
+                            
+
+                            GameRoot.Instance.EffectSystem.MultiPlay<SwordCastEffect>(skilleffect, effect =>
                             {
                                 if (this != null)
                                 {
@@ -274,7 +279,7 @@ public class InGameUnitBase : MonoBehaviour
                         break;
                     case (int)OutGameUnitUpgradeSystem.SKiillInfoType.ValiantStrike:
                         {
-                            GameRoot.Instance.EffectSystem.MultiPlay<BraveEffect>(this.transform.position, effect =>
+                            GameRoot.Instance.EffectSystem.MultiPlay<BraveEffect>(skilleffect, effect =>
                             {
                                 if (this != null)
                                 {
@@ -287,7 +292,7 @@ public class InGameUnitBase : MonoBehaviour
                         break;
                     case (int)OutGameUnitUpgradeSystem.SKiillInfoType.ShieldBash:
                         {
-                            GameRoot.Instance.EffectSystem.MultiPlay<ShieldAttackEffect>(this.transform.position, effect =>
+                            GameRoot.Instance.EffectSystem.MultiPlay<ShieldAttackEffect>(skilleffect, effect =>
                             {
                                 if (this != null)
                                 {
@@ -300,7 +305,7 @@ public class InGameUnitBase : MonoBehaviour
                         break;
                     case (int)OutGameUnitUpgradeSystem.SKiillInfoType.GuardiansStance:
                         {
-                            GameRoot.Instance.EffectSystem.MultiPlay<GurdianEffect>(this.transform.position, effect =>
+                            GameRoot.Instance.EffectSystem.MultiPlay<GurdianEffect>(skilleffect, effect =>
                             {
                                 if (this != null)
                                 {
