@@ -243,6 +243,24 @@ MonoBehaviour:
   - str_outgame_skill_attack_8
   - str_outgame_skill_attack_9
   - unit_level_info
+  - str_ingame_skill_name_1
+  - str_ingame_skill_name_2
+  - str_ingame_skill_name_3
+  - str_ingame_skill_name_4
+  - str_ingame_skill_name_5
+  - str_ingame_skill_name_6
+  - str_ingame_skill_name_7
+  - str_ingame_skill_name_8
+  - str_ingame_skill_name_9
+  - str_ingame_skill_desc_name_1
+  - str_ingame_skill_desc_name_2
+  - str_ingame_skill_desc_name_3
+  - str_ingame_skill_desc_name_4
+  - str_ingame_skill_desc_name_5
+  - str_ingame_skill_desc_name_6
+  - str_ingame_skill_desc_name_7
+  - str_ingame_skill_desc_name_8
+  - str_ingame_skill_desc_name_9
   mSecondKey: []
   mDataList:
   - _idx: str_stage_select_num
@@ -8089,6 +8107,618 @@ MonoBehaviour:
     _ua: 
   - _idx: unit_level_info
     _ko: "\uB808\uBCA8 {0}"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_1
+    _ko: "\uAC80\uC758 \uBD84\uB178"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_2
+    _ko: "\b\uBC29\uD328 \uAC15\uD0C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_3
+    _ko: "\uC218\uD638\uC790\uC758 \uC790\uC138"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_4
+    _ko: "\uC6A9\uB9F9\uD55C \uC77C\uACA9"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_5
+    _ko: "\uACF5\uACA9\uB825\uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_6
+    _ko: "\b\uACF5\uACA9\uC18D\uB3C4\uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_7
+    _ko: "\uC2A4\uD0AC\uD53C\uD574\uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_8
+    _ko: "\uC2A4\uD0AC\uCFE8\uD0C0\uC784\uAC10\uC18C"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_name_9
+    _ko: "\uBCF4\uC2A4\uC785\uD788\uB294\uD53C\uD574\uC99D\uAC00"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_1
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_2
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_3
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_4
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_5
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_6
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_7
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_8
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: str_ingame_skill_desc_name_9
+    _ko: "{0}\uD37C\uC13C\uD2B8 \uD655\uB960\uB85C {1} \uB370\uBBF8\uC9C0"
     _en: 
     _ja: 
     _es: 

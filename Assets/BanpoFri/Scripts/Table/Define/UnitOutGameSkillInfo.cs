@@ -14,18 +14,25 @@ namespace BanpoFri
 			set { _skill_idx = value;}
 		}
 		[SerializeField]
-		private int _skill_value;
-		public int skill_value
-		{
-			get { return _skill_value;}
-			set { _skill_value = value;}
-		}
-		[SerializeField]
 		private string _name;
 		public string name
 		{
 			get { return _name;}
 			set { _name = value;}
+		}
+		[SerializeField]
+		private string _ingame_select_name;
+		public string ingame_select_name
+		{
+			get { return _ingame_select_name;}
+			set { _ingame_select_name = value;}
+		}
+		[SerializeField]
+		private string _ingame_select_desc;
+		public string ingame_select_desc
+		{
+			get { return _ingame_select_desc;}
+			set { _ingame_select_desc = value;}
 		}
 
     }

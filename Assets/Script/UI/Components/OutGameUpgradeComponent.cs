@@ -85,21 +85,17 @@ public class OutGameUpgradeComponent : MonoBehaviour
 
             int curlevel = finddata == null ? 1 : finddata.UnitLevel;
 
-            if (finddata != null)
+            var unitleveltd = Tables.Instance.GetTable<OutGameUnitLevelinfo>().GetData(curlevel);
+
+            if (unitleveltd != null)
             {
-
-                var unitleveltd = Tables.Instance.GetTable<OutGameUnitLevelinfo>().GetData(finddata.UnitLevel);
-
-                if (unitleveltd != null)
-                {
-                    slidevalue = (float)curunitcount / (float)unitleveltd.cardcount;
-                }
-                UnitCountText.text = $"{curunitcount}/{unitleveltd.cardcount}";
-
-                UnitCountSlider.value = slidevalue;
-
-                LevelText.text = Tables.Instance.GetTable<Localize>().GetFormat("unit_level_info", finddata.UnitLevel);
+                slidevalue = (float)curunitcount / (float)unitleveltd.cardcount;
             }
+            UnitCountText.text = $"{curunitcount}/{unitleveltd.cardcount}";
+
+            UnitCountSlider.value = slidevalue;
+
+            LevelText.text = Tables.Instance.GetTable<Localize>().GetFormat("unit_level_info", curlevel);
         }
     }
 
