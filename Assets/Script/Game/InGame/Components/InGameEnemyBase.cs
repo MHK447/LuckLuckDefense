@@ -287,12 +287,12 @@ public class InGameEnemyBase : MonoBehaviour
             GameRoot.Instance.UserData.CurMode.EnergyMoney.Value += rewardvalue;
         }
 
-        //GameRoot.Instance.EffectSystem.MultiPlay<IconTextEffect>(HpTr.position, effect =>
-        //{
-        //    effect.SetText(1.ToString(), (int)Config.CurrencyID.EnergyMoney);
-        //    effect.SetAutoRemove(true, 1f);
-        //    effect.transform.SetParent(GameRoot.Instance.UISystem.WorldCanvas.transform);
-        //});
+
+        GameRoot.Instance.EffectSystem.MultiPlay<DeathEffect>(this.transform.position, effect =>
+        {
+                ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                effect.SetAutoRemove(true, 3f);
+        });
 
         if (GameRoot.Instance.UserData.CurMode.StageData.IsBossProperty.Value == true && UnitIdx > 1000)
         {

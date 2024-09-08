@@ -241,6 +241,10 @@ MonoBehaviour:
     m_Address: Effect/GurdianEffect
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bd2477d741a482540a491990f45d3705
+    m_Address: Effect/DeathEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
