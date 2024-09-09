@@ -748,6 +748,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332d145ca036d204f82f7beab60b0827, type: 3}
+--- !u!114 &3877471934322080968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4363529578267113722, guid: 332d145ca036d204f82f7beab60b0827, type: 3}
+  m_PrefabInstance: {fileID: 667046382008599602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1188525933986322722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1285,6 +1296,34 @@ MonoBehaviour:
   keyColor: BgColor_Black
   eventKeyColor: []
   eventCount: 0
+--- !u!114 &5310912842571704554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860377854930299494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19bc6258131f64341bb1a8729d035ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBuffValueCheck: 0
+  MineralText: {fileID: 6194225993628875964}
+  BattleBoneText: {fileID: 0}
+  BattleGasText: {fileID: 0}
+  CashText: {fileID: 3877471934322080968}
+  MoneyText: {fileID: 0}
+  PiggyCashText: {fileID: 0}
+  CandyText: {fileID: 0}
+  CandyIconTr: {fileID: 0}
+  CashIconTr: {fileID: 0}
+  MoneyIconTr: {fileID: 0}
+  MineralIconTr: {fileID: 0}
+  MineralRoot: {fileID: 0}
+  CandyRoot: {fileID: 0}
+  MoneyBuffText: {fileID: 0}
+  MaterialBuffText: {fileID: 0}
 --- !u!224 &4846045084992592120 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7830188878274899093, guid: df7fb87ced1aae944a9ec1af0b7a42f4, type: 3}
@@ -2097,7 +2136,7 @@ PrefabInstance:
     - target: {fileID: 8308366641245236170, guid: 332d145ca036d204f82f7beab60b0827, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d17037033fc964387a0f9dd676f62132, type: 3}
+      objectReference: {fileID: 21300000, guid: 25e8b389cb7d9491cb6852c542876936, type: 3}
     - target: {fileID: 9043269828386365155, guid: 332d145ca036d204f82f7beab60b0827, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -2188,6 +2227,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332d145ca036d204f82f7beab60b0827, type: 3}
+--- !u!114 &6194225993628875964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4363529578267113722, guid: 332d145ca036d204f82f7beab60b0827, type: 3}
+  m_PrefabInstance: {fileID: 7599842724777821254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8536646280073483479
 PrefabInstance:
   m_ObjectHideFlags: 0

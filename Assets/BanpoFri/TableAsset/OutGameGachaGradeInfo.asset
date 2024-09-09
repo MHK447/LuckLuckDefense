@@ -16,7 +16,6 @@ MonoBehaviour:
   - 1
   - 2
   - 3
-  - 4
   mSecondKey: []
   mDataList:
   - _grade: 1
@@ -25,5 +24,3 @@ MonoBehaviour:
     _ratio: 40
   - _grade: 3
     _ratio: 20
-  - _grade: 4
-    _ratio: 5

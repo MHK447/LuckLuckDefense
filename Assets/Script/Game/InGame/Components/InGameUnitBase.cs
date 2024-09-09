@@ -228,7 +228,12 @@ public class InGameUnitBase : MonoBehaviour
 
     private bool IsCriticalHit()
     {
-        return Random.value < info.criticalChance;
+        if (info.criticalChance <= 0) return false;
+
+
+        var randvalue = Random.Range(0, 100);
+
+        return randvalue < info.criticalChance;
     }
 
 
@@ -326,7 +331,7 @@ public class InGameUnitBase : MonoBehaviour
         {
             var criticaldamagebuff = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALDAMAGE);
 
-            var crticialdamage = (criticaldamagebuff * SkillCardSystem.CrtiticalDamage) / 100f;
+            var crticialdamage = (criticaldamagebuff * SkillCardSystem.CrtiticalDamage) / 100;
 
             var outgamecriticalpercent = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.CriticalDamagePecentIncrease);
 

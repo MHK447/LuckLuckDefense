@@ -28,14 +28,11 @@ MonoBehaviour:
   - 13
   - 14
   - 15
-  - 1001
-  - 1002
-  - 1003
   mSecondKey: []
   mDataList:
   - _unit_idx: 1
     _attack: 10
-    _attackrange: 300
+    _attackrange: 550
     _criticalchance: 0
     _attackspeed: 100
     _grade: 1
@@ -47,7 +44,7 @@ MonoBehaviour:
     _unit_skil_value: c80000000a000000
   - _unit_idx: 2
     _attack: 10
-    _attackrange: 300
+    _attackrange: 550
     _criticalchance: 0
     _attackspeed: 100
     _grade: 1
@@ -59,7 +56,7 @@ MonoBehaviour:
     _unit_skil_value: 01000000
   - _unit_idx: 3
     _attack: 10
-    _attackrange: 300
+    _attackrange: 550
     _criticalchance: 0
     _attackspeed: 100
     _grade: 1
@@ -70,10 +67,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: 1e000000
   - _unit_idx: 4
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit004
     _icon: Unit004_Img
@@ -82,10 +79,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 5
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit005
     _icon: Unit005_Img
@@ -94,10 +91,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 6
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit006
     _icon: Unit006_Img
@@ -106,10 +103,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 7
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit007
     _icon: Unit007_Img
@@ -119,7 +116,7 @@ MonoBehaviour:
     _unit_skil_value: c8000000
   - _unit_idx: 8
     _attack: 10
-    _attackrange: 300
+    _attackrange: 550
     _criticalchance: 25
     _attackspeed: 100
     _grade: 1
@@ -131,7 +128,7 @@ MonoBehaviour:
     _unit_skil_value: c8000000
   - _unit_idx: 9
     _attack: 10
-    _attackrange: 300
+    _attackrange: 550
     _criticalchance: 25
     _attackspeed: 100
     _grade: 1
@@ -142,10 +139,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 10
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit010
     _icon: Unit010_Img
@@ -154,10 +151,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 11
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit011
     _icon: Unit011_Img
@@ -166,10 +163,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 12
-    _attack: 50
-    _attackrange: 300
+    _attack: 40
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 2
     _prefab: Unit012
     _icon: Unit012_Img
@@ -178,10 +175,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 13
-    _attack: 50
-    _attackrange: 300
+    _attack: 100
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 3
     _prefab: Unit013
     _icon: Unit013_Img
@@ -190,10 +187,10 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 14
-    _attack: 50
-    _attackrange: 300
+    _attack: 100
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 3
     _prefab: Unit014
     _icon: Unit014_Img
@@ -202,50 +199,14 @@ MonoBehaviour:
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000
   - _unit_idx: 15
-    _attack: 50
-    _attackrange: 300
+    _attack: 100
+    _attackrange: 550
     _criticalchance: 25
-    _attackspeed: 200
+    _attackspeed: 100
     _grade: 3
     _prefab: Unit015
     _icon: Unit015_Img
     _name: unit_name_015
-    _unit_skill: 01000000
-    _unit_skil_percent: 1e000000
-    _unit_skil_value: c8000000
-  - _unit_idx: 1001
-    _attack: 150
-    _attackrange: 300
-    _criticalchance: 60
-    _attackspeed: 500
-    _grade: 4
-    _prefab: Unit1001
-    _icon: Unit1001_Img
-    _name: unit_name_1001
-    _unit_skill: 01000000
-    _unit_skil_percent: 1e000000
-    _unit_skil_value: c8000000
-  - _unit_idx: 1002
-    _attack: 150
-    _attackrange: 300
-    _criticalchance: 60
-    _attackspeed: 500
-    _grade: 4
-    _prefab: Unit1002
-    _icon: Unit1002_Img
-    _name: unit_name_1002
-    _unit_skill: 01000000
-    _unit_skil_percent: 1e000000
-    _unit_skil_value: c8000000
-  - _unit_idx: 1003
-    _attack: 150
-    _attackrange: 300
-    _criticalchance: 60
-    _attackspeed: 500
-    _grade: 4
-    _prefab: Unit1003
-    _icon: Unit1003_Img
-    _name: unit_name_1003
     _unit_skill: 01000000
     _unit_skil_percent: 1e000000
     _unit_skil_value: c8000000

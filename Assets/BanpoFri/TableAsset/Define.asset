@@ -51,7 +51,7 @@ MonoBehaviour:
   - _index: enemy_normal_base_hp
     _value: 50
   - _index: enemy_wave_increase_hp
-    _value: 120
+    _value: 250
   - _index: boss_gacha_coin_base
     _value: 2
   - _index: boss_gacha_coin_increaes
