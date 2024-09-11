@@ -29,9 +29,6 @@ public class PopupIngameUpgrade : UIBase
     private Button GachaBtn;
 
     [SerializeField]
-    private Button LegendCardBtn;
-
-    [SerializeField]
     private Button PauseBtn;
 
     [SerializeField]
@@ -89,7 +86,7 @@ public class PopupIngameUpgrade : UIBase
         base.Awake();
         UnitSpawnBtn.onClick.AddListener(OnClickUnitSpawn);
         GachaBtn.onClick.AddListener(OnClickGachaBtn);
-        LegendCardBtn.onClick.AddListener(OnClickLegendCardBtn);
+        //LegendCardBtn.onClick.AddListener(OnClickLegendCardBtn);
         PauseBtn.onClick.AddListener(OnClickPause);
         TicketMonsterBtn.onClick.AddListener(OnClickTicketMonster);
         UpgradeBtn.onClick.AddListener(OnClickUpgrade);

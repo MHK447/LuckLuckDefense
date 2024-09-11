@@ -31,6 +31,8 @@ public class InGameBattleSystem
 
     public int boss_gacha_coin_increaes = 0;
 
+    public int unit_death_ratio = 0;
+
     public IReactiveProperty<int> CurUnitCountProperty = new ReactiveProperty<int>();
 
     public void Create()
@@ -47,6 +49,7 @@ public class InGameBattleSystem
         enemy_wave_increase_hp = Tables.Instance.GetTable<Define>().GetData("enemy_wave_increase_hp").value;
         boss_gacha_coin_base = Tables.Instance.GetTable<Define>().GetData("boss_gacha_coin_base").value;
         boss_gacha_coin_increaes = Tables.Instance.GetTable<Define>().GetData("boss_gacha_coin_increaes").value;
+        unit_death_ratio = Tables.Instance.GetTable<Define>().GetData("unit_death_ratio").value;
     }   
 
 

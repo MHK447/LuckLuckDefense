@@ -30,6 +30,7 @@ MonoBehaviour:
   - legendmythic_upgrade_cost
   - summon_percent_base
   - card_upgrade_cost
+  - unit_death_ratio
   mSecondKey: []
   mDataList:
   - _index: end_unit_count
@@ -66,3 +67,5 @@ MonoBehaviour:
     _value: 100
   - _index: card_upgrade_cost
     _value: 100
+  - _index: unit_death_ratio
+    _value: 45

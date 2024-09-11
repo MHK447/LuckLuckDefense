@@ -37,13 +37,13 @@ public class PopupPassiveCardUpgrade : UIBase
 
     public void OnClickUpgrade()
     {
-        if(card_upgrade_cost >= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value)
+        if(card_upgrade_cost >= GameRoot.Instance.UserData.CurMode.Money.Value)
         {
             CardUpgradeBtn.interactable = false;
 
             StartCoroutine(RandomlyScaleCards());
 
-            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, -GameRoot.Instance.UserData.CurMode.EnergyMoney.Value);
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, -card_upgrade_cost);
         }
     }
 
@@ -95,7 +95,6 @@ public class PopupPassiveCardUpgrade : UIBase
                 ProjectUtility.SetActiveCheck(finddata.SelectObj, true);
                 GameRoot.Instance.WaitTimeAndCallback(1f, () => { ProjectUtility.SetActiveCheck(finddata.SelectObj, false); });
             }));
-          
         }
     }
 

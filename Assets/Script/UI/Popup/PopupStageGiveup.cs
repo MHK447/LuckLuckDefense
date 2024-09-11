@@ -33,7 +33,7 @@ public class PopupStageGiveup : UIBase
 
     public void OnClickGiveUp()
     {
-       
+        GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, RewardValue);
         RewardValue = 0;
         GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value = 0;
         GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.ReturnMainScreen();

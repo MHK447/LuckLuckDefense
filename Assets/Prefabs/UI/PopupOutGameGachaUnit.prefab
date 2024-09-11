@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd05f15d731684fd3880c05800dcbdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiType: 2
+  uiType: 3
   uiShowStateName: Show
   activeAnimator: {fileID: 9222333821805178695}
   closeBtn: {fileID: 6899975082174428164}

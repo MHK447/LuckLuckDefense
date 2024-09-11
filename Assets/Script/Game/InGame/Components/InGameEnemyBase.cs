@@ -305,6 +305,12 @@ public class InGameEnemyBase : MonoBehaviour
             GetGachaCoin();
         }
 
+
+        if(IsDeathMoneyReward())
+        {
+            GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value += 1;
+        }
+
         ProjectUtility.SetActiveCheck(this.gameObject, false);
     }
 
@@ -333,6 +339,17 @@ public class InGameEnemyBase : MonoBehaviour
     {
         ProjectUtility.SetActiveCheck(this.gameObject, false);
     }
+
+    public bool IsDeathMoneyReward()
+    {
+        var randvalue = Random.Range(0, 100);
+
+
+        return randvalue <= GameRoot.Instance.InGameBattleSystem.unit_death_ratio;
+
+
+    }
+
 
     void Update()
     {
