@@ -78,6 +78,18 @@ public class OutGameUnitUpgradeData
 
 }
 
+public class SelectGachaWeaponSkillData
+{
+	public int SkillTypeIdx = 0;
+	public int Level = 0;
+
+	public SelectGachaWeaponSkillData(int skillidx , int level)
+    {
+		SkillTypeIdx = skillidx;
+		Level = level;
+    }
+}
+
 
 public class InGameUnitUpgradeData
 {

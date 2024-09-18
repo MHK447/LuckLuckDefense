@@ -67,6 +67,9 @@ public class PopupIngameUpgrade : UIBase
     [SerializeField]
     private Button TicketMonsterBtn;
 
+    [SerializeField]
+    private Slider LevelSliderValue;
+
     private CompositeDisposable disposables = new CompositeDisposable();
 
     private InGameBattle Battle;
@@ -79,7 +82,12 @@ public class PopupIngameUpgrade : UIBase
 
     private int BossUnitTime = 0;
 
-    private int UnitCount = 0; 
+    private int UnitCount = 0;
+
+    private int unitdeadcount = 0;
+
+    [SerializeField]
+    private Text LvText;
 
     protected override void Awake()
     {
@@ -140,6 +148,43 @@ public class PopupIngameUpgrade : UIBase
                 ProjectUtility.SetActiveCheck(BossTimeObj, x);
         }).AddTo(disposables);
 
+        GameRoot.Instance.InGameSystem.LevelProperty.Subscribe(x => {
+
+            LvText.text = $"Lv.{x}";
+        }).AddTo(disposables);
+
+        GameRoot.Instance.InGameSystem.DeadCount.Subscribe(x => {
+            var stageidx = GameRoot.Instance.UserData.CurMode.StageData.StageIdx;
+            var stagetd = Tables.Instance.GetTable<StageCardDrawInfo>().GetData(stageidx);
+
+            if (stagetd != null)
+            {
+                var find = stagetd.unitdead_count.FindAll(y => y > x).FirstOrDefault();
+
+                if (stagetd.unitdead_count.Contains(x))
+                {
+                    LevelSliderValue.value = 0;
+                    return;
+                }
+
+                int beforevalue = 0;
+
+                if (find > 0)
+                {
+                    unitdeadcount = find;
+
+                    beforevalue = stagetd.unitdead_count.FindAll(y => y < x).LastOrDefault();
+                }
+
+                if (unitdeadcount <= 0) return;
+
+                var calcvalue = unitdeadcount - beforevalue;
+                var beforecalcvalue = x - beforevalue;
+                var value = (float)beforecalcvalue / (float)calcvalue;
+
+                LevelSliderValue.value = value;
+            }
+        }).AddTo(disposables);
     }
 
     public void StartWave(int waveidx)

@@ -23,6 +23,7 @@ public interface IUserDataMode
 	public List<PassiveSkillData> PassiveSkillDatas { get; set; }
 	public IReactiveCollection<SkillCardData> SkillCardDatas { get; set; }
 	public IReactiveCollection<OutGameUnitUpgradeData> OutGameUnitUpgradeDatas { get; set; }
+	public IReactiveCollection<SelectGachaWeaponSkillData> SelectGachaWeaponSkillDatas { get; set; }
 }
 
 public class UserDataMain : IUserDataMode
@@ -43,6 +44,7 @@ public class UserDataMain : IUserDataMode
 	public List<PassiveSkillData> PassiveSkillDatas { get; set; } = new List<PassiveSkillData>();
 	public IReactiveCollection<SkillCardData> SkillCardDatas { get; set; } = new ReactiveCollection<SkillCardData>();
 	public IReactiveCollection<OutGameUnitUpgradeData> OutGameUnitUpgradeDatas { get; set; } = new ReactiveCollection<OutGameUnitUpgradeData>();
+	public IReactiveCollection<SelectGachaWeaponSkillData> SelectGachaWeaponSkillDatas { get; set; } = new ReactiveCollection<SelectGachaWeaponSkillData>();
 
 }
 

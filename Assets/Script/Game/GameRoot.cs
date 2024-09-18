@@ -34,6 +34,7 @@ public class GameRoot : Singleton<GameRoot>
 	public UnitSkillSystem UnitSkillSystem { get; private set; } = new UnitSkillSystem();
 	public SkillCardSystem SkillCardSystem { get; private set; } = new SkillCardSystem();
 	public OutGameUnitUpgradeSystem OutGameUnitUpgradeSystem { get; private set; } = new OutGameUnitUpgradeSystem();
+	public SelectGachaWeaponSkillSystem GachaSkillSystem { get; private set; } = new SelectGachaWeaponSkillSystem();
 
 
 	public GameObject UILock;

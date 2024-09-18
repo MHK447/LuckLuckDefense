@@ -100,6 +100,7 @@ public class InGameBattle : MonoBehaviour
         WaveEnemyCount = 0;
         WaveCoolTime = 0f;
         waveonesecondtime = 0f;
+        GameRoot.Instance.UserData.CurMode.SelectGachaWeaponSkillDatas.Clear();
 
         foreach (var player in PlayerUnitList)
         {

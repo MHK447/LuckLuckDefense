@@ -30,6 +30,7 @@ public class InGameStage : MonoBehaviour
     {
             GameRoot.Instance.UserData.CurMode.EnergyMoney.Value = GameRoot.Instance.InGameBattleSystem.start_battle_energymoney;
             GameRoot.Instance.UserData.CurMode.Money.Value = 0;
+            GameRoot.Instance.UserData.CurMode.StageData.StageIdx = 1;
             GameRoot.Instance.UISystem.OpenUI<PageFade>(page => {
                 page.Set(() => {
                     GameRoot.Instance.UISystem.OpenUI<PopupIngameUpgrade>(popup => popup.Init(Battle));

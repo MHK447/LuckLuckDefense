@@ -128,6 +128,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8c261749c551c4468b06b270c4797a0d, type: 3}
   - {fileID: 21300000, guid: 29c841a9a078142c19c7307d27adcf0a, type: 3}
   - {fileID: 21300000, guid: 82df740aece7f47b3b4997846f9c60a3, type: 3}
+  - {fileID: 21300000, guid: 011a4b3ac43324346841b886e2c28a30, type: 3}
   - {fileID: 21300000, guid: 0a96a95a1b76f4a3b994c9c0fd612f57, type: 3}
   - {fileID: 21300000, guid: a32fb39a4bdce4808bc4de797f6dfa2c, type: 3}
   - {fileID: 21300000, guid: a6b55d9a11bd44f7e9a9757cb7564580, type: 3}
@@ -140,6 +141,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0ed6192cad13f4d1798cf46c86163ed0, type: 3}
   - {fileID: 21300000, guid: 8064b64cde92c4d678cddc2f6c1ee8c8, type: 3}
   - {fileID: 21300000, guid: 431cd48cd9ede48d0aaf2abbc7e12aee, type: 3}
+  - {fileID: 21300000, guid: 4471caac55233894a9bb101531718b93, type: 3}
   - {fileID: 21300000, guid: 16b7ebac4264141c8965b6478844c6b3, type: 3}
   - {fileID: 21300000, guid: abfdddbc0a2a54f569ac419d979db02e, type: 3}
   - {fileID: 21300000, guid: 75bc59dc3d0d4430786d9d3840255fe6, type: 3}
@@ -163,6 +165,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4b53d2ee24cb7418a83489c291d76d46, type: 3}
   - {fileID: 21300000, guid: 5439f25fc10604420bf79a7adedcff9f, type: 3}
   - {fileID: 21300000, guid: 09f76b5fde4284fd5b3852683afe6d29, type: 3}
+  - {fileID: 21300000, guid: 4591beaf3501a4dc695752ed09adfca4, type: 3}
   - {fileID: 21300000, guid: 282d9dcf41fdd424da5b0d83dca3c4d2, type: 3}
   m_PackedSpriteNamesToIndex:
   - Icon_Food_Can
@@ -219,6 +222,7 @@ SpriteAtlas:
   - Icon_Gem04_Octagon_Yellow
   - Icon_Bomb_Dynamite
   - Icon_Dog-Gum
+  - Btn_Rectangle01Blue_n
   - Icon_Potion02_Red
   - Icon_Megaphone
   - Icon_Pumkin
@@ -231,6 +235,7 @@ SpriteAtlas:
   - Icon_Gem02_Hexagon_Purple
   - Icon_Quest
   - Icon_Gem03_Diamond_Green
+  - Popup004_Blue
   - Icon_Gps
   - Icon_Emergency_Bag
   - Icon_Gem03_Diamond_Purple
@@ -254,6 +259,7 @@ SpriteAtlas:
   - Icon_Gem03_Diamond_Blue
   - Icon_Food_Shell
   - Icon_Book
+  - Btn_Rectangle01Cyan_n
   - Icon_Clan
   m_RenderDataMap: {}
   m_Tag: Atlas_UI_Common

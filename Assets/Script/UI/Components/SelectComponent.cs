@@ -23,7 +23,7 @@ public class SelectComponent : MonoBehaviour
     private List<Image> ImageList = new List<Image>();
 
     [SerializeField]
-    private int WeaponIdx = 0;
+    private int SkillIdx = 0;
 
     private System.Action<int> ClickAction = null;
 
@@ -32,50 +32,50 @@ public class SelectComponent : MonoBehaviour
         SelectBtn.onClick.AddListener(OnClickSelect);
     }
 
-    public void Set(int weaponidx , System.Action<int> clickaction)
+    public void Set(int skillidx , System.Action<int> clickaction)
     {
-        var td = Tables.Instance.GetTable<PlanetWeaponInfo>().GetData(weaponidx);
+        var td = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().GetData(skillidx);
 
         if(td != null)
         {
-            WeaponIdx = weaponidx;
+            SkillIdx = skillidx;
             ClickAction = clickaction;
-            BulletImg.sprite = Config.Instance.GetInGameAtlas(td.image);
-            NameText.text = Tables.Instance.GetTable<Localize>().GetString(td.name);
+            BulletImg.sprite = Config.Instance.GetInGameSkillAtlas(td.icon);
+            NameText.text = Tables.Instance.GetTable<Localize>().GetString(td.desc_1);
 
             foreach(var starimg in ImageList)
             {
-                starimg.sprite = Config.Instance.GetIconImg("Icon_star");
+                starimg.sprite = Config.Instance.GetIconImg("Icon_ImageIcon_StarGrade_l_Off");
             }
 
-            var findata = GameRoot.Instance.UserData.CurMode.PlayerWeapon.WeaponList.ToList().Find(x => x.WeaponIdx == weaponidx);
+            var findata = GameRoot.Instance.UserData.CurMode.SelectGachaWeaponSkillDatas.ToList().Find(x => x.SkillTypeIdx == skillidx);
 
             if(findata != null)
             {
-                var weapongachaupgradetd = Tables.Instance.GetTable<WeaponGachaUpgrade>().GetData(new KeyValuePair<int, int>(weaponidx, findata.WeaponLevel + 1));
-
-                var weaponinfotd = Tables.Instance.GetTable<GachaUpgradeType>().GetData(findata.WeaponLevel + 1);
-
-                if(weaponinfotd != null)
+                for (int i = 0; i < findata.Level + 1; ++i)
                 {
-                    AttackDesc.text = Tables.Instance.GetTable<Localize>().GetFormat(weaponinfotd.desc , (float)weapongachaupgradetd.upgrade_value / 100f);
+                    ImageList[i].sprite = Config.Instance.GetIconImg("Icon_ImageIcon_StarGrade_l_On");
                 }
+            }
 
-                for (int i = 0; i < findata.WeaponLevel + 1; ++i)
-                {
-                    ImageList[i].sprite = Config.Instance.GetIconImg("Icon_Star2");
-                }
+            var level = findata == null ? 1 : findata.Level;
+
+
+            if (td.desc_type == 1)
+            {
+                var buffvalue = td.value_1 + (td.level_buff_value * (level - 1));
+               AttackDesc.text =  Tables.Instance.GetTable<Localize>().GetFormat(td.desc_2, buffvalue);
             }
             else
             {
-                AttackDesc.text = Tables.Instance.GetTable<Localize>().GetString(td.name_desc);
+               AttackDesc.text = Tables.Instance.GetTable<Localize>().GetString(td.desc_2);
             }
         }
     }
 
     public void OnClickSelect()
     {
-        ClickAction?.Invoke(WeaponIdx);
+        ClickAction?.Invoke(SkillIdx);
         
     }
 

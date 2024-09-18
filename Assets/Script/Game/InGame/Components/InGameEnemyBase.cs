@@ -259,6 +259,7 @@ public class InGameEnemyBase : MonoBehaviour
         if(Hp <= 0)
         {
             Dead();
+            GameRoot.Instance.InGameSystem.DrawCardCheck();
         }
 
         Battle.SetDamageUI(GetHpTr, damage);

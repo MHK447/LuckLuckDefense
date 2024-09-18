@@ -162,6 +162,8 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     private SpriteAtlas UnitImgAtlas;
     [SerializeField]
     private SpriteAtlas SkillAtlas;
+    [SerializeField]
+    private SpriteAtlas InGameSkillAtlas;
 
 
 
@@ -269,6 +271,11 @@ public class Config : BanpoFri.SingletonScriptableObject<Config>, BanpoFri.ILoad
     public Sprite GetSkillAtlas(string key)
     {
         return SkillAtlas.GetSprite(key);
+    }
+
+    public Sprite GetInGameSkillAtlas(string key)
+    {
+        return InGameSkillAtlas.GetSprite(key);
     }
 
     public Sprite GetIconImg(string key)
