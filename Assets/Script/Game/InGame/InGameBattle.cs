@@ -32,6 +32,8 @@ public class InGameBattle : MonoBehaviour
 
     private List<InGameEnemyBase> EnemyList = new List<InGameEnemyBase>();
 
+    public List<InGameEnemyBase> GetEnemyList { get { return EnemyList; } }
+
     private List<InGameUnitBase> PlayerUnitList = new List<InGameUnitBase>();
 
     private List<InGameDamageUI> DamageUIList = new List<InGameDamageUI>();

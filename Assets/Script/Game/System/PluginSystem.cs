@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-#if UNITY_ANDROID && !UNITY_EDITOR
-using Google.Play.Review;
-using Google.Android.PerformanceTuner;
-#elif UNITY_IOS && !UNITY_EDITOR
-using System.Runtime.InteropServices;
-using Unity.Advertisement.IosSupport; 
-#endif
 using BanpoFri;
 
 public class PluginSystem

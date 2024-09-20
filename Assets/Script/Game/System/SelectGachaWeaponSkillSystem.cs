@@ -22,7 +22,16 @@ public class SelectGachaWeaponSkillSystem
         RandomRareUnitAdd = 11,
         WaterRise = 12,
         QuickEnergy = 13,
+        Bomb = 14,
     }
+
+    private InGameBattle Battle;
+
+    public void Create()
+    {
+        Battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle;
+    }
+
 
     public void AddWeaponSkillBuff(GachaWeaponSkillType skilltype)
     {
@@ -102,6 +111,55 @@ public class SelectGachaWeaponSkillSystem
             }
         }
         return buffvalue;
+    }
+
+
+    public void Update()
+    {
+
+        foreach(var skill in GameRoot.Instance.UserData.CurMode.SelectGachaWeaponSkillDatas)
+        {
+           switch(skill.SkillTypeIdx)
+            {
+                case (int)GachaWeaponSkillType.Bomb:
+                    {
+                        if(Time.time >= skill.NextFireTime)
+                        {
+                            var enemy =  Battle.GetEnemyList.Find(x => x.IsDeath == false);
+
+                            if (enemy != null)
+                            {
+
+                                var td = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().GetData((int)skill.SkillTypeIdx);
+
+                                FireSkill((GachaWeaponSkillType)skill.SkillTypeIdx, enemy);
+
+                                skill.NextFireTime = Time.time + td.value_2;
+                            }
+                        }
+                    }
+                    break;
+            }
+        }
+    }
+
+    public void FireSkill(GachaWeaponSkillType type , InGameEnemyBase target)
+    {
+        switch(type)
+        {
+            case GachaWeaponSkillType.Bomb:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<BombEffect>(target.transform.position, effect =>
+                    {
+                        if (this != null)
+                        {
+                            ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                            effect.SetAutoRemove(true, 2f);
+                        }
+                    });
+                }
+                break;
+        }
     }
 
 }

@@ -154,10 +154,15 @@ public class InGameUnitBase : MonoBehaviour
 
             var outgamebuffvalue = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.AttackPowerIncrease);
 
-            var getbuffvalue = ProjectUtility.GetPercentValue(UnitIdx, outgamebuffvalue); 
+            var getbuffvalue = ProjectUtility.GetPercentValue(UnitIdx, outgamebuffvalue);
+
+            float selectgachaattackbuff = GameRoot.Instance.GachaSkillSystem.GetBuffValue(SelectGachaWeaponSkillSystem.GachaWeaponSkillType.AttackDamageIncrease);
+
+            var selectgachadamagepercent = ProjectUtility.GetPercentValue(attackvalue, selectgachaattackbuff);
 
 
-            info.Attack = td.attack + (int)damageprecentvalue + getbuffvalue;
+
+            info.Attack = td.attack + (int)damageprecentvalue + getbuffvalue + selectgachadamagepercent;
 
             var criticalbuffvalue = ProjectUtility.GetPercentValue(td.criticalchance,(float)GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.CRITICALPERECENT));
 
@@ -173,9 +178,13 @@ public class InGameUnitBase : MonoBehaviour
 
             var outgameattackspeedvalue = GameRoot.Instance.OutGameUnitUpgradeSystem.FindBuffValue(UnitIdx, OutGameUnitUpgradeSystem.SKiillInfoType.AttackSpeedIncrease);
 
-            var getoutgameattackspeed = ProjectUtility.GetPercentValue(UnitIdx, outgameattackspeedvalue);
+            var getoutgameattackspeed = ProjectUtility.GetPercentValue((float)speedbuffvalue, outgameattackspeedvalue);
 
-            info.AttackSpeed = attackspeedvalue + (float)speedbuffvalue + getoutgameattackspeed; 
+            float selectattackspeed = GameRoot.Instance.GachaSkillSystem.GetBuffValue(SelectGachaWeaponSkillSystem.GachaWeaponSkillType.AttackSpeedIncrease);
+
+            var selectgachattackspeedvalue = ProjectUtility.GetPercentValue((float)speedbuffvalue, selectattackspeed);
+
+            info.AttackSpeed = attackspeedvalue + (float)speedbuffvalue + getoutgameattackspeed + selectgachattackspeedvalue; 
            
 
 

@@ -82,12 +82,15 @@ public class SelectGachaWeaponSkillData
 {
 	public int SkillTypeIdx = 0;
 	public int Level = 0;
+	public float NextFireTime = 0f;
 
 	public SelectGachaWeaponSkillData(int skillidx , int level)
     {
 		SkillTypeIdx = skillidx;
 		Level = level;
-    }
+		NextFireTime = 0f;
+
+	}
 }
 
 

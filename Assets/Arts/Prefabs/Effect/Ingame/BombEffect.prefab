@@ -4908,6 +4908,7 @@ GameObject:
   - component: {fileID: 8470069872215834971}
   - component: {fileID: 7270681218501424319}
   - component: {fileID: 5737345358344095365}
+  - component: {fileID: 5698382764844723582}
   m_Layer: 0
   m_Name: BombEffect
   m_TagString: Untagged
@@ -9710,6 +9711,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &5698382764844723582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525212541177109026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599cc2513555e458888dc919424ba6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: []
 --- !u!1 &3787313984889745803
 GameObject:
   m_ObjectHideFlags: 0
