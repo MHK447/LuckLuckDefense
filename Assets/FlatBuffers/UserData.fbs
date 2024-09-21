@@ -15,7 +15,8 @@ table UserData {
   gachacoin:int = 0;
   unitcarddatas:[UnitCardData];
   skillcarddatas:[SkillCardData]; 
-  outgameunitupgradedatas:[OutGameUnitUpgradeData];	
+  outgameunitupgradedatas:[OutGameUnitUpgradeData];
+  highwaveidx:int = 1;	
 }
 
 table FacilityData {

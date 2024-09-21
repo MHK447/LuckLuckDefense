@@ -60,6 +60,8 @@ public struct UserData : IFlatbufferObject
   public int SkillcarddatasLength { get { int o = __p.__offset(26); return o != 0 ? __p.__vector_len(o) : 0; } }
   public BanpoFri.Data.OutGameUnitUpgradeData? Outgameunitupgradedatas(int j) { int o = __p.__offset(28); return o != 0 ? (BanpoFri.Data.OutGameUnitUpgradeData?)(new BanpoFri.Data.OutGameUnitUpgradeData()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
   public int OutgameunitupgradedatasLength { get { int o = __p.__offset(28); return o != 0 ? __p.__vector_len(o) : 0; } }
+  public int Highwaveidx { get { int o = __p.__offset(30); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)1; } }
+  public bool MutateHighwaveidx(int highwaveidx) { int o = __p.__offset(30); if (o != 0) { __p.bb.PutInt(o + __p.bb_pos, highwaveidx); return true; } else { return false; } }
 
   public static Offset<BanpoFri.Data.UserData> CreateUserData(FlatBufferBuilder builder,
       StringOffset moneyOffset = default(StringOffset),
@@ -74,10 +76,12 @@ public struct UserData : IFlatbufferObject
       int gachacoin = 0,
       VectorOffset unitcarddatasOffset = default(VectorOffset),
       VectorOffset skillcarddatasOffset = default(VectorOffset),
-      VectorOffset outgameunitupgradedatasOffset = default(VectorOffset)) {
-    builder.StartTable(13);
+      VectorOffset outgameunitupgradedatasOffset = default(VectorOffset),
+      int highwaveidx = 1) {
+    builder.StartTable(14);
     UserData.AddCurplaydatetime(builder, curplaydatetime);
     UserData.AddLastlogintime(builder, lastlogintime);
+    UserData.AddHighwaveidx(builder, highwaveidx);
     UserData.AddOutgameunitupgradedatas(builder, outgameunitupgradedatasOffset);
     UserData.AddSkillcarddatas(builder, skillcarddatasOffset);
     UserData.AddUnitcarddatas(builder, unitcarddatasOffset);
@@ -92,7 +96,7 @@ public struct UserData : IFlatbufferObject
     return UserData.EndUserData(builder);
   }
 
-  public static void StartUserData(FlatBufferBuilder builder) { builder.StartTable(13); }
+  public static void StartUserData(FlatBufferBuilder builder) { builder.StartTable(14); }
   public static void AddMoney(FlatBufferBuilder builder, StringOffset moneyOffset) { builder.AddOffset(0, moneyOffset.Value, 0); }
   public static void AddStoremoney(FlatBufferBuilder builder, StringOffset storemoneyOffset) { builder.AddOffset(1, storemoneyOffset.Value, 0); }
   public static void AddCash(FlatBufferBuilder builder, int cash) { builder.AddInt(2, cash, 0); }
@@ -118,6 +122,7 @@ public struct UserData : IFlatbufferObject
   public static VectorOffset CreateOutgameunitupgradedatasVector(FlatBufferBuilder builder, Offset<BanpoFri.Data.OutGameUnitUpgradeData>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
   public static VectorOffset CreateOutgameunitupgradedatasVectorBlock(FlatBufferBuilder builder, Offset<BanpoFri.Data.OutGameUnitUpgradeData>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
   public static void StartOutgameunitupgradedatasVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static void AddHighwaveidx(FlatBufferBuilder builder, int highwaveidx) { builder.AddInt(13, highwaveidx, 1); }
   public static Offset<BanpoFri.Data.UserData> EndUserData(FlatBufferBuilder builder) {
     int o = builder.EndTable();
     return new Offset<BanpoFri.Data.UserData>(o);

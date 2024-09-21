@@ -124,6 +124,7 @@ public class InGameUnitBase : MonoBehaviour
 
             GameRoot.Instance.WaitTimeAndCallback(0.1f, () => {
                 ChangeState(State.Idle);
+                StartAnim("0_idle");
             });
         }
     }
@@ -375,6 +376,7 @@ public class InGameUnitBase : MonoBehaviour
         {
             case State.Idle:
                 {
+                    Target = null;
                     StartAnim("0_idle");
                 }
                 break;

@@ -183,6 +183,7 @@ public partial class UserDataSystem
 		BanpoFri.Data.UserData.AddUnitcarddatas(builder, unitvec);
 		BanpoFri.Data.UserData.AddSkillcarddatas(builder, skillcarddatasvec);
 		BanpoFri.Data.UserData.AddOutgameunitupgradedatas(builder, outgameunitupgradevec);
+		BanpoFri.Data.UserData.AddHighwaveidx(builder, mainData.StageData.StageHighWave);
 
 
 		//end 

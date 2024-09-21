@@ -27,9 +27,14 @@ public class PageLobbyBattle : UIBase
 
     public void OnClickStart()
     {
+        StartBtn.interactable = false;
         GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.StartBattle(1);
         GameRoot.Instance.InGameSystem.DeadCount.Value = 0;
         GameRoot.Instance.InGameSystem.LevelProperty.Value = 0;
+
+        GameRoot.Instance.WaitTimeAndCallback(2f, () => {
+            StartBtn.interactable = true;
+        });
     }
 
 
@@ -48,7 +53,7 @@ public class PageLobbyBattle : UIBase
 
         var highwave = GameRoot.Instance.UserData.CurMode.StageData.StageHighWave;
 
-        var stagewavetd = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList();
+        var stagewavetd = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList().FindAll(x=> x.wave_idx > highwave);
 
 
         float closestValue = stagewavetd[0].wave_idx;
@@ -56,17 +61,14 @@ public class PageLobbyBattle : UIBase
 
         StageWaveInfoData data = null; 
 
-        for (int i = 1; i < stagewavetd.Count; i++)
+
+        if(stagewavetd.Count == 0)
         {
-            float difference = Mathf.Abs(highwave - stagewavetd[i].wave_idx);
-
-            if (difference < minDifference)
-            {
-                minDifference = difference;
-                closestValue = stagewavetd[i].wave_idx;
-                data = stagewavetd[i];
-
-            }
+            data = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList().Last();
+        }
+        else
+        {
+            data = stagewavetd.First();
         }
 
 
@@ -75,7 +77,7 @@ public class PageLobbyBattle : UIBase
         {
             HighWaveText.text = $"Highest Wave:{highwave}";
 
-            var unittd = Tables.Instance.GetTable<EnemyInfo>().GetData(data.unit_idx);
+            var unittd = Tables.Instance.GetTable<EnemyInfo>().GetData(data.boss_idx);
 
             foreach(var unitimg in UnitImgList)
             {

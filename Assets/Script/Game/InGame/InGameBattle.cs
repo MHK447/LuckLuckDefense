@@ -82,6 +82,13 @@ public class InGameBattle : MonoBehaviour
             var coinbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.WAVEADDCOIN, false);
 
             GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, (int)coinbuffvalue);
+
+            var highscorewave = GameRoot.Instance.UserData.CurMode.StageData.StageHighWave;
+
+            if(waveidx > highscorewave)
+            {
+                GameRoot.Instance.UserData.CurMode.StageData.StageHighWave = waveidx;
+            }
         }
     }
 

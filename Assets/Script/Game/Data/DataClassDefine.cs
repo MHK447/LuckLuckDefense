@@ -23,7 +23,7 @@ public class StageData
 
 	public int UnitAddCount = 0;
 
-	public int StageHighWave = 0;
+	public int StageHighWave = 1;
 
 	public bool IsStartBattle = false;
 

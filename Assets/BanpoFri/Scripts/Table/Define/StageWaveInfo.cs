@@ -41,6 +41,13 @@ namespace BanpoFri
 			get { return _unit_idx;}
 			set { _unit_idx = value;}
 		}
+		[SerializeField]
+		private int _boss_idx;
+		public int boss_idx
+		{
+			get { return _boss_idx;}
+			set { _boss_idx = value;}
+		}
 
     }
 
