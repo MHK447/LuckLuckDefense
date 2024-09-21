@@ -77,17 +77,17 @@ MonoBehaviour:
     _name: enemy_name_101
   - _unit_idx: 102
     _movespeed: 150
-    _prefab: Enemy_101
+    _prefab: Enemy_102
     _image: 
     _name: enemy_name_101
   - _unit_idx: 103
     _movespeed: 150
-    _prefab: Enemy_101
+    _prefab: Enemy_103
     _image: 
     _name: enemy_name_101
   - _unit_idx: 104
     _movespeed: 150
-    _prefab: Enemy_101
+    _prefab: Enemy_104
     _image: 
     _name: enemy_name_101
   - _unit_idx: 105
@@ -267,18 +267,18 @@ MonoBehaviour:
     _name: enemy_name_1001
   - _unit_idx: 1002
     _movespeed: 200
-    _prefab: Enemy_1001
-    _image: Boss_1001_1
+    _prefab: Enemy_1002
+    _image: Boss_1002_1
     _name: enemy_name_1001
   - _unit_idx: 1003
     _movespeed: 200
-    _prefab: Enemy_1001
-    _image: Boss_1001_1
+    _prefab: Enemy_1003
+    _image: Boss_1003_1
     _name: enemy_name_1001
   - _unit_idx: 1004
     _movespeed: 200
-    _prefab: Enemy_1001
-    _image: Boss_1001_1
+    _prefab: Enemy_1004
+    _image: Boss_1004_1
     _name: enemy_name_1001
   - _unit_idx: 1005
     _movespeed: 200

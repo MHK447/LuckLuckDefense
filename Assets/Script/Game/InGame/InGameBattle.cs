@@ -385,6 +385,7 @@ public class InGameBattle : MonoBehaviour
         foreach (InGameEnemyBase enemy in EnemyList)
         {
             if (enemy.IsDeath) continue;
+            if (enemy.gameObject.activeSelf == false) continue;
 
             float distance = Vector3.Distance(unittr.position, enemy.transform.position);
             if (distance < closestDistance && distance <= attackrange)

@@ -23,6 +23,8 @@ public class StageData
 
 	public int UnitAddCount = 0;
 
+	public int StageHighWave = 0;
+
 	public bool IsStartBattle = false;
 
 	public IReactiveProperty<bool> IsBossProperty = new ReactiveProperty<bool>(false);

@@ -253,6 +253,30 @@ MonoBehaviour:
     m_Address: Effect/BombEffect
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 79c7fde2c42554f4397283e98346abd9
+    m_Address: Enemy_102
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: abbf0d4a442734710b62f746e16d3612
+    m_Address: Enemy_1002
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3e39814eae8f14988b5fb1b8fb2eb000
+    m_Address: Enemy_1003
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b20ff5826130d4e9eaab0868cc974c76
+    m_Address: Enemy_1004
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 903110c885768473da20b28d508d6afe
+    m_Address: Enemy_103
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bebdbbcab268c40f7b11d9e5ba90aef2
+    m_Address: Enemy_104
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
