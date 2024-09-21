@@ -99,7 +99,6 @@ public class InGameUnitBase : MonoBehaviour
         {
             SetInfo();
 
-            ChangeState(State.Idle);
 
 
             ProjectUtility.SetActiveCheck(attackRangeIndicator.gameObject, false);
@@ -122,6 +121,10 @@ public class InGameUnitBase : MonoBehaviour
             var finddata = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == UpgradeIdx);
 
             finddata.LevelProperty.Subscribe(x => { SetInfo(); }).AddTo(disposables);
+
+            GameRoot.Instance.WaitTimeAndCallback(0.1f, () => {
+                ChangeState(State.Idle);
+            });
         }
     }
 
@@ -364,9 +367,11 @@ public class InGameUnitBase : MonoBehaviour
 
     public void ChangeState(State state)
     {
+        if (CurState == state) return;
+
         CurState = state;
 
-        switch(state)
+        switch (state)
         {
             case State.Idle:
                 {

@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 6d864d7c45db90746a18c19aac57483e
+guid: 927e354ab04c34ee7a8866c5577d0481
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,13 +63,14 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -78,9 +79,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 10
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -89,10 +90,10 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
+    buildTarget: iPhone
+    maxTextureSize: 256
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 50
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -101,10 +102,10 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
+    buildTarget: Android
+    maxTextureSize: 256
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 34
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -116,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_014_0
+      name: Boss_1004_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4c12baa4779d47498f8d097786dd9a3
-      internalID: -582142435
+      spriteID: ce77df21798c9428cb03e1a4da5afe70
+      internalID: -1275968486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_1
+      name: Boss_1004_1
       rect:
         serializedVersion: 2
         x: 48
@@ -151,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55d834a3944b85545b58af528f754539
-      internalID: 2012960209
+      spriteID: 9c5929912acd04d7d84fbe6c6a5838a5
+      internalID: 1037530184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_2
+      name: Boss_1004_2
       rect:
         serializedVersion: 2
         x: 96
@@ -172,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd17c79b5bc41964689544de118a70f7
-      internalID: -1415312827
+      spriteID: 68b999a932af64fde964145b912a0f30
+      internalID: 88356530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_3
+      name: Boss_1004_3
       rect:
         serializedVersion: 2
         x: 144
@@ -193,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8ee9aad0c616394ea847d393abe4531
-      internalID: 1760999481
+      spriteID: 32409c0ad980e444087a6962e03aa8bc
+      internalID: -1236012444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_4
+      name: Boss_1004_4
       rect:
         serializedVersion: 2
         x: 0
@@ -214,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f41d6219c07fe4eb441035c981c5ff
-      internalID: 181672054
+      spriteID: f5d2103196f0d4c228824b0b6da1abe0
+      internalID: -892035226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_5
+      name: Boss_1004_5
       rect:
         serializedVersion: 2
         x: 48
@@ -235,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca68dfaf350ccd3468951d72bc5918a8
-      internalID: 1090946474
+      spriteID: 9d9ffcc020f224c43ab345fa2f1ef5d7
+      internalID: 118626666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_6
+      name: Boss_1004_6
       rect:
         serializedVersion: 2
         x: 96
@@ -256,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 402746ff59c363f49b234c9b103d3b51
-      internalID: -1741461243
+      spriteID: bc2d703ba4025459d8f5458850678bc4
+      internalID: -1887648935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_7
+      name: Boss_1004_7
       rect:
         serializedVersion: 2
         x: 144
@@ -277,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c66e93c4be7be9c4abbfbebede0c23d4
-      internalID: -1699892432
+      spriteID: 651e40dcc5627454381a4e7aaf5c238d
+      internalID: -1205117249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_8
+      name: Boss_1004_8
       rect:
         serializedVersion: 2
         x: 0
@@ -298,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f56f760e417c2a4abd09380d391fbc9
-      internalID: 461232261
+      spriteID: 529e1cb19f7c54ce58a13fd56a2c6b4c
+      internalID: -1317367233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_9
+      name: Boss_1004_9
       rect:
         serializedVersion: 2
         x: 48
@@ -319,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d6592c0d85fee24dafcd307ab13d04c
-      internalID: 1896315107
+      spriteID: 60fc1e449af3e49dc8e18c23d7db3bd8
+      internalID: -1837031498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_10
+      name: Boss_1004_10
       rect:
         serializedVersion: 2
         x: 96
@@ -340,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3140558aae40d284bb54fe65b1ff9f5e
-      internalID: 263702209
+      spriteID: a9194231c69134b7c8122c16c9f859bd
+      internalID: -1974046274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_11
+      name: Boss_1004_11
       rect:
         serializedVersion: 2
         x: 144
@@ -361,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdcff32aee817214cb5069ff633b2961
-      internalID: -212256709
+      spriteID: 5a512ce5642104d89b68ac283ff8d712
+      internalID: 246560681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_12
+      name: Boss_1004_12
       rect:
         serializedVersion: 2
         x: 0
@@ -382,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0823edb223615e44a01b5de13986a73
-      internalID: 2111106360
+      spriteID: d5e5bdf38b4174c0ba6067f6d792520d
+      internalID: -494207981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_13
+      name: Boss_1004_13
       rect:
         serializedVersion: 2
         x: 48
@@ -403,14 +404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc7b5a41d167324e9dbf4f279b2f5ab
-      internalID: 1936017445
+      spriteID: 32c00ae28bc9942ff8a8387fb09a6e7c
+      internalID: 1801600199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_14
+      name: Boss_1004_14
       rect:
         serializedVersion: 2
         x: 96
@@ -424,14 +425,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d69f94a0f71c9648aab0a146307a6ac
-      internalID: -1588750857
+      spriteID: 2db15aa96d04f4205a71b44ecd0ab880
+      internalID: -1401982839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_15
+      name: Boss_1004_15
       rect:
         serializedVersion: 2
         x: 144
@@ -445,14 +446,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdaca5e8687c2fe4abd9e6a82663a59c
-      internalID: 1977946458
+      spriteID: 3271cb26c8e66418fb5825805bae53fb
+      internalID: -502124795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_16
+      name: Boss_1004_16
       rect:
         serializedVersion: 2
         x: 0
@@ -466,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acae3d01cf27bc345ab0141e5cd021a3
-      internalID: 201603426
+      spriteID: 212ca4c2baf064ee1b9291c97377093b
+      internalID: 274924667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_17
+      name: Boss_1004_17
       rect:
         serializedVersion: 2
         x: 48
@@ -487,14 +488,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f21e2eb9e903aba49be6cbbc5f92f13e
-      internalID: -123160299
+      spriteID: fee1178795f3748198a140ab7f733553
+      internalID: 765507720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_18
+      name: Boss_1004_18
       rect:
         serializedVersion: 2
         x: 96
@@ -508,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92264163aeb003b4fa995470da313367
-      internalID: 669248001
+      spriteID: 2648aaede563440789138061f6f2f667
+      internalID: -966408909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_014_19
+      name: Boss_1004_19
       rect:
         serializedVersion: 2
         x: 144
@@ -529,8 +530,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6c8138c87e69b144aab87cd6cb50488
-      internalID: 346053251
+      spriteID: 968f79178212346018a6c8e75a74cd4b
+      internalID: 280178781
       vertices: []
       indices: 
       edges: []
@@ -546,26 +547,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boss_014_17: -123160299
-      Boss_014_12: 2111106360
-      Boss_014_0: -582142435
-      Boss_014_8: 461232261
-      Boss_014_19: 346053251
-      Boss_014_3: 1760999481
-      Boss_014_15: 1977946458
-      Boss_014_10: 263702209
-      Boss_014_14: -1588750857
-      Boss_014_13: 1936017445
-      Boss_014_6: -1741461243
-      Boss_014_11: -212256709
-      Boss_014_16: 201603426
-      Boss_014_5: 1090946474
-      Boss_014_4: 181672054
-      Boss_014_9: 1896315107
-      Boss_014_1: 2012960209
-      Boss_014_7: -1699892432
-      Boss_014_18: 669248001
-      Boss_014_2: -1415312827
+      Boss_1004_0: -1275968486
+      Boss_1004_1: 1037530184
+      Boss_1004_10: -1974046274
+      Boss_1004_11: 246560681
+      Boss_1004_12: -494207981
+      Boss_1004_13: 1801600199
+      Boss_1004_14: -1401982839
+      Boss_1004_15: -502124795
+      Boss_1004_16: 274924667
+      Boss_1004_17: 765507720
+      Boss_1004_18: -966408909
+      Boss_1004_19: 280178781
+      Boss_1004_2: 88356530
+      Boss_1004_3: -1236012444
+      Boss_1004_4: -892035226
+      Boss_1004_5: 118626666
+      Boss_1004_6: -1887648935
+      Boss_1004_7: -1205117249
+      Boss_1004_8: -1317367233
+      Boss_1004_9: -1837031498
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
