@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FX_MAT_Ring_01 14
+  m_Name: FX_MAT_Ring_01 21
   m_Shader: {fileID: 4800000, guid: ce729004bd5ad164282691f4b6248cb2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -22,17 +22,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DissolveTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: be1f42079c98cdc47a6bf0542dcb45eb, type: 3}
+        m_Scale: {x: 0.5, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DistortTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 2, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0.5, y: 1.27}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9f4ac5b366238b549b2c60d352cec894, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 6368e4e1bac21d3468e00ce794ddf6ba, type: 3}
+        m_Scale: {x: -1, y: 1}
+        m_Offset: {x: 1.06, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,7 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0
+    - _Alpha: 1
     - _AlphaCutoff: 0.5
     - _BackfaceType: 0
     - _Blend_Mode: 10
@@ -71,7 +71,7 @@ Material:
     - _Brightnessamount: 0
     - _Cull_Mode: 2
     - _Cullmode2: 2
-    - _Custom1_XY: 0
+    - _Custom1_XY: 5
     - _Custom1_ZW: 1
     - _Custom2_XY: 2
     - _DissolveOffset: 0
@@ -99,7 +99,7 @@ Material:
     m_Colors:
     - _BackfaceColor: {r: 1, g: 1, b: 1, a: 0}
     - _BrightnessColor: {r: 4.415715, g: 0.22911733, b: 0.31283125, a: 1}
-    - _DissolvePannerXY: {r: 0, g: 0, b: 0, a: 0}
+    - _DissolvePannerXY: {r: 1, g: 0, b: 0, a: 0}
     - _DissolveScaleAmount: {r: 0, g: 0, b: 0, a: 0}
     - _DistortPannerXY: {r: 0, g: 0, b: 0, a: 0}
     - _DistortPannerXYPowerXY: {r: 0, g: 0, b: 0, a: 0}
@@ -112,5 +112,5 @@ Material:
     - _SubColor: {r: 1, g: 1, b: 1, a: 0}
     - _SubPannerXY: {r: 0, g: 0, b: 0, a: 0}
     - _SubScaleAmount: {r: 1, g: 1, b: 0, a: 0}
-    - _Tint: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 1}
+    - _Tint: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
   m_BuildTextureStacks: []
