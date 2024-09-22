@@ -38,6 +38,43 @@ public class PageLobbyBattle : UIBase
     }
 
 
+    public void Init()
+    {
+        var highwave = GameRoot.Instance.UserData.CurMode.StageData.StageHighWave;
+
+        var stagewavetd = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList().FindAll(x => x.wave_idx > highwave);
+
+
+        float closestValue = stagewavetd[0].wave_idx;
+        float minDifference = Mathf.Abs(highwave - closestValue);
+
+        StageWaveInfoData data = null;
+
+
+        if (stagewavetd.Count == 0)
+        {
+            data = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList().Last();
+        }
+        else
+        {
+            data = stagewavetd.First();
+        }
+
+
+
+        if (data != null)
+        {
+            HighWaveText.text = $"Highest Wave:{highwave}";
+
+            var unittd = Tables.Instance.GetTable<EnemyInfo>().GetData(data.boss_idx);
+
+            foreach (var unitimg in UnitImgList)
+            {
+                unitimg.sprite = Config.Instance.GetUnitImg(unittd.image);
+            }
+        }
+    }
+
 
     public override void CustomSortingOrder()
     {
@@ -50,43 +87,6 @@ public class PageLobbyBattle : UIBase
     public void SortingRollBack()
     {
         transform.GetComponent<Canvas>().sortingOrder = UISystem.START_PAGE_SORTING_NUMBER;
-
-        var highwave = GameRoot.Instance.UserData.CurMode.StageData.StageHighWave;
-
-        var stagewavetd = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList().FindAll(x=> x.wave_idx > highwave);
-
-
-        float closestValue = stagewavetd[0].wave_idx;
-        float minDifference = Mathf.Abs(highwave - closestValue);
-
-        StageWaveInfoData data = null; 
-
-
-        if(stagewavetd.Count == 0)
-        {
-            data = Tables.Instance.GetTable<StageWaveInfo>().DataList.ToList().Last();
-        }
-        else
-        {
-            data = stagewavetd.First();
-        }
-
-
-
-        if(data != null)
-        {
-            HighWaveText.text = $"Highest Wave:{highwave}";
-
-            var unittd = Tables.Instance.GetTable<EnemyInfo>().GetData(data.boss_idx);
-
-            foreach(var unitimg in UnitImgList)
-            {
-                unitimg.sprite = Config.Instance.GetUnitImg(unittd.image);
-            }
-        }
-
-
-
     }
 
 

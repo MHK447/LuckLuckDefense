@@ -188,6 +188,13 @@ public class InGameBattle : MonoBehaviour
         {
             IsEndWave = true;
         }
+
+        var highscorewave = GameRoot.Instance.UserData.CurMode.StageData.StageHighWave;
+
+        if (GameRoot.Instance.UserData.CurMode.StageData.WaveIdxProperty.Value > highscorewave)
+        {
+            GameRoot.Instance.UserData.CurMode.StageData.StageHighWave = GameRoot.Instance.UserData.CurMode.StageData.WaveIdxProperty.Value;
+        }
     }
 
 

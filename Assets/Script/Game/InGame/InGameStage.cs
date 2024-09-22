@@ -74,7 +74,7 @@ public class InGameStage : MonoBehaviour
         GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
         GameRoot.Instance.UISystem.OpenUI<PageFade>(page => {
             page.Set(() => {
-                GameRoot.Instance.UISystem.OpenUI<PageLobbyBattle>();
+                GameRoot.Instance.UISystem.OpenUI<PageLobbyBattle>(popup => popup.Init());
                 GameRoot.Instance.UISystem.OpenUI<HUDTotal>();
                 var getui = GameRoot.Instance.UISystem.GetUI<PopupIngameUpgrade>();
 

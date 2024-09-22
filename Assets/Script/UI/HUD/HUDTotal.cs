@@ -84,6 +84,7 @@ public class HUDTotal : UIBase
                 break;
             case LobbyTab.Fight:
                 GameRoot.Instance.UISystem.OpenUI<PageLobbyBattle>(popup => {
+                    popup.Init();
                     popup.CustomSortingOrder();
                 });
                 break;
