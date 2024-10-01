@@ -85,12 +85,17 @@ public class SelectGachaWeaponSkillData
 	public int SkillTypeIdx = 0;
 	public int Level = 0;
 	public float NextFireTime = 0f;
+	public ReactiveProperty<int> LevelProperty = new ReactiveProperty<int>();
 
 	public SelectGachaWeaponSkillData(int skillidx , int level)
     {
 		SkillTypeIdx = skillidx;
 		Level = level;
 		NextFireTime = 0f;
+
+		LevelProperty.Value = Level;
+
+		LevelProperty.Subscribe(x => { Level = x; });
 
 	}
 }
@@ -144,7 +149,7 @@ public class PassiveSkillData : IClientData
 	public int SkillIdx = 0;
 
 	public int SkillValue = 0;
-
+		
 	public PassiveSkillData(int skillidx , int skillvalue ,  int unitidx)
     {
 		SkillIdx = skillidx;

@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[EffectPath("Effect/BombEffect", false, true)]
-public class BombEffect : Effect
+public class EarthQuakeEffect : Effect
 {
-
     public void Set(int damage)
     {
         float bombrange = 3f;
@@ -17,7 +15,7 @@ public class BombEffect : Effect
         {
             if (!processedObjects.Contains(hitCollider.gameObject))
             {
-                var getobj = hitCollider.transform.parent.GetComponent<InGameEnemyBase>();
+                var getobj = hitCollider.gameObject.GetComponent<InGameEnemyBase>();
                 if (getobj != null)
                 {
                     getobj.Damage(damage);
@@ -25,5 +23,4 @@ public class BombEffect : Effect
             }
         }
     }
-
 }

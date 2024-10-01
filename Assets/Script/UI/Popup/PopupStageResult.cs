@@ -34,6 +34,7 @@ public class PopupStageResult : UIBase
 
     public void OnClickHome()
     {
+        GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value);
         GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value = 0;
 
         GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.ReturnMainScreen();

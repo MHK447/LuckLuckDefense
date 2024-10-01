@@ -56,7 +56,7 @@ public class PopupSelectGacha : UIBase
     {
         base.OnShowAfter();
 
-        Time.timeScale = 0f;
+        Time.timeScale = 0f;    
     }
 
 
@@ -64,7 +64,7 @@ public class PopupSelectGacha : UIBase
     {
         GameRoot.Instance.GachaSkillSystem.AddWeaponSkillBuff((SelectGachaWeaponSkillSystem.GachaWeaponSkillType)weaponidx);
         Hide();
-    }
+    }   
 
     public override void Hide()
     {

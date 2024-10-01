@@ -30,7 +30,7 @@ public class PopupStageGiveup : UIBase
         ContinueBtn.onClick.AddListener(Hide);
         DimBtn.onClick.AddListener(Hide);
     }
-
+        
     public void OnClickGiveUp()
     {
         GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, RewardValue);

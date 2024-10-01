@@ -37,7 +37,7 @@ public class PopupPassiveCardUpgrade : UIBase
 
     public void OnClickUpgrade()
     {
-        if(card_upgrade_cost >= GameRoot.Instance.UserData.CurMode.Money.Value)
+        if(card_upgrade_cost <= GameRoot.Instance.UserData.CurMode.Money.Value)
         {
             CardUpgradeBtn.interactable = false;
 

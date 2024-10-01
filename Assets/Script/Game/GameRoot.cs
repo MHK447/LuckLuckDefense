@@ -108,6 +108,7 @@ public class GameRoot : Singleton<GameRoot>
 
 		UserData.Update();
 		PlayTimeSystem.Update();
+		GachaSkillSystem.Update();
 
 		if (deltaTime >= 1f) // one seconds updates;
 		{
@@ -230,6 +231,7 @@ public class GameRoot : Singleton<GameRoot>
 		InGameSystem.ChangeMode(CurInGameType);
 		InGameBattleSystem.Create();
 		UnitUpgradeSystem.Create();
+		GachaSkillSystem.Create();
 
 		LoadComplete = true;
 

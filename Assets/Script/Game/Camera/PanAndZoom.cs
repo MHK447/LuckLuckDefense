@@ -439,8 +439,8 @@ public class PanAndZoom : MonoBehaviour {
 
     public void FocusPositionImmediately(Vector3 worldPos, float _focusSize = 15f)
     {
-        cam.orthographicSize = _focusSize;
-        cam.transform.position = worldPos;
+        //cam.orthographicSize = _focusSize;
+        //cam.transform.position = worldPos;
     }
     
     public void FocusPosition(Vector3 worldPos, float _focusSize = 15f)
@@ -521,12 +521,12 @@ public class PanAndZoom : MonoBehaviour {
             focusDeltaTime += Time.deltaTime;
         }
         else
-        if(moving)
+        if(moving) 
         {
             Vector2 autoScrollVector = -cameraScrollVelocity * Time.deltaTime;
-            cam.transform.position = new Vector3(cam.transform.position.x + autoScrollVector.x,
-                cam.transform.position.y + autoScrollVector.y,
-                cam.transform.position.z);
+            //cam.transform.position = new Vector3(cam.transform.position.x + autoScrollVector.x,
+            //    cam.transform.position.y + autoScrollVector.y,
+            //    cam.transform.position.z);
                 
             if (onSwipe != null) {
                 onSwipe(autoScrollVector);
@@ -548,29 +548,29 @@ public class PanAndZoom : MonoBehaviour {
             float camMinY = boundMinY + marginY;
 
             bool over = false;
-            Vector3 target = cam.transform.position;
-            if (!isTouching)
-			{                
-                if (cam.transform.position.x < camMinX)
-                {
-                    over = true;
-                    target.x = camMinX;
-                }
-                else if (cam.transform.position.x > camMaxX)
-                {
-                    over = true;
-                    target.x = camMaxX;
-                }
-                if (cam.transform.position.y < camMinY)
-                {
-                    over = true;
-                    target.y = camMinY;
-                }
-                else if (cam.transform.position.y > camMaxY)
-                {
-                    over = true;
-                    target.y = camMaxY;
-                }
+   //         Vector3 target = cam.transform.position;
+   //         if (!isTouching)
+			//{                
+   //             if (cam.transform.position.x < camMinX)
+   //             {
+   //                 over = true;
+   //                 target.x = camMinX;
+   //             }
+   //             else if (cam.transform.position.x > camMaxX)
+   //             {
+   //                 over = true;
+   //                 target.x = camMaxX;
+   //             }
+   //             if (cam.transform.position.y < camMinY)
+   //             {
+   //                 over = true;
+   //                 target.y = camMinY;
+   //             }
+   //             else if (cam.transform.position.y > camMaxY)
+   //             {
+   //                 over = true;
+   //                 target.y = camMaxY;
+   //             }
                 if (over)
                 {
                     //cam.transform.position = new Vector3(target.x , 7.8f , -10);//Vector3.Lerp(cam.transform.position, target,  Time.deltaTime * 5f);
@@ -586,31 +586,31 @@ public class PanAndZoom : MonoBehaviour {
                 //camMinX *= 1.4f;
                 //camMinY *= 1.4f;
 
-                if (cam.transform.position.x < camMinX)
-                {
-                    over = true;
-                    target.x = camMinX;
-                }
-                else if (cam.transform.position.x > camMaxX)
-                {
-                    over = true;
-                    target.x = camMaxX;
-                }
-                if (cam.transform.position.y < camMinY)
-                {
-                    over = true;
-                    target.y = camMinY;
-                }
-                else if (cam.transform.position.y > camMaxY)
-                {
-                    over = true;
-                    target.y = camMaxY;
-                }
+                //if (cam.transform.position.x < camMinX)
+                //{
+                //    over = true;
+                //    target.x = camMinX;
+                //}
+                //else if (cam.transform.position.x > camMaxX)
+                //{
+                //    over = true;
+                //    target.x = camMaxX;
+                //}
+                //if (cam.transform.position.y < camMinY)
+                //{
+                //    over = true;
+                //    target.y = camMinY;
+                //}
+                //else if (cam.transform.position.y > camMaxY)
+                //{
+                //    over = true;
+                //    target.y = camMaxY;
+                //}
 
-                if (over)
-                {
-                    //cam.transform.position = new Vector3(target.x, 7.8f, -10);
-                }
+                //if (over)
+                //{
+                //    //cam.transform.position = new Vector3(target.x, 7.8f, -10);
+                //}
             }
 
             //float camX = Mathf.Clamp(cam.transform.position.x, camMinX, camMaxX);
@@ -647,4 +647,3 @@ public class PanAndZoom : MonoBehaviour {
     //    RenderTexture.ReleaseTemporary(cam.targetTexture);
     //    return texture;
     //}
-}

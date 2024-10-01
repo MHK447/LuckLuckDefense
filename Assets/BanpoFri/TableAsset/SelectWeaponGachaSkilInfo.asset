@@ -26,11 +26,12 @@ MonoBehaviour:
   - 11
   - 12
   - 13
+  - 14
   mSecondKey: []
   mDataList:
   - _skill_idx: 1
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_001
     _desc_1: weapon_skill_name_1
@@ -38,8 +39,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 2
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_002
     _desc_1: weapon_skill_name_2
@@ -47,8 +48,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 3
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_003
     _desc_1: weapon_skill_name_3
@@ -56,8 +57,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 4
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_004
     _desc_1: weapon_skill_name_4
@@ -65,8 +66,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 5
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_005
     _desc_1: weapon_skill_name_5
@@ -74,8 +75,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 6
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_006
     _desc_1: weapon_skill_name_6
@@ -83,8 +84,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 7
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_007
     _desc_1: weapon_skill_name_7
@@ -92,8 +93,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 8
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_008
     _desc_1: weapon_skill_name_8
@@ -101,8 +102,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 9
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_009
     _desc_1: weapon_skill_name_9
@@ -110,8 +111,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 10
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_010
     _desc_1: weapon_skill_name_10
@@ -119,8 +120,8 @@ MonoBehaviour:
     _instantuse: -1
     _desc_type: 1
   - _skill_idx: 11
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_011
     _desc_1: weapon_skill_name_11
@@ -128,8 +129,8 @@ MonoBehaviour:
     _instantuse: 1
     _desc_type: -1
   - _skill_idx: 12
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_012
     _desc_1: weapon_skill_name_12
@@ -137,11 +138,20 @@ MonoBehaviour:
     _instantuse: 1
     _desc_type: -1
   - _skill_idx: 13
-    _value_1: 20
-    _value_2: 20
+    _value_1: 55
+    _value_2: 3
     _level_buff_value: 5
     _icon: Icon_Skill_013
     _desc_1: weapon_skill_name_13
     _desc_2: weapon_skill_desc_13
     _instantuse: 1
+    _desc_type: 1
+  - _skill_idx: 14
+    _value_1: 55
+    _value_2: 3
+    _level_buff_value: 5
+    _icon: Icon_Skill_001
+    _desc_1: weapon_skill_name_1
+    _desc_2: weapon_skill_desc_1
+    _instantuse: -1
     _desc_type: 1

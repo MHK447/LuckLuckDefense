@@ -88,6 +88,8 @@ public class InGameUnitBase : MonoBehaviour
 
     public void Set(int unitidx , InGameBattle battle)
     {
+        disposables.Clear();
+
         Target = null;
         UnitIdx = unitidx;
         Battle = battle;
@@ -121,6 +123,11 @@ public class InGameUnitBase : MonoBehaviour
             var finddata = GameRoot.Instance.UserData.CurMode.UnitUpgradeDatas.Find(x => x.UpgradeTypeIdx == UpgradeIdx);
 
             finddata.LevelProperty.Subscribe(x => { SetInfo(); }).AddTo(disposables);
+
+            GameRoot.Instance.UserData.CurMode.SelectGachaWeaponSkillDatas.ObserveAdd().Subscribe(x => {
+                SetInfo();
+                x.Value.LevelProperty.Subscribe(x => { SetInfo(); }).AddTo(disposables);
+            }).AddTo(disposables);
 
             GameRoot.Instance.WaitTimeAndCallback(0.1f, () => {
                 ChangeState(State.Idle);
@@ -160,7 +167,7 @@ public class InGameUnitBase : MonoBehaviour
 
             var getbuffvalue = ProjectUtility.GetPercentValue(UnitIdx, outgamebuffvalue);
 
-            float selectgachaattackbuff = GameRoot.Instance.GachaSkillSystem.GetBuffValue(SelectGachaWeaponSkillSystem.GachaWeaponSkillType.AttackDamageIncrease);
+            float selectgachaattackbuff = GameRoot.Instance.GachaSkillSystem.GetBuffValue(SelectGachaWeaponSkillSystem.GachaWeaponSkillType.AttackPowerIncrease);
 
             var selectgachadamagepercent = ProjectUtility.GetPercentValue(attackvalue, selectgachaattackbuff);
 

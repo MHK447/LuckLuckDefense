@@ -43989,8 +43989,9 @@ GameObject:
   - component: {fileID: 4075401792288134487}
   - component: {fileID: 4075401792288134480}
   - component: {fileID: 4075401792288134481}
+  - component: {fileID: -2082363269996566445}
   m_Layer: 0
-  m_Name: WaterexplosionEffect
+  m_Name: WaterRiseEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48791,3 +48792,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-2082363269996566445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075401792288134482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a159fef1c9b204f0da5cf8923d1c7e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: []

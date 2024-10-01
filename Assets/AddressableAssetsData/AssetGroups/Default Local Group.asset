@@ -277,6 +277,18 @@ MonoBehaviour:
     m_Address: Enemy_104
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 377b4c86af427fb45aa4a4d8aba9ac4e
+    m_Address: Effect/MeteorEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ba07f6cdc0e2994eb3eda4ebba1dbee
+    m_Address: Effect/WaterRiseEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e6f0f502e8c9334abfb82236c2a869a
+    m_Address: Effect/TornadoEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

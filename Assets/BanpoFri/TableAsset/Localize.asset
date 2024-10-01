@@ -8780,7 +8780,7 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_name_1
-    _ko: "\uD478\uB978\uBD88\uAF43"
+    _ko: "\uBA54\uD14C\uC624"
     _en: 
     _ja: 
     _es: 
@@ -8848,7 +8848,7 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_name_3
-    _ko: "\uC5B4\uB460\uAD6C\uCCB4"
+    _ko: "\uC5B4\uC2A4\uD018\uC774\uD06C"
     _en: 
     _ja: 
     _es: 
@@ -8882,7 +8882,7 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_name_4
-    _ko: "\uAFF0\uB6AB\uB294 \uCC3D"
+    _ko: "\uD1A0\uB124\uC774\uB3C4"
     _en: 
     _ja: 
     _es: 
@@ -9256,8 +9256,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_desc_1
-    _ko: "\uC801\uC5D0\uAC8C \uB79C\uB364\uC73C\uB85C \uD478\uB978 \uBD88\uAF43\uC744
-      \uC18C\uD658\uD558\uC5EC {0}\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+    _ko: "\uC801\uC5D0\uAC8C \uB79C\uB364\uC73C\uB85C \uBA54\uD14C\uC624\uB97C \uC18C\uD658\uD558\uC5EC
+      {0}\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
     _en: 
     _ja: 
     _es: 
@@ -9326,8 +9326,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_desc_3
-    _ko: "\uC801\uC5D0\uAC8C \uB79C\uB364\uC73C\uB85C \uC5B4\uB460\uAD6C\uCCB4\uB97C
-      \uC18C\uD658\uD558\uC5EC {0}\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+    _ko: "\uC801\uC5D0\uAC8C \uB79C\uB364\uC73C\uB85C \uB545\uC774 \uAC08\uB77C\uC9C0\uBA70
+      {0}\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
     _en: 
     _ja: 
     _es: 
@@ -9361,8 +9361,8 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_desc_4
-    _ko: "\b\uB79C\uB364\uC73C\uB85C \uC801\uC5D0\uAC8C \uCC3D\uC744 \uBC1C\uC0AC\uD558\uC5EC
-      \uAD00\uD1B5 \uB370\uBBF8\uC9C0 {0}\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+    _ko: "\b\uB79C\uB364\uC73C\uB85C \uC801\uC5D0\uAC8C \uC9C0\uC18D\uC801\uC73C\uB85C
+      {0}\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
     _en: 
     _ja: 
     _es: 

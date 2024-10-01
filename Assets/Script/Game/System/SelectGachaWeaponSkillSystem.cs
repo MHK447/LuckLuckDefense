@@ -9,27 +9,29 @@ public class SelectGachaWeaponSkillSystem
 
     public enum GachaWeaponSkillType
     {
-        AttackDamageIncrease = 1,
-        AttackSpeedIncrease = 2,
-        BlueFlame = 3,
-        CriticalDamageIncrease = 4,
-        CriticalHitRateIncrease = 5,
-        DarknessSphere = 6,
-        LightSphere = 7,
-        MonsterKillMoneyBonus = 8,
-        PierceSpear = 9,
-        RandomEpicUnitAdd = 10,
-        RandomRareUnitAdd = 11,
-        WaterRise = 12,
-        QuickEnergy = 13,
-        Bomb = 14,
+        Meteor = 1,
+        WaterRise = 2,
+        Earthquake = 3,
+        Tornado = 4,
+        LightSphere = 5,
+        AttackPowerIncrease = 6,
+        AttackSpeedIncrease = 7,
+        CriticalHitRateIncrease = 8,
+        CriticalHitDamageIncrease = 9,
+        ExtraGoldOnMonsterKill = 10,
+        RandomRareUnit = 11,
+        RandomEpicUnit = 12,
+        InstantEnergyGain = 13,
+        Explosion = 14  
     }
 
     private InGameBattle Battle;
 
     public void Create()
     {
-        Battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle;
+        GameRoot.Instance.WaitTimeAndCallback(1f, () => {
+            Battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle;
+        });
     }
 
 
@@ -39,7 +41,7 @@ public class SelectGachaWeaponSkillSystem
 
         if(finddata != null)
         {
-            finddata.Level += 1;
+            finddata.LevelProperty.Value += 1;
         }
         else
         {
@@ -53,7 +55,7 @@ public class SelectGachaWeaponSkillSystem
         {
             switch (skilltype)
             {
-                case GachaWeaponSkillType.RandomEpicUnitAdd:
+                case GachaWeaponSkillType.RandomEpicUnit:
                     {
                         var findlist = Tables.Instance.GetTable<PlayerUnitInfo>().DataList.ToList();
 
@@ -64,7 +66,7 @@ public class SelectGachaWeaponSkillSystem
                         GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.AddUnit(unitlist[randidx].unit_idx);
                     }
                     break;
-                case GachaWeaponSkillType.RandomRareUnitAdd:
+                case GachaWeaponSkillType.RandomRareUnit:
                     {
                         var findlist = Tables.Instance.GetTable<PlayerUnitInfo>().DataList.ToList();
 
@@ -75,7 +77,7 @@ public class SelectGachaWeaponSkillSystem
                         GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.AddUnit(unitlist[randidx].unit_idx);
                     }
                     break;
-                case GachaWeaponSkillType.QuickEnergy:
+                case GachaWeaponSkillType.InstantEnergyGain:
                     {
                         GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, td.value_1);
                         break;
@@ -99,9 +101,9 @@ public class SelectGachaWeaponSkillSystem
             {
                 switch(type)
                 {
-                    case GachaWeaponSkillType.AttackDamageIncrease:
+                    case GachaWeaponSkillType.AttackPowerIncrease:
                     case GachaWeaponSkillType.AttackSpeedIncrease:
-                    case GachaWeaponSkillType.CriticalDamageIncrease:
+                    case GachaWeaponSkillType.CriticalHitDamageIncrease:
                     case GachaWeaponSkillType.CriticalHitRateIncrease:
                         {
                             buffvalue = tdtype.value_1 + (tdtype.level_buff_value * (finddata.Level - 1));
@@ -121,7 +123,12 @@ public class SelectGachaWeaponSkillSystem
         {
            switch(skill.SkillTypeIdx)
             {
-                case (int)GachaWeaponSkillType.Bomb:
+
+                case (int)GachaWeaponSkillType.Earthquake:
+                case (int)GachaWeaponSkillType.WaterRise:
+                case (int)GachaWeaponSkillType.Meteor:
+                case (int)GachaWeaponSkillType.Tornado:
+                case (int)GachaWeaponSkillType.Explosion:
                     {
                         if(Time.time >= skill.NextFireTime)
                         {
@@ -132,7 +139,11 @@ public class SelectGachaWeaponSkillSystem
 
                                 var td = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().GetData((int)skill.SkillTypeIdx);
 
-                                FireSkill((GachaWeaponSkillType)skill.SkillTypeIdx, enemy);
+
+
+                                var damage = td.value_1 + (td.level_buff_value * skill.Level);
+
+                                FireSkill((GachaWeaponSkillType)skill.SkillTypeIdx, enemy , damage);
 
                                 skill.NextFireTime = Time.time + td.value_2;
                             }
@@ -143,19 +154,47 @@ public class SelectGachaWeaponSkillSystem
         }
     }
 
-    public void FireSkill(GachaWeaponSkillType type , InGameEnemyBase target)
+    public void FireSkill(GachaWeaponSkillType type , InGameEnemyBase target , int damage)
     {
         switch(type)
         {
-            case GachaWeaponSkillType.Bomb:
+            case GachaWeaponSkillType.Meteor:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<MeteorEffect>(target.transform.position, effect =>
+                    {
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                        effect.Set(damage);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.WaterRise:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<WaterRiseEffect>(target.transform.position, effect =>
+                    {
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                        effect.Set(damage, target);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.Earthquake:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<EarthQuakeEffect>(target.transform.position, effect =>
+                    {
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                        effect.Set(damage);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.Explosion:
                 {
                     GameRoot.Instance.EffectSystem.MultiPlay<BombEffect>(target.transform.position, effect =>
                     {
-                        if (this != null)
-                        {
-                            ProjectUtility.SetActiveCheck(effect.gameObject, true);
-                            effect.SetAutoRemove(true, 2f);
-                        }
+                        effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
                     });
                 }
                 break;

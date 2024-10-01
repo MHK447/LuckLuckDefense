@@ -104,6 +104,13 @@ public class CheatWindow : MonoBehaviour
     }
 
 
+    public void OnClickCheatInGameSkill()
+    {
+        GameRoot.Instance.UISystem.OpenUI<PopupSelectGacha>(popup => popup.Init());
+    }
+
+
+
     public void SetCardData()
     {
         if (string.IsNullOrEmpty(inputField.text))
