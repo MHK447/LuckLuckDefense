@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BanpoFri;
 using UnityEngine.UI;
-using UniRx;
+using UniRx;using GoogleMobileAds;
+using GoogleMobileAds.Api;
 
 public class InGameUnitBase : MonoBehaviour
 {

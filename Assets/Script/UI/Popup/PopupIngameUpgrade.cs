@@ -294,6 +294,15 @@ public class PopupIngameUpgrade : UIBase
 
             UnitEnergyCostText.color = nextcostvalue <= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value ?
                 Config.Instance.GetTextColor("TextColor_White"):Config.Instance.GetTextColor("TextColor_Red");
+
+
+            //GameRoot.Instance.GetAdManager.ShowRewardedAd(() =>
+            //{
+            //    GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.EnergyMoney, 1000);
+            //});
+
+            //GameRoot.Instance.GetAdManager.ShowInterstitialAd();
+            
         }
     }
 

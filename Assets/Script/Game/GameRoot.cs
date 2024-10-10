@@ -19,6 +19,8 @@ public class GameRoot : Singleton<GameRoot>
 	private GameObject CheatWindow;
 	[HideInInspector]
 	public LoadingBasic Loading;
+	[SerializeField]
+	private AdManager AdManager;
 
 	public RectTransform GetMainCanvasTR { get { return MainCanvas.transform as RectTransform; } }
 	public UISystem UISystem { get; private set; } = new UISystem();
@@ -36,6 +38,8 @@ public class GameRoot : Singleton<GameRoot>
 	public OutGameUnitUpgradeSystem OutGameUnitUpgradeSystem { get; private set; } = new OutGameUnitUpgradeSystem();
 	public SelectGachaWeaponSkillSystem GachaSkillSystem { get; private set; } = new SelectGachaWeaponSkillSystem();
 
+
+	public AdManager GetAdManager { get { return AdManager; } }
 
 	public GameObject UILock;
 	private static bool InitTry = false;

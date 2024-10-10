@@ -540,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9084572751578744685}
   - component: {fileID: 31885915522602182}
+  - component: {fileID: 3999658311351936806}
   m_Layer: 0
   m_Name: GameRoot
   m_TagString: Untagged
@@ -585,7 +586,20 @@ MonoBehaviour:
   WorldCanvas: {fileID: 179374077513188534}
   CheatWindow: {fileID: 927367955552756237}
   Loading: {fileID: 0}
+  AdManager: {fileID: 3999658311351936806}
   UILock: {fileID: 0}
+--- !u!114 &3999658311351936806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084572751578744687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46aff577a1024bdca72f7e8c8c04c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9084572752029594849
 GameObject:
   m_ObjectHideFlags: 0
