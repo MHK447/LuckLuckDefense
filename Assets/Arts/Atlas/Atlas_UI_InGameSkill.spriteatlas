@@ -74,29 +74,141 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 0907f420238ff204d939b7c4980c373c, type: 3}
+  - {fileID: 21300000, guid: e7da0280791ecce41b68e19216edc21b, type: 3}
+  - {fileID: 21300000, guid: 8b7998e056a29144c98e732fd445d582, type: 3}
+  - {fileID: 21300000, guid: ed046ff0521d62144a528e86fb5974a4, type: 3}
+  - {fileID: 21300000, guid: 8bd1cb016a0a8364fab652af1716a727, type: 3}
+  - {fileID: 21300000, guid: ad756d612452ad148b765467b9ac9bac, type: 3}
+  - {fileID: 21300000, guid: e15aa171b2c1efa4894681134197e402, type: 3}
+  - {fileID: 21300000, guid: 3d71ecd18da984a429bcb2b1d40ea66f, type: 3}
   - {fileID: 21300000, guid: b02a0822b3c6cf44fb33836eb9cd6de7, type: 3}
+  - {fileID: 21300000, guid: 3f8552626f5e27c42937e951ddda521c, type: 3}
+  - {fileID: 21300000, guid: 4beacf82cc5ef6f47b3ca640dd78f8e2, type: 3}
+  - {fileID: 21300000, guid: d43f279209d95d74fa435e99a3c3fc59, type: 3}
+  - {fileID: 21300000, guid: 24ff251335757de4ca689ecd891fd2c0, type: 3}
+  - {fileID: 21300000, guid: b1b09094307cb004bbbcf4912359c532, type: 3}
   - {fileID: 21300000, guid: 49370cc416447bc40b5437e4de7900d9, type: 3}
   - {fileID: 21300000, guid: ee500115ee008ec4abc014d1717b1d98, type: 3}
+  - {fileID: 21300000, guid: 9248435518076e34d92138741b2145cd, type: 3}
+  - {fileID: 21300000, guid: 717a239568e493d49954c0d48828df6c, type: 3}
+  - {fileID: 21300000, guid: fe1fce954bf61294aad14183b755b12b, type: 3}
+  - {fileID: 21300000, guid: 996306c5d2212e94b8ff9c282e900538, type: 3}
+  - {fileID: 21300000, guid: 8ea1f206db8ee9a4f8abef0f6fcfa604, type: 3}
+  - {fileID: 21300000, guid: 53c48936eff7115469963ca4858a287a, type: 3}
+  - {fileID: 21300000, guid: 10aab57634347b940854416d8144860c, type: 3}
   - {fileID: 21300000, guid: f0f482d61b31f1f44b8a615bca6afa03, type: 3}
+  - {fileID: 21300000, guid: 9001ace6156acb94eaa96e67034fbba3, type: 3}
+  - {fileID: 21300000, guid: 6bac3de67fc83d740b416111d5735d46, type: 3}
+  - {fileID: 21300000, guid: 24106407e068c164e9f62ab3b24c547d, type: 3}
   - {fileID: 21300000, guid: 6095b13786533a84696bb5d9c2171b96, type: 3}
+  - {fileID: 21300000, guid: 4cab414781b794a47a58d99eb3126f5b, type: 3}
+  - {fileID: 21300000, guid: 2e8ce057351d2b9459a1be03986bc660, type: 3}
+  - {fileID: 21300000, guid: d5829c576b2214945bad4a50282b6e46, type: 3}
+  - {fileID: 21300000, guid: c48e48e75ee825e49a9f591b4c5cbc9a, type: 3}
+  - {fileID: 21300000, guid: 93767938f86357a4696aebd11b00c114, type: 3}
   - {fileID: 21300000, guid: 2880e3484a14d5546bd5145411aaece0, type: 3}
+  - {fileID: 21300000, guid: 703000889c819c74298c1c52b3338285, type: 3}
+  - {fileID: 21300000, guid: 7fe38998ec956ad4b80d8402aa59a607, type: 3}
+  - {fileID: 21300000, guid: ed5da1f8bd3800546a4a9ef14a5bf11a, type: 3}
+  - {fileID: 21300000, guid: bcbd60096edf37945a8949e6381cc2bd, type: 3}
+  - {fileID: 21300000, guid: 1e51bd09246b8de4286fb4bfe2a7a6ba, type: 3}
+  - {fileID: 21300000, guid: 461803293f6b29e4c9885b952ecad92a, type: 3}
+  - {fileID: 21300000, guid: 751f1f491fc452e45b86a4f07763a573, type: 3}
+  - {fileID: 21300000, guid: 8a9469c9d4776444583057d0b82bbb61, type: 3}
   - {fileID: 21300000, guid: d4aa7dd9e9a8e574b9d9b55513492772, type: 3}
+  - {fileID: 21300000, guid: 3d5bced970f8bfa4d993bfe3dac4d8b2, type: 3}
   - {fileID: 21300000, guid: 96137f2aee981474db5a88a248c1f2ef, type: 3}
   - {fileID: 21300000, guid: 9dfb524a5aa0d464981b3185530fb5eb, type: 3}
+  - {fileID: 21300000, guid: 8a0df26a4bee32346afbb5fd4bb4cbaa, type: 3}
+  - {fileID: 21300000, guid: 02f3018a1cfdb7542856f1e41b64e356, type: 3}
+  - {fileID: 21300000, guid: 49b292ea6a6298145a6488c267a44546, type: 3}
+  - {fileID: 21300000, guid: f554ae0bc0e012648a4ce51b0be7fbd9, type: 3}
+  - {fileID: 21300000, guid: 7617363bf259208459f9887b4e550f6c, type: 3}
+  - {fileID: 21300000, guid: d854046b71d662b4888e01ee1b34c069, type: 3}
+  - {fileID: 21300000, guid: 1e7f508b0d329c149908c7408a2c1e7d, type: 3}
+  - {fileID: 21300000, guid: cc57cb9b60d22424f8e9a7271f226448, type: 3}
+  - {fileID: 21300000, guid: 142810ab5b7dc984d9641e99212de7eb, type: 3}
   - {fileID: 21300000, guid: 9098d87cc9d0b5348845c06aaa8f79b0, type: 3}
+  - {fileID: 21300000, guid: 6bbc41fc0e5467444ab0a9a5814d6435, type: 3}
   - {fileID: 21300000, guid: 16e19f0d002cf464eac27a1bbbe7e0d7, type: 3}
+  - {fileID: 21300000, guid: 6d7abc6d7f5ee98478be193fbe65cb7f, type: 3}
+  - {fileID: 21300000, guid: d00063cdbee15d0429bc841a440d49bc, type: 3}
+  - {fileID: 21300000, guid: 484068eda76fc074987d0acfada44665, type: 3}
+  - {fileID: 21300000, guid: 3e2d4e8e7383fd341ba7ce7b6c605ce9, type: 3}
+  - {fileID: 21300000, guid: 97948a1f6e37f7446884126c2bb0f599, type: 3}
+  - {fileID: 21300000, guid: 4339f04f8c833ad4d9365b710920b9b2, type: 3}
+  - {fileID: 21300000, guid: edc14a8f25a23094db914bb6d0eccdd0, type: 3}
+  - {fileID: 21300000, guid: 90c454bf85feb064f8716b64fe5e30cb, type: 3}
+  - {fileID: 21300000, guid: bc361aef4ad02d949ac90d339aad4321, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Icon_Skill_30
+  - Icon_Skill_18
+  - Icon_Skill_19
+  - Icon_Skill_48
+  - Icon_Skill_44
+  - Icon_Skill_20
+  - Icon_Skill_55
+  - Icon_Skill_41
   - Icon_Skill_004
+  - Icon_Skill_37
+  - Icon_Skill_65
+  - Icon_Skill_67
+  - Icon_Skill_61
+  - Icon_Skill_25
   - Icon_Skill_003
   - Icon_Skill_009
+  - Icon_Skill_23
+  - Icon_Skill_56
+  - Icon_Skill_66
+  - Icon_Skill_59
+  - Icon_Skill_31
+  - Icon_Skill_58
+  - Icon_Skill_54
   - Icon_Skill_002
+  - Icon_Skill_13
+  - Icon_Skill_38
+  - Icon_Skill_62
   - Icon_Skill_001
+  - Icon_Skill_15
+  - Icon_Skill_32
+  - Icon_Skill_47
+  - Icon_Skill_43
+  - Icon_Skill_24
   - Icon_Skill_005
+  - Icon_Skill_26
+  - Icon_Skill_42
+  - Icon_Skill_28
+  - Icon_Skill_16
+  - Icon_Skill_49
+  - Icon_Skill_33
+  - Icon_Skill_40
+  - Icon_Skill_50
   - Icon_Skill_006
+  - Icon_Skill_63
   - Icon_Skill_007
   - Icon_Skill_011
+  - Icon_Skill_22
+  - Icon_Skill_51
+  - Icon_Skill_29
+  - Icon_Skill_64
+  - Icon_Skill_60
+  - Icon_Skill_52
+  - Icon_Skill_27
+  - Icon_Skill_45
+  - Icon_Skill_39
   - Icon_Skill_010
+  - Icon_Skill_36
   - Icon_Skill_008
+  - Icon_Skill_57
+  - Icon_Skill_12
+  - Icon_Skill_14
+  - Icon_Skill_34
+  - Icon_Skill_53
+  - Icon_Skill_17
+  - Icon_Skill_35
+  - Icon_Skill_46
+  - Icon_Skill_21
   m_RenderDataMap: {}
   m_Tag: Atlas_UI_InGameSkill
   m_IsVariant: 0

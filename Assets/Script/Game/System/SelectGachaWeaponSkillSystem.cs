@@ -22,7 +22,8 @@ public class SelectGachaWeaponSkillSystem
         RandomRareUnit = 11,
         RandomEpicUnit = 12,
         InstantEnergyGain = 13,
-        Explosion = 14  
+        Explosion = 14,
+        Lightning = 15, 
     }
 
     private InGameBattle Battle;
@@ -83,7 +84,6 @@ public class SelectGachaWeaponSkillSystem
                         break;
                     }
             }
-
         }
     }
 
@@ -191,6 +191,16 @@ public class SelectGachaWeaponSkillSystem
             case GachaWeaponSkillType.Explosion:
                 {
                     GameRoot.Instance.EffectSystem.MultiPlay<BombEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.Tornado:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<TornadoEffect>(target.transform.position, effect =>
                     {
                         effect.Set(damage);
                         ProjectUtility.SetActiveCheck(effect.gameObject, true);
