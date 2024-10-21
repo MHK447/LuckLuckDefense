@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FX_MAT_Glow_01 14
-  m_Shader: {fileID: 4800000, guid: ce729004bd5ad164282691f4b6248cb2, type: 3}
+  m_Name: FX_MAT_Glow_01 61
+  m_Shader: {fileID: 4800000, guid: cb331e908d3c49a41a107b1e0ec32056, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _USECUSTOM_ON
@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DissolveTex:
-        m_Texture: {fileID: 2800000, guid: 67306993c2b2ac549857bf3271ddf615, type: 3}
+        m_Texture: {fileID: 2800000, guid: 49a96bb2f2c578545a5d1c23de2997b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DistortTex:
@@ -30,21 +30,21 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 430904643a4077f4dbe01d4da0f7fcac, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0.22}
+        m_Offset: {x: 0, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Step1:
-        m_Texture: {fileID: 2800000, guid: 37cb7e3d985ba2945922442445489737, type: 3}
+        m_Texture: {fileID: 2800000, guid: 40f8f57a093484d4e9678f28b9df3c1b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Step2:
-        m_Texture: {fileID: 2800000, guid: e8a712f101e4daa469da9bb3c503476e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3487a43315e854546a5855fcc7583649, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: -0.07}
     - _SubTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,25 +63,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0
+    - _Alpha: 1
     - _AlphaCutoff: 0.5
     - _BackfaceType: 0
     - _Blend_Mode: 10
     - _BrightnessOffset: 0
-    - _Brightnessamount: 0.02
-    - _Cull_Mode: 2
+    - _Brightnessamount: 0.31
+    - _Cull_Mode: 0
     - _Cullmode2: 2
     - _Custom1_XY: 0
     - _Custom1_ZW: 1
     - _Custom2_XY: 2
-    - _DissolveBlendDistort: 0
     - _DissolveOffset: 0
     - _DissolveRotationAmount: 0
     - _DissolveType: 0
     - _DissolveUV: 0
     - _DissolveUseDistort: 0
     - _Dissolve_Mode: 0
-    - _Dissolveamount: 0.24
+    - _Dissolveamount: 0
     - _DistortRotationAmount: 0
     - _MainRotationAmount: 0
     - _MaskRotationAmount: 0
@@ -99,8 +98,8 @@ Material:
     - _Zwritemode: 0
     m_Colors:
     - _BackfaceColor: {r: 1, g: 1, b: 1, a: 0}
-    - _BrightnessColor: {r: 0.2436635, g: 0.2436635, b: 0.2436635, a: 1}
-    - _DissolvePannerXY: {r: 0, g: 0, b: 0, a: 0}
+    - _BrightnessColor: {r: 2.670157, g: 0.95878494, b: 0.41563767, a: 1}
+    - _DissolvePannerXY: {r: 1, g: 0, b: 0, a: 0}
     - _DissolveScaleAmount: {r: 0, g: 0, b: 0, a: 0}
     - _DistortPannerXY: {r: 0, g: 0, b: 0, a: 0}
     - _DistortPannerXYPowerXY: {r: 0, g: 0, b: 0, a: 0}
@@ -113,5 +112,5 @@ Material:
     - _SubColor: {r: 1, g: 1, b: 1, a: 0}
     - _SubPannerXY: {r: 0, g: 0, b: 0, a: 0}
     - _SubScaleAmount: {r: 1, g: 1, b: 0, a: 0}
-    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _Tint: {r: 8, g: 8, b: 8, a: 1}
   m_BuildTextureStacks: []
