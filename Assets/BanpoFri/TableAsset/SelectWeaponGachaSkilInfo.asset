@@ -27,6 +27,7 @@ MonoBehaviour:
   - 12
   - 13
   - 14
+  - 15
   mSecondKey: []
   mDataList:
   - _skill_idx: 1
@@ -153,5 +154,14 @@ MonoBehaviour:
     _icon: Icon_Skill_66
     _desc_1: weapon_skill_name_14
     _desc_2: weapon_skill_desc_14
+    _instantuse: -1
+    _desc_type: 1
+  - _skill_idx: 15
+    _value_1: 55
+    _value_2: 3
+    _level_buff_value: 5
+    _icon: Icon_Skill_35
+    _desc_1: weapon_skill_name_15
+    _desc_2: weapon_skill_desc_15
     _instantuse: -1
     _desc_type: 1

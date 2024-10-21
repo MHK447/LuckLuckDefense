@@ -14657,6 +14657,7 @@ GameObject:
   - component: {fileID: 1196639172550955173}
   - component: {fileID: 1196639172550955172}
   - component: {fileID: 1196639172550955171}
+  - component: {fileID: 2132067425610439883}
   m_Layer: 0
   m_Name: SwordFallEffect
   m_TagString: Untagged
@@ -19468,6 +19469,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2132067425610439883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196639172550955170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d7b7f4b8f4c48c099e5cad53b9af65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196639172789438617
 GameObject:
   m_ObjectHideFlags: 0

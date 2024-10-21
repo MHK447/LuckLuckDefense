@@ -20,9 +20,7 @@ public class HUDTotal : UIBase
     [SerializeField]
     private List<Toggle> lobbyToggles = new List<Toggle>();
 
-
     public LobbyTab CurrentTab { get; private set; } = LobbyTab.Fight;
-
 
     private LobbyTab defualtOption = LobbyTab.Fight;
 
@@ -42,7 +40,6 @@ public class HUDTotal : UIBase
             ChangeTab((LobbyTab)tabIdx, false);
             ++iter;
         }
-
     }
 
     public void SelectTab(LobbyTab tab)
@@ -54,7 +51,6 @@ public class HUDTotal : UIBase
         {
             passivecardupgrade.SortingRollBack();
         }
-
 
         var lobbybattle = GameRoot.Instance.UISystem.GetUI<PageLobbyBattle>();
 
@@ -69,7 +65,7 @@ public class HUDTotal : UIBase
         {
             upgrade.SortingRollBack();
         }
-        
+
         switch (tab)
         {
             case LobbyTab.Shop:

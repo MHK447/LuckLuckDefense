@@ -44,7 +44,7 @@ public partial class UserDataSystem
         mainData.LastLoginTime = new System.DateTime(flatBufferUserData.Lastlogintime);
         mainData.CurPlayDateTime = new System.DateTime(flatBufferUserData.Curplaydatetime);
         mainData.EnergyMoney.Value = BigInteger.Parse(flatBufferUserData.Energymoney);
-        mainData.GachaCoin.Value = flatBufferUserData.Gachacoin;
+        //mainData.GachaCoin.Value = flatBufferUserData.Gachacoin;
         mainData.StageData.StageHighWave = flatBufferUserData.Highwaveidx;
 
         mainData.UnitCardDatas.Clear();

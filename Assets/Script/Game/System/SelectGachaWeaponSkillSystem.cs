@@ -23,7 +23,7 @@ public class SelectGachaWeaponSkillSystem
         RandomEpicUnit = 12,
         InstantEnergyGain = 13,
         Explosion = 14,
-        Lightning = 15, 
+        Thunder = 15,
     }
 
     private InGameBattle Battle;
@@ -118,12 +118,12 @@ public class SelectGachaWeaponSkillSystem
 
     public void Update()
     {
-
         foreach(var skill in GameRoot.Instance.UserData.CurMode.SelectGachaWeaponSkillDatas)
         {
            switch(skill.SkillTypeIdx)
             {
 
+                case (int)GachaWeaponSkillType.Thunder:
                 case (int)GachaWeaponSkillType.Earthquake:
                 case (int)GachaWeaponSkillType.WaterRise:
                 case (int)GachaWeaponSkillType.Meteor:
@@ -201,6 +201,16 @@ public class SelectGachaWeaponSkillSystem
             case GachaWeaponSkillType.Tornado:
                 {
                     GameRoot.Instance.EffectSystem.MultiPlay<TornadoEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.Thunder:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<ThunderEffect>(target.transform.position, effect =>
                     {
                         effect.Set(damage);
                         ProjectUtility.SetActiveCheck(effect.gameObject, true);

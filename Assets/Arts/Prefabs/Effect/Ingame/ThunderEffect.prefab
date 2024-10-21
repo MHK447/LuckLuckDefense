@@ -58694,6 +58694,7 @@ GameObject:
   - component: {fileID: 9121143911956815511}
   - component: {fileID: 9121143911956815512}
   - component: {fileID: 9121143911956815513}
+  - component: {fileID: 756177687106494425}
   m_Layer: 0
   m_Name: ThunderEffect
   m_TagString: Untagged
@@ -63510,6 +63511,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &756177687106494425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121143911956815514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1255bde3b104a47bc520377d3ad1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: []
 --- !u!1 &9121143912055139574
 GameObject:
   m_ObjectHideFlags: 0

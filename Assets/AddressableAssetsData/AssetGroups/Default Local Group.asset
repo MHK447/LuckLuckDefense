@@ -289,6 +289,14 @@ MonoBehaviour:
     m_Address: Effect/TornadoEffect
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 78efe2dacabb3a04980af3dfa50b195d
+    m_Address: Effect/ThunderEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f1fa19575ff54904c9022483b4fd94aa
+    m_Address: Effect/SwordFallEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

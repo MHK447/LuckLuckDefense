@@ -275,6 +275,7 @@ MonoBehaviour:
   - weapon_skill_name_12
   - weapon_skill_name_13
   - weapon_skill_name_14
+  - weapon_skill_name_15
   - weapon_skill_desc_1
   - weapon_skill_desc_2
   - weapon_skill_desc_3
@@ -9222,7 +9223,41 @@ MonoBehaviour:
     _tr: 
     _ua: 
   - _idx: weapon_skill_name_14
-    _ko: "\b\uB300\uD3ED\uBC1C!"
+    _ko: "\uB300\uD3ED\uBC1C!"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: weapon_skill_name_15
+    _ko: "\uC36C\uB354!"
     _en: 
     _ja: 
     _es: 

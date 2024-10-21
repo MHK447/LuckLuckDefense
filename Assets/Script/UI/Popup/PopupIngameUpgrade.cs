@@ -149,7 +149,6 @@ public class PopupIngameUpgrade : UIBase
         }).AddTo(disposables);
 
         GameRoot.Instance.InGameSystem.LevelProperty.Subscribe(x => {
-
             LvText.text = $"Lv.{x}";
         }).AddTo(disposables);
 
@@ -235,8 +234,6 @@ public class PopupIngameUpgrade : UIBase
             ProjectUtility.SetActiveCheck(LowHealthObj, false);
             GameRoot.Instance.UISystem.OpenUI<PopupStageResult>(popup => popup.Init(true));
         }
-
-      
 
         SliderValue.value = (float)unitcount / (float)GameRoot.Instance.InGameBattleSystem.end_unit_count;
         WaveEnemyCountText.text = $"{unitcount}/{GameRoot.Instance.InGameBattleSystem.end_unit_count}";

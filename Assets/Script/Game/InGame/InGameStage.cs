@@ -70,6 +70,7 @@ public class InGameStage : MonoBehaviour
 
     public void ReturnMainScreen()
     {
+        GameRoot.Instance.UserData.CurMode.GachaCoin.Value = 0;
         GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value = 0;
         GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
         GameRoot.Instance.UISystem.OpenUI<PageFade>(page => {
