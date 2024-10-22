@@ -297,6 +297,22 @@ MonoBehaviour:
     m_Address: Effect/SwordFallEffect
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 63ab2fa4acad2074b87822fdb2951298
+    m_Address: Effect/BlueFireEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a09bff5c9657bd44f88f091b5b1ab580
+    m_Address: Effect/FlamePillarEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d0e7b14832db07f47b8fa8dabde3b99a
+    m_Address: Effect/DarkExplosionEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 93df0e6f3cb8cb74b94b46e6fff5fe56
+    m_Address: Effect/DarknedEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:

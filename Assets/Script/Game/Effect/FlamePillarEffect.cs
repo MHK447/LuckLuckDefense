@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BanpoFri;
 
-[EffectPath("Effect/SwordFallEffect", false, true)]
-public class SwordFallEffect : Effect
+
+[EffectPath("Effect/FlamePillarEffect", false, true)]
+public class FlamePillarEffect : Effect
 {
     public void Set(int damage)
     {

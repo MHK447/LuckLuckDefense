@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[EffectPath("Effect/SwordFallEffect", false, true)]
-public class SwordFallEffect : Effect
+[EffectPath("Effect/DarkExplosionEffect", false, true)]
+public class DarkExplosionEffect : Effect
 {
     public void Set(int damage)
     {

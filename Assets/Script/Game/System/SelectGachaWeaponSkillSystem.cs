@@ -24,6 +24,12 @@ public class SelectGachaWeaponSkillSystem
         InstantEnergyGain = 13,
         Explosion = 14,
         Thunder = 15,
+        BlueFire = 16,
+        SwordFallEffect = 17,
+        FlamePillarEffect = 18,
+        HandOfDarkness = 19,
+        DarkExplosion = 20,
+
     }
 
     private InGameBattle Battle;
@@ -122,13 +128,17 @@ public class SelectGachaWeaponSkillSystem
         {
            switch(skill.SkillTypeIdx)
             {
-
+                case (int)GachaWeaponSkillType.BlueFire:
+                case (int)GachaWeaponSkillType.SwordFallEffect:
+                case (int)GachaWeaponSkillType.FlamePillarEffect:
                 case (int)GachaWeaponSkillType.Thunder:
                 case (int)GachaWeaponSkillType.Earthquake:
                 case (int)GachaWeaponSkillType.WaterRise:
                 case (int)GachaWeaponSkillType.Meteor:
                 case (int)GachaWeaponSkillType.Tornado:
                 case (int)GachaWeaponSkillType.Explosion:
+                case (int)GachaWeaponSkillType.DarkExplosion:
+                case (int)GachaWeaponSkillType.HandOfDarkness:
                     {
                         if(Time.time >= skill.NextFireTime)
                         {
@@ -213,6 +223,56 @@ public class SelectGachaWeaponSkillSystem
                     GameRoot.Instance.EffectSystem.MultiPlay<ThunderEffect>(target.transform.position, effect =>
                     {
                         effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.BlueFire:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<BlueFireEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage, target);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.SwordFallEffect:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<SwordFallEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.FlamePillarEffect:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<FlamePillarEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.DarkExplosion:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<DarkExplosionEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage);
+                        ProjectUtility.SetActiveCheck(effect.gameObject, true);
+                        effect.SetAutoRemove(true, 2f);
+                    });
+                }
+                break;
+            case GachaWeaponSkillType.HandOfDarkness:
+                {
+                    GameRoot.Instance.EffectSystem.MultiPlay<DarknedEffect>(target.transform.position, effect =>
+                    {
+                        effect.Set(damage,target);
                         ProjectUtility.SetActiveCheck(effect.gameObject, true);
                         effect.SetAutoRemove(true, 2f);
                     });
