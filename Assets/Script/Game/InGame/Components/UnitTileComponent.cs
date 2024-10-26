@@ -35,9 +35,9 @@ public class UnitTileComponent : MonoBehaviour
 
     public bool IsTileMax { get { return UnitList.Count >= 3; } }
 
-    public void Set(int tileorder)
+    public void Init()
     {
-        TileOrder = tileorder;
+        UnitList.Clear();
     }
         
     public void SpawnTileUnit(InGameUnitBase unit)

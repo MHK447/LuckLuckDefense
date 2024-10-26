@@ -68,6 +68,8 @@ public class TileSelector : MonoBehaviour
                 getunitinfo.Hide();
             }
 
+
+            if(InGameUnitSelectUI != null)
             ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, false);
 
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);

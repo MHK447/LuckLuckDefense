@@ -39,6 +39,14 @@ public class InGameUnitSelect : InGameFloatingUI
     {
         TileComponent.UnitMergeUpgrade();
         ProjectUtility.SetActiveCheck(this.gameObject, false);
+
+
+        var getunitinfo = GameRoot.Instance.UISystem.GetUI<PopupInGameUnitInfo>();
+
+        if (getunitinfo != null && getunitinfo.gameObject.activeSelf)
+        {
+            getunitinfo.Hide();
+        }
     }
 
     private void OnClickClose()

@@ -109,6 +109,7 @@ public class GachaUnitCardComponent : MonoBehaviour
         else
         {
             //꽝!
+            IsGachaStart = false;
             ProjectUtility.SetActiveCheck(NoneSelectObj, true);
             ProjectUtility.SetActiveCheck(SelectUnitImg.gameObject, false);
         }
@@ -125,6 +126,7 @@ public class GachaUnitCardComponent : MonoBehaviour
 
     public void Set(int grade)
     {
+        IsGachaStart = false;
         GradeIdx = grade;
 
         var td = Tables.Instance.GetTable<GachaUnitCardInfo>().GetData(grade);

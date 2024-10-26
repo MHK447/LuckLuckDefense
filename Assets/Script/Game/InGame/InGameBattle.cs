@@ -104,6 +104,12 @@ public class InGameBattle : MonoBehaviour
 
     public void InitClear()
     {
+
+        foreach (var tile in TileComponentList)
+        {
+            tile.Init();
+        }
+
         IsEndWave = true;
         GameRoot.Instance.UserData.CurMode.StageData.IsStartBattle = false;
         WaveEnemyCount = 0;
