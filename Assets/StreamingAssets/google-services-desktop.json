@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "646611150396",
+    "project_id": "luckyluckydefense",
+    "storage_bucket": "luckyluckydefense.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646611150396:android:68a12e7783c80663e58539",
+        "android_client_info": {
+          "package_name": "com.banpofri.luckydefense.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOKpCs8YxFWxK3F9QIm3KiT-Ul0_7nzew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

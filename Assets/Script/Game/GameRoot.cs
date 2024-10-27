@@ -198,7 +198,7 @@ public class GameRoot : Singleton<GameRoot>
 		}
 		//TouchStartActions.Clear();
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
-		//PluginSystem.Init();
+		PluginSystem.Init();
 		//InAppPurchaseManager = GetComponent<InAppPurchaseManager>();
 		//if (InAppPurchaseManager != null)
 		//	InAppPurchaseManager.Init();
