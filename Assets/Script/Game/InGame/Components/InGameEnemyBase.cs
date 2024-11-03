@@ -101,8 +101,14 @@ public class InGameEnemyBase : MonoBehaviour
 
             IsBoss = td.unit_idx > 1000;
 
-            Hp = (int)value * increase;
-
+            if (IsBoss)
+            {
+                Hp = td.basehp + ((int)value * increase);
+            }
+            else
+            {
+                Hp = (int)value * increase;
+            }
             var movespeedbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.SLOWENEMY,false);
 
             var movespeedvalue = (float)td.movespeed / 100f;

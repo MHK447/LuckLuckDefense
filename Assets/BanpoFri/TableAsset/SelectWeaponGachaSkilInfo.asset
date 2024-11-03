@@ -147,7 +147,7 @@ MonoBehaviour:
     _value_1: 70
     _value_2: 5
     _level_buff_value: 50
-    _icon: Icon_Skill_013
+    _icon: Icon_Skill_42
     _desc_1: weapon_skill_name_13
     _desc_2: weapon_skill_desc_13
     _instantuse: 1

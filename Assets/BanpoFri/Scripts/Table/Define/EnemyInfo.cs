@@ -41,6 +41,13 @@ namespace BanpoFri
 			get { return _name;}
 			set { _name = value;}
 		}
+		[SerializeField]
+		private int _basehp;
+		public int basehp
+		{
+			get { return _basehp;}
+			set { _basehp = value;}
+		}
 
     }
 
