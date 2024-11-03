@@ -131,6 +131,9 @@ public class PopupIngameUpgrade : UIBase
 
         GameRoot.Instance.InGameBattleSystem.CurUnitCountProperty.Subscribe(x => {
             UnitCountText.text = $"{x}/{UnitCount}";
+            var nextcostvalue = GetSpawnCostValue(GameRoot.Instance.UserData.CurMode.StageData.UnitAddCount);
+            UnitEnergyCostText.color = nextcostvalue <= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value && GameRoot.Instance.InGameBattleSystem.CurUnitCountProperty.Value < UnitCount ?
+                Config.Instance.GetTextColor("TextColor_White") : Config.Instance.GetTextColor("TextColor_Red");
         }).AddTo(disposables);
 
         GameRoot.Instance.UserData.CurMode.GachaCoin.Subscribe(x => {
@@ -275,6 +278,12 @@ public class PopupIngameUpgrade : UIBase
     
     private void OnClickUnitSpawn()
     {
+        var unitcountbuff = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.UNITADDINCREASEMAX, false);
+
+        UnitCount = GameRoot.Instance.InGameBattleSystem.unit_max_count + (int)unitcountbuff;
+
+        if (GameRoot.Instance.InGameBattleSystem.CurUnitCountProperty.Value >= UnitCount) return;
+
 
         var costvalue = GetSpawnCostValue(GameRoot.Instance.UserData.CurMode.StageData.UnitAddCount);
 
@@ -289,7 +298,7 @@ public class PopupIngameUpgrade : UIBase
             var nextcostvalue = GetSpawnCostValue(GameRoot.Instance.UserData.CurMode.StageData.UnitAddCount);
             UnitEnergyCostText.text = nextcostvalue.ToString();
 
-            UnitEnergyCostText.color = nextcostvalue <= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value ?
+            UnitEnergyCostText.color = nextcostvalue <= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value  && GameRoot.Instance.InGameBattleSystem.CurUnitCountProperty.Value <  UnitCount ?
                 Config.Instance.GetTextColor("TextColor_White"):Config.Instance.GetTextColor("TextColor_Red");
 
 
@@ -309,9 +318,8 @@ public class PopupIngameUpgrade : UIBase
         EnergyText.text = energy.ToString();
 
         var nextcostvalue = GetSpawnCostValue(GameRoot.Instance.UserData.CurMode.StageData.UnitAddCount);
-
-        UnitEnergyCostText.color = nextcostvalue <= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value ?
-            Config.Instance.GetTextColor("TextColor_White") : Config.Instance.GetTextColor("TextColor_Red");
+        UnitEnergyCostText.color = nextcostvalue <= GameRoot.Instance.UserData.CurMode.EnergyMoney.Value && GameRoot.Instance.InGameBattleSystem.CurUnitCountProperty.Value < UnitCount ?
+               Config.Instance.GetTextColor("TextColor_White") : Config.Instance.GetTextColor("TextColor_Red");
     }
 
     private void OnDisable()

@@ -142,7 +142,7 @@ public class SelectGachaWeaponSkillSystem
                     {
                         if(Time.time >= skill.NextFireTime)
                         {
-                            var enemy =  Battle.GetEnemyList.Find(x => x.IsDeath == false);
+                            var enemy =  Battle.GetEnemyList.Find(x => x.IsDeath == false && x.gameObject.activeSelf == true);
 
                             if (enemy != null)
                             {
