@@ -259,7 +259,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 234.07, y: 0}
+  m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3105772319731483998
 CanvasRenderer:
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4591beaf3501a4dc695752ed09adfca4, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 683db1d27544445abbf0c9e0f188b92b, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -671,7 +671,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 220.5, y: 471.2702}
+  m_SizeDelta: {x: 280, y: 471.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8492950712893487356
 CanvasRenderer:
@@ -701,8 +701,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4591beaf3501a4dc695752ed09adfca4, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 25b7295e2512f4351a9b1c12e9fab7a9, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -727,7 +727,7 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 10
-    m_Bottom: 0
+    m_Bottom: 30
   m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -759,7 +759,7 @@ MonoBehaviour:
   - {fileID: 720621579984859299}
   - {fileID: 5369123366317520453}
   - {fileID: 2072101876144392314}
-  WeaponIdx: 0
+  SkillIdx: 0
 --- !u!114 &8383827140826860593
 MonoBehaviour:
   m_ObjectHideFlags: 0
