@@ -14,6 +14,13 @@ namespace BanpoFri
 			set { _skill_idx = value;}
 		}
 		[SerializeField]
+		private int _select_type;
+		public int select_type
+		{
+			get { return _select_type;}
+			set { _select_type = value;}
+		}
+		[SerializeField]
 		private int _value_1;
 		public int value_1
 		{

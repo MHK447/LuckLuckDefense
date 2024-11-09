@@ -51,13 +51,9 @@ public class InGameUnitSelect : InGameFloatingUI
 
     private void OnClickClose()
     {
-        //var td = Tables.Instance.GetTable<UnitSellInfo>().GetData(UnitIdx);
+        //reward 지급
+        TileComponent.DeleteUnit();
+        ProjectUtility.SetActiveCheck(this.gameObject, false);
 
-        //if(td != null)
-        //{
-            //reward 지급
-            TileComponent.DeleteUnit();
-            ProjectUtility.SetActiveCheck(this.gameObject, false);
-        //}
     }
 }

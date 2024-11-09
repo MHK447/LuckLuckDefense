@@ -43,6 +43,7 @@ public class PopupInGameUnitInfo : UIBase
             UnitDamageText.text = td.attack.ToString();
             UnitAttackSpeedText.text = attackspeed.ToString();
 
+            if(SKillComponent != null)
             SKillComponent.Set(td.unit_skill[0]);
         }
 

@@ -23,7 +23,21 @@ public class PopupSelectGacha : UIBase
         GameRoot.Instance.InGameSystem.LevelProperty.Value += 1;
         SelectCountList.Clear();
 
-        var tdlist = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().DataList.ToList();
+        List<SelectWeaponGachaSkilInfoData> tdlist = new List<SelectWeaponGachaSkilInfoData>();
+
+
+
+
+        if(GameRoot.Instance.UserData.CurMode.StageData.SelectSkill >= GameRoot.Instance.InGameBattleSystem.MaximumSkillSelect)
+        {
+            tdlist = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().DataList.ToList().FindAll(x=> x.select_type == 2);
+        }
+        else
+        {
+            tdlist = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().DataList.ToList();
+        }
+
+
 
 
         foreach(var select in SelectComponentList)

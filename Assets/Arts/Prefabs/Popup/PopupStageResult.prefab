@@ -627,15 +627,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784536877689081262, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: m_EffectColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 784536877689081262, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: m_EffectColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 784536877689081262, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: m_EffectColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1176256858690614510, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: keyColor
@@ -985,20 +985,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4489406767484173519, guid: 0673afac6264c024eb89576093e0335f, type: 3}
       propertyPath: m_EffectColor.b
-      value: 0.29803923
+      value: 0.32941177
       objectReference: {fileID: 0}
     - target: {fileID: 4489406767484173519, guid: 0673afac6264c024eb89576093e0335f, type: 3}
       propertyPath: m_EffectColor.g
-      value: 0.29803923
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 4489406767484173519, guid: 0673afac6264c024eb89576093e0335f, type: 3}
       propertyPath: m_EffectColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863594224735160142, guid: 0673afac6264c024eb89576093e0335f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 90438585ba3d849179d4b59b31d9f37d, type: 3}
+      objectReference: {fileID: 21300000, guid: 841f65fda85df4921ac0a8a46062664f, type: 3}
     - target: {fileID: 5599082249323655783, guid: 0673afac6264c024eb89576093e0335f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1832,15 +1832,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784536877689081262, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: m_EffectColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 784536877689081262, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: m_EffectColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 784536877689081262, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: m_EffectColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1176256858690614510, guid: ce4e271feaf6d8f40a99b2accca7f313, type: 3}
       propertyPath: keyColor

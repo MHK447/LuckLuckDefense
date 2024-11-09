@@ -1497,7 +1497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7062244060942511695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1560,15 +1560,23 @@ MonoBehaviour:
   - SkillImg: {fileID: 4476556287549014568}
     SKillBtn: {fileID: 3228112732890936474}
     LockObj: {fileID: 4893176558573484378}
+    SkillIdx: 0
+    SkillLevel: 0
   - SkillImg: {fileID: 6171085697806006532}
     SKillBtn: {fileID: 7440569623890307942}
     LockObj: {fileID: 2350091219496486295}
+    SkillIdx: 0
+    SkillLevel: 0
   - SkillImg: {fileID: 8589970214131562139}
     SKillBtn: {fileID: 6029456750641772284}
     LockObj: {fileID: 2829208062777042494}
+    SkillIdx: 0
+    SkillLevel: 0
   - SkillImg: {fileID: 9083433234509403476}
     SKillBtn: {fileID: 3236693997643897600}
     LockObj: {fileID: 3238116925833259754}
+    SkillIdx: 0
+    SkillLevel: 0
 --- !u!1001 &493476339043786172
 PrefabInstance:
   m_ObjectHideFlags: 0

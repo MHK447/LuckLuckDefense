@@ -352,7 +352,7 @@ public class PopupIngameUpgrade : UIBase
                 if(BossUnitTime <= 0)
                 {
                     BossUnitTime = 0;
-                    GameRoot.Instance.UISystem.OpenUI<PopupStageGiveup>(popup => popup.Init());
+                    GameRoot.Instance.UISystem.OpenUI<PopupStageResult>(popup => popup.Init(true));
                 }
             }
         }

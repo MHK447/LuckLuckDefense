@@ -157,6 +157,8 @@ public class UnitTileComponent : MonoBehaviour
                     unit.RemoveUnit();
                 }
 
+                GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.CurUnitCountCheck();
+
                 UnitList.Clear();
 
                 GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.MergeAddUnit(selectunit.unit_idx, this);
@@ -170,6 +172,8 @@ public class UnitTileComponent : MonoBehaviour
         {
             unit.RemoveUnit();
         }
+
+        GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle.CurUnitCountCheck();
 
         UnitList.Clear();
     }

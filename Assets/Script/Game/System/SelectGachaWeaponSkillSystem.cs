@@ -58,6 +58,11 @@ public class SelectGachaWeaponSkillSystem
 
         var td = Tables.Instance.GetTable<SelectWeaponGachaSkilInfo>().GetData((int)skilltype);
 
+        if(td.select_type == 1)
+        {
+            GameRoot.Instance.UserData.CurMode.StageData.SelectSkill += 1;
+        }
+
         if(td != null && td.instantuse == 1)
         {
             switch (skilltype)

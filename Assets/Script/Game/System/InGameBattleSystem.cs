@@ -33,6 +33,14 @@ public class InGameBattleSystem
 
     public int unit_death_ratio = 0;
 
+    public int ten_wave_clear = 0;
+
+    public int tweenty_wave_clear = 0;
+
+    public int thirdteen_wave_clear = 0;
+
+    public int MaximumSkillSelect = 0;
+
     public IReactiveProperty<int> CurUnitCountProperty = new ReactiveProperty<int>();
 
     public void Create()
@@ -50,9 +58,9 @@ public class InGameBattleSystem
         boss_gacha_coin_base = Tables.Instance.GetTable<Define>().GetData("boss_gacha_coin_base").value;
         boss_gacha_coin_increaes = Tables.Instance.GetTable<Define>().GetData("boss_gacha_coin_increaes").value;
         unit_death_ratio = Tables.Instance.GetTable<Define>().GetData("unit_death_ratio").value;
+        ten_wave_clear = Tables.Instance.GetTable<Define>().GetData("ten_wave_clear").value;
+        tweenty_wave_clear = Tables.Instance.GetTable<Define>().GetData("tweenty_wave_clear").value;
+        thirdteen_wave_clear = Tables.Instance.GetTable<Define>().GetData("thirdteen_wave_clear").value;
+        MaximumSkillSelect = Tables.Instance.GetTable<Define>().GetData("MaximumSkillSelect").value;
     }   
-
-
-
-
 }

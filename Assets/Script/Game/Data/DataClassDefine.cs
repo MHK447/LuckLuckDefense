@@ -25,6 +25,8 @@ public class StageData
 
 	public int StageHighWave = 1;
 
+	public int SelectSkill = 0;
+
 	public bool IsStartBattle = false;
 
 	public IReactiveProperty<bool> IsBossProperty = new ReactiveProperty<bool>(false);

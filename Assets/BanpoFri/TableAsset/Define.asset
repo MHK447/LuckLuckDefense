@@ -31,6 +31,10 @@ MonoBehaviour:
   - summon_percent_base
   - card_upgrade_cost
   - unit_death_ratio
+  - ten_wave_clear
+  - tweenty_wave_clear
+  - thirdteen_wave_clear
+  - MaximumSkillSelect
   mSecondKey: []
   mDataList:
   - _index: end_unit_count
@@ -69,3 +73,11 @@ MonoBehaviour:
     _value: 100
   - _index: unit_death_ratio
     _value: 45
+  - _index: ten_wave_clear
+    _value: 1000
+  - _index: tweenty_wave_clear
+    _value: 2000
+  - _index: thirdteen_wave_clear
+    _value: 3000
+  - _index: MaximumSkillSelect
+    _value: 2

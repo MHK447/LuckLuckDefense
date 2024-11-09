@@ -262,7 +262,14 @@ public class InGameBattle : MonoBehaviour
 
     public void RandGachaUnit()
     {
-        var level = GameRoot.Instance.UnitUpgradeSystem.FindUnitUpgradeData(UpgradeComponentType.SpawnPercent).Level;
+        int level = 1;
+
+        var finddata = GameRoot.Instance.UnitUpgradeSystem.FindUnitUpgradeData(UpgradeComponentType.SpawnPercent);
+
+        if(finddata != null)
+        {
+            level = finddata.Level;
+        }
 
         var grade = ProjectUtility.GetRandGachaCard(level);
 

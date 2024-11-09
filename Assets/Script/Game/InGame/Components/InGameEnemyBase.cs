@@ -87,9 +87,23 @@ public class InGameEnemyBase : MonoBehaviour
 
         var td = Tables.Instance.GetTable<EnemyInfo>().GetData(UnitIdx);
 
+        
+
         if(td != null)
         {
+
             var curwaveidx = GameRoot.Instance.UserData.CurMode.StageData.WaveIdxProperty.Value;
+
+            int buffvalue = 0;
+
+            var stageinfotd = Tables.Instance.GetTable<StageWaveInfo>().GetData(curwaveidx);
+
+            if(stageinfotd != null)
+            {
+                buffvalue = stageinfotd.hp_buff_value;
+            }
+
+
 
             var basehp = GameRoot.Instance.InGameBattleSystem.enemy_normal_base_hp;
 
@@ -108,7 +122,13 @@ public class InGameEnemyBase : MonoBehaviour
             else
             {
                 Hp = (int)value * increase;
+
+                Hp = Hp * buffvalue;
+
+                Hp = Hp / 100;
             }
+
+
             var movespeedbuffvalue = GameRoot.Instance.SkillCardSystem.GetBuffValue((int)SKillCardIdx.SLOWENEMY,false);
 
             var movespeedvalue = (float)td.movespeed / 100f;
@@ -125,7 +145,9 @@ public class InGameEnemyBase : MonoBehaviour
         }
 
         SetState(State.Move);
-        SetDirection(InGameBattle.Direction.TOP);
+
+        GameRoot.Instance.WaitTimeAndCallback(0.5f, () => { SetDirection(InGameBattle.Direction.TOP); });
+
         ticketdeltime = 0f;
 
         if (UnitIdx == GameRoot.Instance.InGameSystem.TicketEnemyIdx)

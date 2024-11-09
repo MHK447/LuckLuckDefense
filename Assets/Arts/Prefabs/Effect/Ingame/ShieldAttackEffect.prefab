@@ -19475,7 +19475,6 @@ GameObject:
   - component: {fileID: 8689025677760046453}
   - component: {fileID: 8689025677760046452}
   - component: {fileID: 6997734101934011}
-  - component: {fileID: 7228678978025697932}
   m_Layer: 0
   m_Name: ShieldAttackEffect
   m_TagString: Untagged
@@ -24376,43 +24375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: []
---- !u!114 &7228678978025697932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8689025677760046451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f45c7f16e79bec24eb5af1e2485bd5c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.1
-      inSlope: -0.004911028
-      outSlope: -0.004911028
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.08655126
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -0.05181988
-      outSlope: -0.05181988
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.113182485
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  duration: 0.25
 --- !u!1 &8689025678043055011
 GameObject:
   m_ObjectHideFlags: 0

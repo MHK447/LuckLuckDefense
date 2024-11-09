@@ -48,6 +48,13 @@ namespace BanpoFri
 			get { return _boss_idx;}
 			set { _boss_idx = value;}
 		}
+		[SerializeField]
+		private int _hp_buff_value;
+		public int hp_buff_value
+		{
+			get { return _hp_buff_value;}
+			set { _hp_buff_value = value;}
+		}
 
     }
 
