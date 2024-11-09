@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BanpoFri;
 
+[EffectPath("Effect/EarthQuakeEffect", false, true)]
 public class EarthQuakeEffect : Effect
 {
     public void Set(int damage)

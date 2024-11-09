@@ -31,7 +31,9 @@ public class InGameUnitSelect : InGameFloatingUI
         UnitIdx = unitidx;
         TileComponent = tilecomponent;
 
-        SyntheticBtn.interactable = tilecomponent.UnitList.Count >= 3;
+        var unitinfotd = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(UnitIdx);
+
+        SyntheticBtn.interactable = tilecomponent.UnitList.Count >= 3 || unitinfotd.grade < 3;
     }
 
 
