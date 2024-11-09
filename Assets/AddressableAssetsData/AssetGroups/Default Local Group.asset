@@ -313,6 +313,18 @@ MonoBehaviour:
     m_Address: Effect/DarknedEffect
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4904c5aa809acdd409261a1f98a80837
+    m_Address: Effect/EarthQuakeEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 78584b2e27e020b479a8850035c609ec
+    m_Address: Effect/ThunderEffect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 28b5da3abcd534e4390a5d6a0aedfe65
+    m_Address: Assets/Arts/Prefabs/Effect/Ingame/DarkeyeEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 33d34b1065dcd4c0db03f94efd6e0ee1, type: 2}
   m_SchemaSet:
