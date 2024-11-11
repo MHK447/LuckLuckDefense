@@ -170,7 +170,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 23
-  AndroidTargetSdkVersion: 33
+  AndroidTargetSdkVersion: 34
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -253,11 +253,11 @@ PlayerSettings:
   useCustomMainManifest: 1
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 1
-  useCustomLauncherGradleManifest: 0
-  useCustomBaseGradleTemplate: 0
+  useCustomLauncherGradleManifest: 1
+  useCustomBaseGradleTemplate: 1
   useCustomGradlePropertiesTemplate: 1
-  useCustomGradleSettingsTemplate: 0
-  useCustomProguardFile: 0
+  useCustomGradleSettingsTemplate: 1
+  useCustomProguardFile: 1
   AndroidTargetArchitectures: 3
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
@@ -279,8 +279,8 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   chromeosInputEmulation: 1
-  AndroidMinifyRelease: 0
-  AndroidMinifyDebug: 0
+  AndroidMinifyRelease: 1
+  AndroidMinifyDebug: 1
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
   AndroidReportGooglePlayAppDependencies: 1
@@ -804,7 +804,7 @@ PlayerSettings:
     PS4: DOTWEEN
     PS5: DOTWEEN
     Stadia: DOTWEEN
-    Standalone: RH_AutoComplete;DOTWEEN;AMPLIFY_SHADER_EDITOR
+    Standalone: 
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
