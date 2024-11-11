@@ -3,7 +3,7 @@ guid: 3781f2218eef4d5a823dba406baa434b
 labels:
 - gvh
 - gvh_targets-editor
-- gvh_version-12.3.0
+- gvh_version-11.9.0
 - gvhp_exportpath-Firebase/Editor/Firebase.Crashlytics.Editor.dll
 PluginImporter:
   externalObjects: {}
@@ -40,11 +40,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: None
-  - first:
-      : Web
-    second:
-      enabled: 0
-      settings: {}
   - first:
       : WebStreamed
     second:
@@ -93,6 +88,11 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: None
+  - first:
+      WebGL: Web
+    second:
+      enabled: 0
+      settings: {}
   - first:
       Windows Store Apps: WindowsStoreApps
     second:
