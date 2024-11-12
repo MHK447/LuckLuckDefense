@@ -303,49 +303,49 @@ MonoBehaviour:
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 1500
   - _unit_idx: 1002
     _movespeed: 200
     _prefab: Enemy_1002
     _image: Boss_1002_1
-    _name: enemy_name_1001
-    _basehp: 20000
+    _name: enemy_name_1002
+    _basehp: 3000
   - _unit_idx: 1003
     _movespeed: 200
     _prefab: Enemy_1003
     _image: Boss_1003_1
-    _name: enemy_name_1001
-    _basehp: 20000
+    _name: enemy_name_1003
+    _basehp: 4500
   - _unit_idx: 1004
     _movespeed: 200
     _prefab: Enemy_1004
     _image: Boss_1004_1
-    _name: enemy_name_1001
-    _basehp: 20000
+    _name: enemy_name_1004
+    _basehp: 6000
   - _unit_idx: 1005
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
-    _name: enemy_name_1001
-    _basehp: 20000
+    _name: enemy_name_1005
+    _basehp: 7500
   - _unit_idx: 1006
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 9000
   - _unit_idx: 1007
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 9500
   - _unit_idx: 1008
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 10000
   - _unit_idx: 1009
     _movespeed: 200
     _prefab: Enemy_1001
@@ -357,46 +357,46 @@ MonoBehaviour:
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 25000
   - _unit_idx: 1011
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 30000
   - _unit_idx: 1012
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 33000
   - _unit_idx: 1013
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 36000
   - _unit_idx: 1014
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 39000
   - _unit_idx: 1015
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 42000
   - _unit_idx: 1016
     _movespeed: 200
     _prefab: Enemy_1001
     _image: Boss_1001_1
     _name: enemy_name_1001
-    _basehp: 20000
+    _basehp: 45000
   - _unit_idx: 10001
     _movespeed: 300
     _prefab: Enemy_10001
     _image: 
     _name: enemy_name_10001
-    _basehp: 20000
+    _basehp: 48000
