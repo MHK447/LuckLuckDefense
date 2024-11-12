@@ -5,7 +5,6 @@ dependencies {
     }
 
 android {
-    ndkPath "**NDKPATH**"
     namespace "**NAMESPACE**"
 
     compileSdkVersion **APIVERSION**
