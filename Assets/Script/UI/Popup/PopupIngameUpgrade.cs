@@ -35,6 +35,9 @@ public class PopupIngameUpgrade : UIBase
     private Button UpgradeBtn;
 
     [SerializeField]
+    private Button AdBtn;
+
+    [SerializeField]
     private Text UnitCountText;
 
     [SerializeField]
@@ -98,6 +101,8 @@ public class PopupIngameUpgrade : UIBase
         PauseBtn.onClick.AddListener(OnClickPause);
         TicketMonsterBtn.onClick.AddListener(OnClickTicketMonster);
         UpgradeBtn.onClick.AddListener(OnClickUpgrade);
+        AdBtn.onClick.AddListener(OnClickAd);
+
     }
 
     public void Init(InGameBattle battle)
@@ -245,6 +250,11 @@ public class PopupIngameUpgrade : UIBase
     public int GetSpawnCostValue(int unitaddcount)
     {
         return GameRoot.Instance.InGameBattleSystem.initial_cost_start + (GameRoot.Instance.InGameBattleSystem.inital_increase_count * unitaddcount);
+    }
+
+    private void OnClickAd()
+    {
+        GameRoot.Instance.GetAdManager.ShowRewardedAd(()=> { Debug.Log("보상지급!!"); });
     }
 
     private void OnClickGachaBtn()
