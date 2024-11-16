@@ -178,8 +178,11 @@ public class InGameEnemyBase : MonoBehaviour
         }
         else
         {
-            ProjectUtility.SetActiveCheck(HpUI.gameObject, true);
-            HpUI.Set(Hp);
+
+            GameRoot.Instance.WaitTimeAndCallback(0.5f, () => {
+                ProjectUtility.SetActiveCheck(HpUI.gameObject, true);
+                HpUI.Set(Hp);
+            });
         }
     }
 
