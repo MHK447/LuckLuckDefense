@@ -11,13 +11,7 @@ public class AdManager : MonoBehaviour
     private RewardedAd _rewardedAd;
     private InterstitialAd _interstitialAd;
 
-#if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-4348570103813665/5725603077";
-#elif UNITY_IPHONE
-  private string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
-#else
-  private string _adUnitId = "unused";
-#endif
+    private string _adUnitId = "ca-app-pub-4348570103813665/1002389856";
 
     private bool IsInterAdLoaded = false;
 
@@ -26,9 +20,11 @@ public class AdManager : MonoBehaviour
 
     void Start()
     {
-        MobileAds.Initialize(initStatus => {
-            LoadRewardedAd();
-            LoadInterstitialAd();
+        GameRoot.Instance.WaitTimeAndCallback(2f, () => {
+            MobileAds.Initialize(initStatus => {
+                LoadRewardedAd();
+                LoadInterstitialAd();
+            });
         });
     }
 
@@ -89,8 +85,6 @@ public class AdManager : MonoBehaviour
         // 광고가 닫힌 후 다시 로드
         LoadInterstitialAd();
     }
-
-    // 리워드 광고 로드
     public void LoadRewardedAd()
     {
         // Clean up the old ad before loading a new one.
@@ -109,20 +103,22 @@ public class AdManager : MonoBehaviour
         RewardedAd.Load(_adUnitId, adRequest,
             (RewardedAd ad, LoadAdError error) =>
             {
-                _rewardedAd = ad;
-              // if error is not null, the load request failed.
-              if (error != null || ad == null)
+                if (error != null || ad == null)
                 {
-                    Debug.LogError("Rewarded ad failed to load an ad " +
-                                   "with error : " + error);
-                    return;
+                    Debug.LogError("Rewarded ad failed to load with error: " + error);
+                // 여기에서 추가적인 디버그 메시지나 오류를 처리할 수 있습니다.
+                return;
                 }
 
-                Debug.Log("Rewarded ad loaded with response : "
-                          + ad.GetResponseInfo());
+                Debug.Log("Rewarded ad loaded with response: " + ad.GetResponseInfo());
 
-                // 광고가 닫혔을 때 이벤트 핸들러
-                _rewardedAd.OnAdFullScreenContentClosed += HandleRewardedAdClosed;
+                _rewardedAd = ad;
+
+            // 광고가 로드되면 이벤트 핸들러 등록
+            RegisterEventHandlers(_rewardedAd);
+
+            // 광고가 닫혔을 때 이벤트 핸들러
+            _rewardedAd.OnAdFullScreenContentClosed += HandleRewardedAdClosed;
             });
     }
     // 리워드 광고 표시

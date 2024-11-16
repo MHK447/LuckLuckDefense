@@ -378,7 +378,10 @@ public class InGameUnitBase : MonoBehaviour
     {
         if (CurState == state) return;
 
+
         CurState = state;
+
+        Debug.Log(state.ToString());
 
         switch (state)
         {
@@ -415,6 +418,8 @@ public class InGameUnitBase : MonoBehaviour
 
     public void MoveToTile(UnitTileComponent tile , Transform movetr)
     {
+        if (MoveTr == movetr) return;
+
         MoveTr = movetr;  
         ChangeState(State.Move);
         CurTileComponent = tile;
@@ -459,9 +464,9 @@ public class InGameUnitBase : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackRangeTr.position, info.AttackRange); // 공격 범위는 여기서 설정
     }
-
-        void Update()
+    void Update()
     {
+        // 이동 상태 처리
         if (CurState == State.Move && MoveTr != null)
         {
             Vector3 direction = MoveTr.position - transform.position;
@@ -480,24 +485,27 @@ public class InGameUnitBase : MonoBehaviour
             // 유닛을 목표 방향으로 이동
             transform.position += direction * 10f * Time.deltaTime;
 
-            float distance = Vector3.Distance(MoveTr.position, this.transform.position);
+            float distance = Vector3.Distance(MoveTr.position, transform.position);
 
-            if(distance < 0.1f)
+            if (distance < 0.2f) // 거리 조건을 조금 넉넉하게 설정
             {
-                //이동이후
+                // 이동 완료 후 상태 초기화
+                Target = null;
+                MoveTr = null; // 목표 위치 초기화
                 ChangeState(State.Idle);
             }
 
-
-            return;
+            return; // 이동 중에는 나머지 코드를 실행하지 않음
         }
 
+        // 공격 대상이 없을 경우, 새로운 적 탐색
         if (Target == null)
         {
             Target = Battle.FindClosestEnemy(info.AttackRange, AttackRangeTr);
 
             if (Target != null)
             {
+                // 적이 발견되었을 경우 공격 상태로 전환
                 Vector3 direction = Target.transform.position - transform.position;
                 direction.Normalize();
 
@@ -515,11 +523,14 @@ public class InGameUnitBase : MonoBehaviour
             }
             else
             {
-                ChangeState(State.Idle);
+                // 적이 없을 경우 아이들 상태 유지
+                if (CurState != State.Idle) // 상태가 이미 Idle이면 중복 설정 방지
+                {
+                    ChangeState(State.Idle);
+                }
             }
         }
     }
-
 
 
     void Flip()

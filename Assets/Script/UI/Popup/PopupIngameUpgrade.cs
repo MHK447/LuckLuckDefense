@@ -35,9 +35,6 @@ public class PopupIngameUpgrade : UIBase
     private Button UpgradeBtn;
 
     [SerializeField]
-    private Button AdBtn;
-
-    [SerializeField]
     private Text UnitCountText;
 
     [SerializeField]
@@ -101,7 +98,6 @@ public class PopupIngameUpgrade : UIBase
         PauseBtn.onClick.AddListener(OnClickPause);
         TicketMonsterBtn.onClick.AddListener(OnClickTicketMonster);
         UpgradeBtn.onClick.AddListener(OnClickUpgrade);
-        AdBtn.onClick.AddListener(OnClickAd);
 
     }
 

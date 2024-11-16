@@ -46,7 +46,6 @@ public class TileSelector : MonoBehaviour
     {
         HandleInput();
     }
-
     void HandleInput()
     {
         if (IsPointerOverUIObject())
@@ -54,147 +53,181 @@ public class TileSelector : MonoBehaviour
             return;
         }
 
+        // 입력 상태 감지
+        bool isTouch = Input.touchCount > 0;
+        bool isMouseDown = Input.GetMouseButtonDown(0);
+        bool isMouseUp = Input.GetMouseButtonUp(0);
+        bool isMouse = Input.GetMouseButton(0);
 
-        if (Input.GetMouseButtonDown(0))
+        Vector2 inputPosition2D = Vector2.zero;
+
+        if (isTouch)
         {
-            if (SelectAttackArangeUnit != null)
-                SelectAttackArangeUnit.TileAttackRangeActive(false);
+            Touch touch = Input.GetTouch(0);
+            Vector3 touchPosition = mainCamera.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10f));
+            inputPosition2D = new Vector2(touchPosition.x, touchPosition.y);
 
-
-            var getunitinfo = GameRoot.Instance.UISystem.GetUI<PopupInGameUnitInfo>();
-
-            if(getunitinfo != null && getunitinfo.gameObject.activeSelf)
+            if (touch.phase == TouchPhase.Began)
             {
-                getunitinfo.Hide();
+                HandleBeginInput(inputPosition2D);
             }
-
-
-            if(InGameUnitSelectUI != null)
-            ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, false);
-
-            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-            if (hit.collider != null && hit.collider.CompareTag("Tile"))
+            else if (touch.phase == TouchPhase.Moved)
             {
-                FirstSelectComponent = hit.collider.GetComponent<UnitTileComponent>();
-
-                if (FirstSelectComponent.UnitList.Count > 0)
-                {
-                    selectedUnit = hit.collider.gameObject;
-                    isUnitSelected = true;
-                    FirstSelectComponent.EnableTile();
-                }
-                else
-                {
-                    isUnitSelected = false;
-                }
+                HandleMoveInput(inputPosition2D);
+            }
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                HandleEndInput(inputPosition2D);
             }
         }
-
-
-        if (isUnitSelected && (Input.GetMouseButton(0) || Input.touchCount > 0))
+        else
         {
-            Vector3 currentMousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 currentMousePosition2D = new Vector2(currentMousePosition.x, currentMousePosition.y);
-            RaycastHit2D hit = Physics2D.Raycast(currentMousePosition2D, Vector2.zero);
-
-            if (hit.collider != null && hit.collider.CompareTag("Tile"))
+            if (isMouseDown)
             {
-                if (SecondSelectComponent != null && FirstSelectComponent != SecondSelectComponent)
+                Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                inputPosition2D = new Vector2(mousePosition.x, mousePosition.y);
+                HandleBeginInput(inputPosition2D);
+            }
+            else if (isMouse)
+            {
+                Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                inputPosition2D = new Vector2(mousePosition.x, mousePosition.y);
+                HandleMoveInput(inputPosition2D);
+            }
+            else if (isMouseUp)
+            {
+                Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                inputPosition2D = new Vector2(mousePosition.x, mousePosition.y);
+                HandleEndInput(inputPosition2D);
+            }
+        }
+    }
+
+    void HandleBeginInput(Vector2 position)
+    {
+        if (SelectAttackArangeUnit != null)
+            SelectAttackArangeUnit.TileAttackRangeActive(false);
+
+        var getunitinfo = GameRoot.Instance.UISystem.GetUI<PopupInGameUnitInfo>();
+        if (getunitinfo != null && getunitinfo.gameObject.activeSelf)
+            getunitinfo.Hide();
+
+        if (InGameUnitSelectUI != null)
+            ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, false);
+
+        Collider2D hitCollider = Physics2D.OverlapPoint(position);
+        if (hitCollider != null && hitCollider.CompareTag("Tile"))
+        {
+            FirstSelectComponent = hitCollider.GetComponent<UnitTileComponent>();
+            if (FirstSelectComponent.UnitList.Count > 0)
+            {
+                selectedUnit = hitCollider.gameObject;
+                isUnitSelected = true;
+                FirstSelectComponent.EnableTile();
+            }
+            else
+            {
+                isUnitSelected = false;
+            }
+        }
+    }
+
+    void HandleMoveInput(Vector2 position)
+    {
+        if (isUnitSelected)
+        {
+            Collider2D hitCollider = Physics2D.OverlapPoint(position);
+            if (hitCollider != null && hitCollider.CompareTag("Tile"))
+            {
+                UnitTileComponent newTileComponent = hitCollider.GetComponent<UnitTileComponent>();
+
+                // 이미 선택된 타일과 같으면 무시
+                if (SecondSelectComponent == newTileComponent)
+                    return;
+
+                // 이전 타일 비활성화
+                if (SecondSelectComponent != null && SecondSelectComponent != FirstSelectComponent)
                     SecondSelectComponent.DisableTile();
 
-                SecondSelectComponent = hit.collider.GetComponent<UnitTileComponent>();
-                currentMousePosition.z = 0;
-                DrawPath(selectedUnit.transform.position, hit.transform.position);
+                // 새로운 타일 활성화
+                SecondSelectComponent = newTileComponent;
+                DrawPath(selectedUnit.transform.position, hitCollider.transform.position);
                 SecondSelectComponent.EnableTile();
             }
         }
+    }
 
-        if (isUnitSelected && (Input.GetMouseButtonUp(0) || (Input.touchCount == 0 && Input.GetMouseButtonUp(0))))
+    void HandleEndInput(Vector2 position)
+    {
+        Collider2D hitCollider = Physics2D.OverlapPoint(position);
+
+        if (FirstSelectComponent != null && SecondSelectComponent == null)
         {
-            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mousePosition2D = new Vector2(mousePosition.x, mousePosition.y);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition2D, Vector2.zero);
-
-            if (FirstSelectComponent != null && SecondSelectComponent == null)
+            // 같은 타일을 선택한 경우
+            var finddata = FirstSelectComponent.UnitList.FirstOrDefault();
+            if (finddata != null)
             {
-                //같은곳을 선택할경우
+                finddata.TileAttackRangeActive(true);
+                GameRoot.Instance.UISystem.OpenUI<PopupInGameUnitInfo>(popup => popup.Set(finddata.GetUnitIdx));
+                ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, true);
+                InGameUnitSelectUI.Init(FirstSelectComponent.transform);
+                InGameUnitSelectUI.Set(finddata.GetUnitIdx, FirstSelectComponent);
+            }
+        }
+        else if (FirstSelectComponent != null && SecondSelectComponent != null)
+        {
+            if (FirstSelectComponent.GetTileSpawnOrder == SecondSelectComponent.GetTileSpawnOrder)
+            {
                 var finddata = FirstSelectComponent.UnitList.FirstOrDefault();
-
-                if(finddata != null)
+                if (finddata != null)
                 {
+                    SelectAttackArangeUnit = finddata;
                     finddata.TileAttackRangeActive(true);
-
                     GameRoot.Instance.UISystem.OpenUI<PopupInGameUnitInfo>(popup => popup.Set(finddata.GetUnitIdx));
                     ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, true);
                     InGameUnitSelectUI.Init(FirstSelectComponent.transform);
                     InGameUnitSelectUI.Set(finddata.GetUnitIdx, FirstSelectComponent);
-
-
-                    FirstSelectComponent.DisableTile();
-                    SecondSelectComponent.DisableTile();
-                    FirstSelectComponent = null;
-                    SecondSelectComponent = null;
-
-                    
                 }
             }
-            else if (FirstSelectComponent != null && SecondSelectComponent != null)
+            else
             {
-                if (FirstSelectComponent.GetTileSpawnOrder == SecondSelectComponent.GetTileSpawnOrder)
+                // 다른 타일로 이동
+                FirstSelectComponent.MoveChangeTileUnit(SecondSelectComponent);
+                SecondSelectComponent.MoveChangeTileUnit(FirstSelectComponent);
+
+                var tempUnitList = FirstSelectComponent.UnitList.ToList();
+                FirstSelectComponent.UnitList = SecondSelectComponent.UnitList;
+                SecondSelectComponent.UnitList = tempUnitList;
+
+                if (FirstSelectComponent.UnitList.Count > 0)
+                    FirstSelectComponent.SetTileUnitIdx(FirstSelectComponent.UnitList.First().GetUnitIdx);
+
+                if (SecondSelectComponent.UnitList.Count > 0)
                 {
-                    //같은곳을 선택할경우
-                    var finddata = FirstSelectComponent.UnitList.FirstOrDefault();
-
-                    if (finddata != null)
-                    {
-                        SelectAttackArangeUnit = finddata;
-                        finddata.TileAttackRangeActive(true);
-                        ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, true);
-                        InGameUnitSelectUI.Init(FirstSelectComponent.transform);
-                        InGameUnitSelectUI.Set(finddata.GetUnitIdx , FirstSelectComponent );
-                        GameRoot.Instance.UISystem.OpenUI<PopupInGameUnitInfo>(popup => popup.Set(finddata.GetUnitIdx));
-
-                        FirstSelectComponent.DisableTile();
-                        SecondSelectComponent.DisableTile();
-                        FirstSelectComponent = null;
-                        SecondSelectComponent = null;
-                    }
-                }
-                else
-                {
-                    FirstSelectComponent.MoveChangeTileUnit(SecondSelectComponent);
-                    SecondSelectComponent.MoveChangeTileUnit(FirstSelectComponent);
-
-                    FirstSelectComponent.SetTileUnitIdx(-1);
-                    SecondSelectComponent.SetTileUnitIdx(-1);
-                    //유닛교체 
-                    var tempunitlist = FirstSelectComponent.UnitList.ToList();
-                    FirstSelectComponent.UnitList = SecondSelectComponent.UnitList;
-                    if (SecondSelectComponent.UnitList.Count > 0)
-                    {
-                        FirstSelectComponent.SetTileUnitIdx(SecondSelectComponent.UnitList.First().GetUnitIdx);
-                    }
-                    SecondSelectComponent.UnitList = tempunitlist;
-                    if (tempunitlist.Count > 0)
-                    {
-                        SelectAttackArangeUnit = tempunitlist[0];
-                        tempunitlist.First().TileAttackRangeActive(true);
-                        SecondSelectComponent.SetTileUnitIdx(tempunitlist.First().GetUnitIdx);
-                    }
-
-                    FirstSelectComponent.DisableTile();
-                    SecondSelectComponent.DisableTile();
-                    FirstSelectComponent = null;
-                    SecondSelectComponent = null;
+                    SelectAttackArangeUnit = SecondSelectComponent.UnitList[0];
+                    SecondSelectComponent.UnitList[0].TileAttackRangeActive(true);
+                    SecondSelectComponent.SetTileUnitIdx(SecondSelectComponent.UnitList[0].GetUnitIdx);
                 }
             }
-            lineRenderer.positionCount = 0;
         }
+
+        ResetSelection();
+        lineRenderer.positionCount = 0;
     }
 
+    void ResetSelection()
+    {
+        if (FirstSelectComponent != null)
+        {
+            FirstSelectComponent.DisableTile();
+            FirstSelectComponent = null;
+        }
+        if (SecondSelectComponent != null)
+        {
+            SecondSelectComponent.DisableTile();
+            SecondSelectComponent = null;
+        }
+    }
 
     private bool IsPointerOverUIObject()
     {

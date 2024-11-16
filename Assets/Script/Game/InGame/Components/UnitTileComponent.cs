@@ -181,6 +181,8 @@ public class UnitTileComponent : MonoBehaviour
 
     public void MoveChangeTileUnit(UnitTileComponent movetotile)
     {
+
+        Debug.Log("Move To Tile!!");
         for(int i = 0; i < UnitList.Count; ++i)
         {
             UnitList[i].MoveToTile(movetotile, movetotile.GetSpawnList[i]);
