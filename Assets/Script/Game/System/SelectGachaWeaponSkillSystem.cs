@@ -13,7 +13,6 @@ public class SelectGachaWeaponSkillSystem
         WaterRise = 2,
         Earthquake = 3,
         Tornado = 4,
-        LightSphere = 5,
         AttackPowerIncrease = 6,
         AttackSpeedIncrease = 7,
         CriticalHitRateIncrease = 8,
@@ -273,7 +272,7 @@ public class SelectGachaWeaponSkillSystem
                     });
                 }
                 break;
-            case GachaWeaponSkillType.HandOfDarkness:
+            case GachaWeaponSkillType.HandOfDarkness:   
                 {
                     GameRoot.Instance.EffectSystem.MultiPlay<DarknedEffect>(target.transform.position, effect =>
                     {

@@ -10,11 +10,10 @@ public class HUDTotal : UIBase
 {
     public enum LobbyTab
     {
-        Shop = 0,
-        Card = 1,   
-        Fight = 2,
-        Upgrade = 3,
-        Boss = 4,
+        Card = 0,   
+        Fight = 1,
+        Upgrade = 2,
+        Boss = 3,
     }
 
     [SerializeField]
@@ -68,8 +67,6 @@ public class HUDTotal : UIBase
 
         switch (tab)
         {
-            case LobbyTab.Shop:
-                break;
             case LobbyTab.Card:
                 {
                     GameRoot.Instance.UISystem.OpenUI<PopupPassiveCardUpgrade>(popup => {

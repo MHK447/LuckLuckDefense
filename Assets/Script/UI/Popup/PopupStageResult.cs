@@ -42,6 +42,18 @@ public class PopupStageResult : UIBase
         Hide();
     }
 
+    public void OnClickReward()
+    {
+        GameRoot.Instance.GetAdManager.ShowRewardedAd(() => {
+            GameRoot.Instance.UserData.SetReward((int)Config.RewardType.Currency, (int)Config.CurrencyID.Money, GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value * 2);
+            GameRoot.Instance.UserData.CurMode.StageData.WaveRewardProperty.Value = 0;
+
+            GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.ReturnMainScreen();
+
+            Hide();
+        });
+    }
+
     public void Init(bool isfailed)
     {
         ProjectUtility.SetActiveCheck(FailedTitle.gameObject, isfailed);

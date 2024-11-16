@@ -35,6 +35,7 @@ MonoBehaviour:
   - tweenty_wave_clear
   - thirdteen_wave_clear
   - MaximumSkillSelect
+  - inter_ad_time
   mSecondKey: []
   mDataList:
   - _index: end_unit_count
@@ -81,3 +82,5 @@ MonoBehaviour:
     _value: 3000
   - _index: MaximumSkillSelect
     _value: 2
+  - _index: inter_ad_time
+    _value: 150

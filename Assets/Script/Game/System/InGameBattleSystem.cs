@@ -41,6 +41,8 @@ public class InGameBattleSystem
 
     public int MaximumSkillSelect = 0;
 
+    public int inter_ad_time = 120;
+
     public IReactiveProperty<int> CurUnitCountProperty = new ReactiveProperty<int>();
 
     public void Create()
@@ -62,5 +64,7 @@ public class InGameBattleSystem
         tweenty_wave_clear = Tables.Instance.GetTable<Define>().GetData("tweenty_wave_clear").value;
         thirdteen_wave_clear = Tables.Instance.GetTable<Define>().GetData("thirdteen_wave_clear").value;
         MaximumSkillSelect = Tables.Instance.GetTable<Define>().GetData("MaximumSkillSelect").value;
+        MaximumSkillSelect = Tables.Instance.GetTable<Define>().GetData("MaximumSkillSelect").value;
+        inter_ad_time = Tables.Instance.GetTable<Define>().GetData("inter_ad_time").value;
     }   
 }

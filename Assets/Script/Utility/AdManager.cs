@@ -12,7 +12,7 @@ public class AdManager : MonoBehaviour
     private InterstitialAd _interstitialAd;
 
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
+    private string _adUnitId = "ca-app-pub-4348570103813665/5725603077";
 #elif UNITY_IPHONE
   private string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
 #else
@@ -21,7 +21,7 @@ public class AdManager : MonoBehaviour
 
     private bool IsInterAdLoaded = false;
 
-    private string InitadUnitId = "ca-app-pub-3940256099942544/1033173712"; // 테스트 전면 광고 단위 ID
+    private string InitadUnitId = "ca-app-pub-4348570103813665/9413566645"; // 테스트 전면 광고 단위 ID
 
 
     void Start()
@@ -47,7 +47,7 @@ public class AdManager : MonoBehaviour
         var adRequest = new AdRequest();
 
         // send the request to load the ad.
-        InterstitialAd.Load(_adUnitId, adRequest,
+        InterstitialAd.Load(InitadUnitId, adRequest,
             (InterstitialAd ad, LoadAdError error) =>
             {
               // if error is not null, the load request failed.

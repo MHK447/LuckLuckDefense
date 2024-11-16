@@ -51,6 +51,10 @@ public class GameRoot : Singleton<GameRoot>
 
 	private int loadcount = 0;
 
+
+	private int InterTime = 0;
+
+
 	public static bool IsInit()
 	{
 		if (instance != null && !InitTry)
@@ -118,6 +122,17 @@ public class GameRoot : Singleton<GameRoot>
 		{
 
 			deltaTime -= 1f;
+
+
+			InterTime += 1;
+
+			if(InterTime >= GameRoot.instance.InGameBattleSystem.inter_ad_time)
+            {
+				InterTime = 0;
+
+				GameRoot.instance.AdManager.ShowInterstitialAd();
+            }
+
 		}
 		deltaTime += Time.deltaTime;
 
@@ -240,6 +255,8 @@ public class GameRoot : Singleton<GameRoot>
 		LoadComplete = true;
 
 		InitSystem();
+
+		GameRoot.instance.WaitTimeAndCallback(0.5f, () => { BgmOn(); });
 	}
 
 	public void BgmOn()
