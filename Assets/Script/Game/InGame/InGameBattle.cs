@@ -36,6 +36,8 @@ public class InGameBattle : MonoBehaviour
 
     private List<InGameUnitBase> PlayerUnitList = new List<InGameUnitBase>();
 
+    public List<InGameUnitBase> GetPlayerUnitList { get { return PlayerUnitList; } }
+
     private List<InGameDamageUI> DamageUIList = new List<InGameDamageUI>();
 
     private int WaveEnemyCount = 0;
@@ -290,7 +292,7 @@ public class InGameBattle : MonoBehaviour
         {
             level = finddata.Level;
         }
-
+                
         var grade = ProjectUtility.GetRandGachaCard(level);
 
         GachaGradeUnit(grade);
@@ -358,20 +360,22 @@ public class InGameBattle : MonoBehaviour
     {
         var td = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(unitidx);
 
-        if (td != null)
+        Addressables.InstantiateAsync(td.prefab).Completed += (handle) =>
         {
-            var findunit = PlayerUnitList.Find(x => x.gameObject.activeSelf == false && x.GetUnitIdx == unitidx);
+            var getobj = handle.Result.gameObject.GetComponent<InGameUnitBase>();
 
-            if (findunit != null)
+            if (getobj != null)
             {
-                ProjectUtility.SetActiveCheck(findunit.gameObject, true);
-                findunit.Set(unitidx, this);
+                PlayerUnitList.Add(getobj);
+
+                ProjectUtility.SetActiveCheck(getobj.gameObject, true);
+                getobj.Set(unitidx, this);
 
                 var finddata = TileComponentList.Find(x => x.GetTileUnitIdx == unitidx && x.IsTileMax == false);
 
                 if (finddata != null)
                 {
-                    finddata.SpawnTileUnit(findunit);
+                    finddata.SpawnTileUnit(getobj);
                 }
                 else
                 {
@@ -379,45 +383,12 @@ public class InGameBattle : MonoBehaviour
 
                     if (findemptytile != null)
                     {
-                        findemptytile.SpawnTileUnit(findunit);
+                        findemptytile.SpawnTileUnit(getobj);
                     }
                 }
-
                 CurUnitCountCheck();
             }
-            else
-            {
-                Addressables.InstantiateAsync(td.prefab).Completed += (handle) =>
-                {
-                    var getobj = handle.Result.gameObject.GetComponent<InGameUnitBase>();
-
-                    if (getobj != null)
-                    {
-                        PlayerUnitList.Add(getobj);
-
-                        ProjectUtility.SetActiveCheck(getobj.gameObject, true);
-                        getobj.Set(unitidx, this);
-
-                        var finddata = TileComponentList.Find(x => x.GetTileUnitIdx == unitidx && x.IsTileMax == false);
-
-                        if (finddata != null)
-                        {
-                            finddata.SpawnTileUnit(getobj);
-                        }
-                        else
-                        {
-                            var findemptytile = TileComponentOrderList.Find(x => x.GetTileUnitIdx == -1);
-
-                            if (findemptytile != null)
-                            {
-                                findemptytile.SpawnTileUnit(getobj);
-                            }
-                        }
-                        CurUnitCountCheck();
-                    }
-                };
-            }
-        }
+        };
     }
 
 

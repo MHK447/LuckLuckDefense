@@ -165,21 +165,7 @@ public class GameRoot : Singleton<GameRoot>
 				}
 			}
 		}
-		if (Input.GetKeyUp(KeyCode.Escape))
-		{
-			//if (TutorialSystem.IsActive())
-			//	return;
-
-			var uibase = UISystem.GetOpenPopupLastUI();
-			if (uibase != null)
-			{
-				UISystem.ClosePopupBackBtn();
-			}
-			else
-			{
-				
-			}
-		}
+		
 	}
 
 	public bool IsPointerOverUIObject(Vector2 touchPos)

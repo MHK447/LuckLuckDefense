@@ -105,8 +105,12 @@ public class TileSelector : MonoBehaviour
 
     void HandleBeginInput(Vector2 position)
     {
-        if (SelectAttackArangeUnit != null)
-            SelectAttackArangeUnit.TileAttackRangeActive(false);
+        var battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle;
+
+        foreach (var player in battle.GetPlayerUnitList)
+        {
+            player.TileAttackRangeActive(false);
+        }
 
         var getunitinfo = GameRoot.Instance.UISystem.GetUI<PopupInGameUnitInfo>();
         if (getunitinfo != null && getunitinfo.gameObject.activeSelf)
@@ -134,6 +138,14 @@ public class TileSelector : MonoBehaviour
 
     void HandleMoveInput(Vector2 position)
     {
+        var battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle;
+
+        foreach (var player in battle.GetPlayerUnitList)
+        {
+            player.TileAttackRangeActive(false);
+        }
+
+
         if (isUnitSelected)
         {
             Collider2D hitCollider = Physics2D.OverlapPoint(position);
@@ -161,12 +173,22 @@ public class TileSelector : MonoBehaviour
     {
         Collider2D hitCollider = Physics2D.OverlapPoint(position);
 
+        var battle = GameRoot.Instance.InGameSystem.GetInGame<InGameTycoon>().curInGameStage.GetBattle;
+
+        foreach (var player in battle.GetPlayerUnitList)
+        {
+            player.TileAttackRangeActive(false);
+        }
+
+
         if (FirstSelectComponent != null && SecondSelectComponent == null)
         {
             // 같은 타일을 선택한 경우
             var finddata = FirstSelectComponent.UnitList.FirstOrDefault();
             if (finddata != null)
             {
+             
+
                 finddata.TileAttackRangeActive(true);
                 GameRoot.Instance.UISystem.OpenUI<PopupInGameUnitInfo>(popup => popup.Set(finddata.GetUnitIdx));
                 ProjectUtility.SetActiveCheck(InGameUnitSelectUI.gameObject, true);

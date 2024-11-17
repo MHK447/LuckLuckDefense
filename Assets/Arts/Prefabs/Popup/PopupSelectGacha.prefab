@@ -806,7 +806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8003291538616891960, guid: 791e8b6096ecb434d8331bff57f7d2be, type: 3}
       propertyPath: keyColor
-      value: TextColor_Btn_Yes
+      value: TextColor_White
       objectReference: {fileID: 0}
     - target: {fileID: 8463452705946006230, guid: 791e8b6096ecb434d8331bff57f7d2be, type: 3}
       propertyPath: m_Sprite

@@ -119,8 +119,7 @@ namespace AmplifyShaderEditor
 							OnEnterPressed();
 					}
 
-					if( key == KeyCode.Escape )
-						OnEscapePressed();
+					
 
 					if( m_isMouseInside || hasKeyboadFocus )
 					{
