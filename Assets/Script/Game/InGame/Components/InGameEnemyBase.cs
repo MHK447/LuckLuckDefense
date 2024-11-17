@@ -175,7 +175,7 @@ public class InGameEnemyBase : MonoBehaviour
                 hpui.Set(Hp);
                 hpui.Init(HpTr);
             });
-        }
+        }   
         else
         {
 

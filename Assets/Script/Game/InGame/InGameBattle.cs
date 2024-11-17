@@ -303,52 +303,28 @@ public class InGameBattle : MonoBehaviour
     {
         var td = Tables.Instance.GetTable<PlayerUnitInfo>().GetData(unitidx);
 
-        if (td != null)
+        Addressables.InstantiateAsync(td.prefab).Completed += (handle) =>
         {
-            var findunit = PlayerUnitList.Find(x => x.gameObject.activeSelf == false && x.GetUnitIdx == unitidx);
+            var getobj = handle.Result.gameObject.GetComponent<InGameUnitBase>();
 
-            if (findunit != null)
+            if (getobj != null)
             {
-                ProjectUtility.SetActiveCheck(findunit.gameObject, true);
-                findunit.Set(unitidx, this);
+                PlayerUnitList.Add(getobj);
+
+                ProjectUtility.SetActiveCheck(getobj.gameObject, true);
+                getobj.Set(unitidx, this);
 
                 var finddata = TileComponentList.Find(x => x.GetTileUnitIdx == unitidx && x.IsTileMax == false);
 
                 if (finddata != null)
                 {
-                    finddata.SpawnTileUnit(findunit);
+                    finddata.SpawnTileUnit(getobj);
                 }
                 else
-                    unittile.SpawnTileUnit(findunit);
-
-                CurUnitCountCheck();
+                    unittile.SpawnTileUnit(getobj);
             }
-            else
-            {
-                Addressables.InstantiateAsync(td.prefab).Completed += (handle) =>
-                {
-                    var getobj = handle.Result.gameObject.GetComponent<InGameUnitBase>();
-
-                    if (getobj != null)
-                    {
-                        PlayerUnitList.Add(getobj);
-
-                        ProjectUtility.SetActiveCheck(getobj.gameObject, true);
-                        getobj.Set(unitidx, this);
-
-                        var finddata = TileComponentList.Find(x => x.GetTileUnitIdx == unitidx && x.IsTileMax == false);
-
-                        if (finddata != null)
-                        {
-                            finddata.SpawnTileUnit(getobj);
-                        }
-                        else
-                            unittile.SpawnTileUnit(getobj);
-                    }
-                    CurUnitCountCheck();
-                };
-            }
-        }
+            CurUnitCountCheck();
+        };
     }
 
     public void CurUnitCountCheck()
