@@ -13,6 +13,9 @@ public class PopupInGameUnitInfo : UIBase
     private Image UnitImage;
 
     [SerializeField]
+    private Text UnitDescText;
+
+    [SerializeField]
     private Text UnitNameText;
 
     [SerializeField]
@@ -20,9 +23,6 @@ public class PopupInGameUnitInfo : UIBase
 
     [SerializeField]
     private Text UnitAttackSpeedText;
-
-    [SerializeField]
-    private UnitInfoSkillComponent SKillComponent;
 
     private int UnitIdx = 0;
    
@@ -42,9 +42,7 @@ public class PopupInGameUnitInfo : UIBase
             UnitImage.sprite = Config.Instance.GetUnitImg(td.icon);
             UnitDamageText.text = td.attack.ToString();
             UnitAttackSpeedText.text = attackspeed.ToString();
-
-            if(SKillComponent != null)
-            SKillComponent.Set(td.unit_skill[0]);
+            UnitDescText.text = Tables.Instance.GetTable<Localize>().GetString(td.unit_desc);
         }
 
     }

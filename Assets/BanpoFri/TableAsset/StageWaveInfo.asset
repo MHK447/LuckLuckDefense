@@ -121,63 +121,63 @@ MonoBehaviour:
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 2
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 3
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 4
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 5
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 6
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 7
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 8
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 9
     _wave_count: 20
     _unit_delaytime: 50
     _spawn_cooltime: 15
     _unit_idx: 101
     _boss_idx: 1001
-    _hp_buff_value: 100
+    _hp_buff_value: 125
   - _wave_idx: 10
     _wave_count: 1
     _unit_delaytime: 50

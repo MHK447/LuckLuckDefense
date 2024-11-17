@@ -303,6 +303,22 @@ MonoBehaviour:
   - weapon_skill_desc_20
   - enemy_name_1001
   - enemy_name_1002
+  - enemy_name_1003
+  - unit_desc_001
+  - unit_desc_002
+  - unit_desc_003
+  - unit_desc_004
+  - unit_desc_005
+  - unit_desc_006
+  - unit_desc_007
+  - unit_desc_008
+  - unit_desc_009
+  - unit_desc_010
+  - unit_desc_011
+  - unit_desc_012
+  - unit_desc_013
+  - unit_desc_014
+  - unit_desc_015
   mSecondKey: []
   mDataList:
   - _idx: str_stage_select_num
@@ -10201,6 +10217,561 @@ MonoBehaviour:
     _ua: 
   - _idx: enemy_name_1002
     _ko: "\uBD89\uC740 \uC2AC\uB77C\uC784"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: enemy_name_1003
+    _ko: "\uC2E4\uBC84 \uAC70\uB300 \uACE8\uB818"
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_001
+    _ko: "\uAE38 \uC783\uC740 \uAE30\uC0AC, \uADF8\uB7F0\uB370 \uB9C8\uC744\uB85C
+      \uB3CC\uC544\uAC08 \uC0DD\uAC01\uC774 \uC5C6\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_002
+    _ko: "\uB4DC\uB798\uACE4\uC744 \uC7A1\uC73C\uB824\uB358 \uADF8\uB294, \uB4DC\uB798\uACE4\uC774
+      \uB418\uC5C8\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_003
+    _ko: "\uBAA8\uD5D8\uAC00\uB77C\uB354\uB2C8, \uC774\uC81C \uB3D9\uB124 \uBE75\uC9D1
+      \uC6B4\uC601 \uC911."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_004
+    _ko: "\uCE7C\uC774 \uC5C6\uC73C\uBA74 \uADF8\uB0E5 \uAC70\uB300\uD55C \uACE4\uCDA9\uC7A1\uC774."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_005
+    _ko: "\uBCF4\uBB3C\uC744 \uCC3E\uC544 \uB5A0\uB09C \uC790, \uC774\uC81C \uC790\uC2E0\uC774
+      \uBCF4\uBB3C."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_006
+    _ko: "\uB9C8\uC744 \uCD5C\uACE0\uC758 \uC5F0\uC560 \uC0C1\uB2F4\uAC00, \uADF8\uB7F0\uB370
+      \uBCF8\uC778\uC740 \uC194\uB85C."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_007
+    _ko: "\uC138\uC0C1\uC5D0\uC11C \uAC00\uC7A5 \uAC15\uD55C \uC790, \uADF8\uB7F0\uB370
+      \uC544\uCE68\uC7A0\uC774 \uB9CE\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_008
+    _ko: "\uBCC4\uC744 \uBCF4\uACE0 \uC18C\uC6D0\uC744 \uBE4C\uB358 \uC18C\uB144,
+      \uADF8\uB7F0\uB370 \uBCC4\uC774 \uB5A8\uC5B4\uC84C\uB2E4."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_009
+    _ko: "\uAC00\uC7A5 \uD070 \uC801\uC740, \uBC14\uB85C \uC790\uAE30 \uC790\uC2E0."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_010
+    _ko: "\uC131\uC9C1\uC790\uB77C\uB354\uB2C8, \uC8FC\uBB34\uAE30\uB294 \uB9DD\uCE58."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_011
+    _ko: "\uC138\uC0C1\uC5D0\uC11C \uAC00\uC7A5 \uBABB\uC0DD\uAE34 \uBBF8\uB0A8."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_012
+    _ko: "\uD55C\uBC24\uC911\uC758 \uC0AC\uB0E5\uAFBC, \uD558\uC9C0\uB9CC \uB0AE\uC5D0\uB294
+      \uAC10\uC790 \uB18D\uBD80."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_013
+    _ko: "\uCDA4\uCD94\uB294 \uAC80\uAC1D, \uBB38\uC81C\uB294 \uCDA4\uC774 \uB354
+      \uB6F0\uC5B4\uB098\uB2E4\uB294 \uC810."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_014
+    _ko: "\uB9E4\uC77C \uC6A9\uACFC \uC2F8\uC6B0\uB294 \uB0A8\uC790, \uC0AC\uC2E4
+      \uC6A9\uC740 \uCE5C\uAD6C."
+    _en: 
+    _ja: 
+    _es: 
+    _ptbr: 
+    _th: 
+    _tw: 
+    _vi: 
+    _bg: 
+    _cn: 
+    _cs: 
+    _da: 
+    _nl: 
+    _et: 
+    _fi: 
+    _fr: 
+    _de: 
+    _el: 
+    _hu: 
+    _id: 
+    _it: 
+    _lv: 
+    _lt: 
+    _no: 
+    _pl: 
+    _pt: 
+    _ro: 
+    _ru: 
+    _sk: 
+    _sl: 
+    _sv: 
+    _tr: 
+    _ua: 
+  - _idx: unit_desc_015
+    _ko: "\uC5BC\uC74C\uC744 \uB2E4\uB8E8\uB294 \uC790, \uADF8\uB7F0\uB370 \uC5F4\uC815\uC740
+      \uBD88\uD0C0\uC624\uB978\uB2E4."
     _en: 
     _ja: 
     _es: 

@@ -119,19 +119,39 @@ public class InGameBattle : MonoBehaviour
 
         foreach (var player in PlayerUnitList)
         {
-            ProjectUtility.SetActiveCheck(player.gameObject, false);
+            if (player != null)
+            {
+                ProjectUtility.SetActiveCheck(player.gameObject, false);
+                Destroy(player.gameObject);
+            }
         }
+        // 리스트 초기화
+        PlayerUnitList.Clear();
 
-        foreach(var enemy in EnemyList)
+        // EnemyList 삭제
+        foreach (var enemy in EnemyList)
         {
-            enemy.Clear();
-            ProjectUtility.SetActiveCheck(enemy.gameObject, false);
+            if (enemy != null)
+            {
+                enemy.Clear(); // 내부 데이터 초기화
+                ProjectUtility.SetActiveCheck(enemy.gameObject, false);
+                Destroy(enemy.gameObject);
+            }
         }
+        // 리스트 초기화
+        EnemyList.Clear();
 
-        foreach(var damageui in DamageUIList)
+        // DamageUIList 삭제
+        foreach (var damageui in DamageUIList)
         {
-            ProjectUtility.SetActiveCheck(damageui.gameObject, false);
+            if (damageui != null)
+            {
+                ProjectUtility.SetActiveCheck(damageui.gameObject, false);
+                Destroy(damageui.gameObject);
+            }
         }
+        // 리스트 초기화
+        DamageUIList.Clear();
     }
 
     public void SpawnEnemy(int unitidx)

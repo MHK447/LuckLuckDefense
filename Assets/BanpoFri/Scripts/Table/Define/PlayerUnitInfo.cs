@@ -70,6 +70,13 @@ namespace BanpoFri
 			set { _name = value;}
 		}
 		[SerializeField]
+		private string _unit_desc;
+		public string unit_desc
+		{
+			get { return _unit_desc;}
+			set { _unit_desc = value;}
+		}
+		[SerializeField]
 		private List<int> _unit_skill;
 		public List<int> unit_skill
 		{

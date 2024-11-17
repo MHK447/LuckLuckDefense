@@ -377,11 +377,7 @@ public class InGameUnitBase : MonoBehaviour
     public void ChangeState(State state)
     {
         if (CurState == state) return;
-
-
         CurState = state;
-
-        Debug.Log(state.ToString());
 
         switch (state)
         {
