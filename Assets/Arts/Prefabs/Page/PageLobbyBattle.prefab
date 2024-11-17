@@ -1692,7 +1692,8 @@ PrefabInstance:
       value: SafeArea
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3340011902221050291, guid: b9a9e3d325b854d8da3b3167a7f95bd2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9a9e3d325b854d8da3b3167a7f95bd2, type: 3}
