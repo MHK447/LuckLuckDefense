@@ -133,6 +133,7 @@ SpriteAtlas:
     - 35bd1d166689e4d72bca48e848823d9d: -2006524878
     - 35bd1d166689e4d72bca48e848823d9d: -150715368
     - 9e9b0e26b10d2407885fefd2ecadfd18: 21300000
+    - 2f1c0627f8c47497db88fbfea635096f: 21300000
     - db3135c74b1dd4d21a9de40e60af19e7: 21300000
     - 095db3e7615d147128a766c75f43aeb5: 21300000
     - 927e354ab04c34ee7a8866c5577d0481: -1974046274
@@ -206,6 +207,7 @@ SpriteAtlas:
     - d2337c6dc12c14a3693baeb600a5c048: 997584138
     - d2337c6dc12c14a3693baeb600a5c048: -1837819144
     - bf7f6d6da5076420892e8bd21e8115b5: 21300000
+    - 9eee689da30ac4995b93730d66087cbe: 21300000
     - 205e16bd0bb1c46ab8bda194bc519988: 1378046579
     - 205e16bd0bb1c46ab8bda194bc519988: -607270093
     - 205e16bd0bb1c46ab8bda194bc519988: -130983576
@@ -275,6 +277,7 @@ SpriteAtlas:
   - {fileID: -2006524878, guid: 35bd1d166689e4d72bca48e848823d9d, type: 3}
   - {fileID: -150715368, guid: 35bd1d166689e4d72bca48e848823d9d, type: 3}
   - {fileID: 21300000, guid: 9e9b0e26b10d2407885fefd2ecadfd18, type: 3}
+  - {fileID: 21300000, guid: 2f1c0627f8c47497db88fbfea635096f, type: 3}
   - {fileID: 21300000, guid: db3135c74b1dd4d21a9de40e60af19e7, type: 3}
   - {fileID: 21300000, guid: 095db3e7615d147128a766c75f43aeb5, type: 3}
   - {fileID: -1974046274, guid: 927e354ab04c34ee7a8866c5577d0481, type: 3}
@@ -348,6 +351,7 @@ SpriteAtlas:
   - {fileID: 997584138, guid: d2337c6dc12c14a3693baeb600a5c048, type: 3}
   - {fileID: -1837819144, guid: d2337c6dc12c14a3693baeb600a5c048, type: 3}
   - {fileID: 21300000, guid: bf7f6d6da5076420892e8bd21e8115b5, type: 3}
+  - {fileID: 21300000, guid: 9eee689da30ac4995b93730d66087cbe, type: 3}
   - {fileID: 1378046579, guid: 205e16bd0bb1c46ab8bda194bc519988, type: 3}
   - {fileID: -607270093, guid: 205e16bd0bb1c46ab8bda194bc519988, type: 3}
   - {fileID: -130983576, guid: 205e16bd0bb1c46ab8bda194bc519988, type: 3}
@@ -415,6 +419,7 @@ SpriteAtlas:
   - Boss_019_13
   - Boss_019_12
   - Boss_1001_1
+  - Unit017_Img
   - Unit001_Img
   - Unit008_Img
   - Unit011_Img
@@ -489,6 +494,7 @@ SpriteAtlas:
   - Boss_1003_15
   - Boss_1003_14
   - Unit007_Img
+  - Unit018_Img
   - Unit1003_1_0_idle_0_2
   - Unit1003_1_0_idle_0_5
   - Unit1003_1_0_idle_0_4

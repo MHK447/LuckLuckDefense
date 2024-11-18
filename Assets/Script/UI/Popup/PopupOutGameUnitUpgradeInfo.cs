@@ -23,9 +23,6 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
     private Text SkillCoolTimeText;
 
     [SerializeField]
-    private Text CostValueText;
-
-    [SerializeField]
     private List<OutGameUnitUpgradeInfoComponent> InfoComponentList = new List<OutGameUnitUpgradeInfoComponent>();
 
     [SerializeField]
@@ -107,11 +104,7 @@ public class PopupOutGameUnitUpgradeInfo : UIBase
                 CostCardCount = outgameunittd.cardcount;
             }
 
-
             UpgradeBtn.interactable = unitdata != null;
-
-            CostValueText.text = CostValue.ToString();
-
         }
 
     }

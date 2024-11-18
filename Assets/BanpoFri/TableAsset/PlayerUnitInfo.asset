@@ -50,7 +50,7 @@ MonoBehaviour:
     _attackspeed: 100
     _grade: 1
     _prefab: Unit002
-    _icon: Unit002_Img
+    _icon: Unit017_Img
     _name: unit_name_002
     _unit_desc: unit_desc_002
     _unit_skill: 02000000
@@ -167,7 +167,7 @@ MonoBehaviour:
     _attackspeed: 100
     _grade: 2
     _prefab: Unit011
-    _icon: Unit011_Img
+    _icon: Unit018_Img
     _name: unit_name_011
     _unit_desc: unit_desc_011
     _unit_skill: 01000000
