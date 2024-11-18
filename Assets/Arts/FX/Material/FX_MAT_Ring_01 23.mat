@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: FX_MAT_Ring_01 23
   m_Shader: {fileID: 4800000, guid: ce729004bd5ad164282691f4b6248cb2, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _USECUSTOM_ON
@@ -18,6 +20,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -103,7 +106,7 @@ Material:
     - _DissolvePannerXY: {r: 0, g: 0, b: 0, a: 0}
     - _DissolveScaleAmount: {r: 0, g: 0, b: 0, a: 0}
     - _DistortPannerXY: {r: 0, g: 0, b: 0, a: 0}
-    - _DistortPannerXYPowerXY: {r: 0, g: 0, b: 0, a: -2.58}
+    - _DistortPannerXYPowerXY: {r: 0, g: 0, b: 0, a: -4.56}
     - _DistortPowerXY: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainPannerXY: {r: 0, g: 0, b: 0, a: 0}
@@ -115,3 +118,4 @@ Material:
     - _SubScaleAmount: {r: 1, g: 1, b: 0, a: 0}
     - _Tint: {r: 2.9960785, g: 2.9960785, b: 2.9960785, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
