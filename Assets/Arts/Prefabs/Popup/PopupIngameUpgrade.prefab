@@ -787,7 +787,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: -74.78
+  m_Spacing: -15.92
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -2006,7 +2006,6 @@ MonoBehaviour:
   GachaBtn: {fileID: 2793607937272529900}
   PauseBtn: {fileID: 4372960211638231288}
   UpgradeBtn: {fileID: 3035393776040765090}
-  AdBtn: {fileID: 0}
   UnitCountText: {fileID: 8167119758167399849}
   UnitEnergyCostText: {fileID: 298462277494378418}
   UnitGachaCoinText: {fileID: 8003537373505244939}
@@ -2882,7 +2881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8460738628235301190, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 158.3776
       objectReference: {fileID: 0}
     - target: {fileID: 8460738628235301190, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3440,7 +3439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Text
-      value: "\uAC15\uD654"
+      value: Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Color.b
@@ -3583,6 +3582,10 @@ PrefabInstance:
     - target: {fileID: 2219549252669814871, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: keyColor
       value: TextColor_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
+      propertyPath: m_Text
+      value: Not Owned
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Color.b
@@ -4749,11 +4752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8460738628235301190, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 146.8874
       objectReference: {fileID: 0}
     - target: {fileID: 8460738628235301190, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 104.5375
       objectReference: {fileID: 0}
     - target: {fileID: 8460738628235301190, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5132,7 +5135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Text
-      value: "\uB3C4\uBC15"
+      value: Gacha
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Color.b
@@ -5689,7 +5692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Text
-      value: "\uC18C\uD658"
+      value: Spawn
       objectReference: {fileID: 0}
     - target: {fileID: 3930712239398775206, guid: b1711b8521cb3114388a31b7cda003df, type: 3}
       propertyPath: m_Color.b

@@ -1753,7 +1753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0.0070257}
+  m_AnchoredPosition: {x: 0, y: 0.0070257}
   m_SizeDelta: {x: -30, y: -1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5079186660060684692
@@ -2899,7 +2899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8203764367973081256, guid: dc6a022626dbf8842a3bfa1e1c54361f, type: 3}
       propertyPath: m_Text
-      value: "\uC720\uB2DB \uB3C4\uBC15 \uD655\uB960 \uC99D\uAC00"
+      value: Increased Unit Gamble Chance
       objectReference: {fileID: 0}
     - target: {fileID: 8203764368779374713, guid: dc6a022626dbf8842a3bfa1e1c54361f, type: 3}
       propertyPath: m_Color.b

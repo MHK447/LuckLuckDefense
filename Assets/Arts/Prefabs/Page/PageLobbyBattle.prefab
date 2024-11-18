@@ -886,7 +886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2094817030707074423, guid: 0442447de3ab08c4b91f628d3c5657d9, type: 3}
       propertyPath: m_Text
-      value: START
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 2094817030707074423, guid: 0442447de3ab08c4b91f628d3c5657d9, type: 3}
       propertyPath: m_Color.b
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c07b8e0f9bab4a19881686798ad1e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyLocalize: str_stage_start
+  keyLocalize: str_lobby
   IsTextMeshPro: 0
 --- !u!114 &6776708173937390425 stripped
 MonoBehaviour:
